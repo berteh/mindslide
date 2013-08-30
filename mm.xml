@@ -72,7 +72,6 @@
     </p>
   </body>
 </html>
-
 </richcontent>
 <node TEXT="MindMap Slide Export currently supports" ID="ID_825683797" CREATED="1377866419355" MODIFIED="1377866553347"/>
 <node ID="ID_765812044" CREATED="1377866554077" MODIFIED="1377868700769"><richcontent TYPE="NODE">
@@ -91,7 +90,6 @@
 }</code></pre>
   </body>
 </html>
-
 </richcontent>
 </node>
 <node TEXT="clickable links (ctrl+K in freeplane)" ID="ID_594361534" CREATED="1377866613085" MODIFIED="1377870864921" LINK="http://google.com"/>
@@ -110,7 +108,6 @@
     </p>
   </body>
 </html>
-
 </richcontent>
 <hook URI="assets/mindmap-slide-export-demo.png" SIZE="0.09924865" NAME="ExternalObject"/>
 </node>
@@ -131,7 +128,6 @@
     </ul>
   </body>
 </html>
-
 </richcontent>
 </node>
 <node TEXT="easy navigation (space, arrows)" ID="ID_1077356933" CREATED="1377867110013" MODIFIED="1377867121959"/>
@@ -147,7 +143,6 @@
     </p>
   </body>
 </html>
-
 </richcontent>
 </node>
 <node TEXT="decent browser support and fall-back" ID="ID_1942350131" CREATED="1377867277349" MODIFIED="1377867291238" LINK="https://github.com/hakimel/reveal.js/wiki/Browser-Support"/>
@@ -186,7 +181,6 @@
     </p>
   </body>
 </html>
-
 </richcontent>
 </node>
 <node ID="ID_803125215" CREATED="1377874149125" MODIFIED="1377874256380"><richcontent TYPE="NODE">
@@ -201,7 +195,6 @@
     </p>
   </body>
 </html>
-
 </richcontent>
 </node>
 </node>
@@ -219,9 +212,7 @@
 <node TEXT="The process to install and use MindMap Slide Export is not user-friendly for now, but anyone familiar with web technologies should be able to try it out in a few minutes. If you want to help streamline this process dont hesitate to contribute!" ID="ID_203268772" CREATED="1377870131765" MODIFIED="1377870202711">
 <arrowlink SHAPE="CUBIC_CURVE" COLOR="#000000" WIDTH="2" TRANSPARENCY="80" FONT_SIZE="9" FONT_FAMILY="SansSerif" DESTINATION="ID_1128763901" STARTINCLINATION="615;0;" ENDINCLINATION="615;0;" STARTARROW="NONE" ENDARROW="DEFAULT"/>
 </node>
-<node TEXT="download" ID="ID_45909805" CREATED="1377867332134" MODIFIED="1377867340608"/>
-<node TEXT="copy mm as .xml file" ID="ID_437559317" CREATED="1377867340943" MODIFIED="1377867348592"/>
-<node TEXT="run webserver" ID="ID_1234736095" CREATED="1377867348803" MODIFIED="1377868351468"><richcontent TYPE="NOTE">
+<node TEXT="Prerequesite: a webserver and recent browser" ID="ID_499646099" CREATED="1377876584807" MODIFIED="1377876995435"><richcontent TYPE="NOTE">
 
 <html>
   <head>
@@ -229,18 +220,68 @@
   </head>
   <body>
     <p>
-      If you have python installed, running a webserver is a matter of
+      webserver is needed for javascript cannot load the mindmap file otherwise. if you find a way to make javascript open a local .mm file let me know!
     </p>
-    <code>python -m SimpleHTTPServer [port]</code>
+    <p>
+      
+    </p>
+    <p>
+      Any server will do, if you have python simply run <code>python -m SimpleHTTPServer 99 </code>
+    </p>
+    <p>
+      and connect to <a href="http://0.0.0.0:99">http://0.0.0.0:99</a>.
+    </p>
   </body>
 </html>
 
 </richcontent>
 </node>
-<node TEXT="enjoy" ID="ID_143594672" CREATED="1377868268835" MODIFIED="1377868271396"/>
+<node ID="ID_45909805" CREATED="1377867332134" MODIFIED="1377879248073"><richcontent TYPE="NODE">
+
+<html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      Install from repository: in some directory served by your webserver do
+    </p>
+    <ol>
+      <li>
+        git clone git@github.com:berteh/mindslide.git
+      </li>
+      <li>
+        cd mindslide
+      </li>
+      <li>
+        git submodule update --init
+      </li>
+    </ol>
+    <p>
+      of from the archives:
+    </p>
+    <ol>
+      <li>
+        go to some of your web directory (typically /var/www or C:\htdocs\)
+      </li>
+      <li>
+        dowload and unpack <a href="https://github.com/berteh/mindslide/archive/master.zip">https://github.com/berteh/mindslide/archive/master.zip</a>&#160;into &quot;mindslide&quot; directory (or pick any name you like)
+      </li>
+      <li>
+        download and upack <a href="https://github.com/hakimel/reveal.js/archive/master.zip">https://github.com/hakimel/reveal.js/archive/master.zip</a>&#160;into mindslide/reveal.js directory
+      </li>
+    </ol>
+  </body>
+</html>
+
+</richcontent>
+</node>
+<node TEXT="copy your (freemind or freeplane) mindmap file (something.mm) as mm.xml file into mindslide directory" ID="ID_437559317" CREATED="1377867340943" MODIFIED="1377877569630"/>
+<node TEXT="copy its related images (if any) in their respective directory accessible from your webserver" ID="ID_1243868709" CREATED="1377877570655" MODIFIED="1377877600725"/>
+<node TEXT="browse to mindslide.html page and enjoy." ID="ID_143594672" CREATED="1377868268835" MODIFIED="1377877044138"/>
 </node>
 <node TEXT="Configure" ID="ID_1593867677" CREATED="1377867328934" MODIFIED="1377867331019">
-<node TEXT="edit directly the mm-viewer file for your own settings, themeing and more." ID="ID_62454801" CREATED="1377867358677" MODIFIED="1377867378338"/>
+<node TEXT="edit directly the mindslide.html file for your own settings, themeing and more." ID="ID_62454801" CREATED="1377867358677" MODIFIED="1377877108796"/>
 </node>
 <node TEXT="Contribute" ID="ID_1128763901" CREATED="1377867379405" MODIFIED="1377867381388">
 <node TEXT="contributions are welcome in all kinds" ID="ID_756109089" CREATED="1377867407739" MODIFIED="1377867414680"/>

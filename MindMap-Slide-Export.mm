@@ -236,7 +236,7 @@
 
 </richcontent>
 </node>
-<node ID="ID_45909805" CREATED="1377867332134" MODIFIED="1377876753902"><richcontent TYPE="NODE">
+<node ID="ID_45909805" CREATED="1377867332134" MODIFIED="1377879248073"><richcontent TYPE="NODE">
 
 <html>
   <head>
@@ -258,14 +258,26 @@
       </li>
     </ol>
     <p>
-      Or download and upack the archive at &lt;todo&gt; in a web directory (typically /var/www or C:\htdocs\)
+      of from the archives:
     </p>
+    <ol>
+      <li>
+        go to some of your web directory (typically /var/www or C:\htdocs\)
+      </li>
+      <li>
+        dowload and unpack <a href="https://github.com/berteh/mindslide/archive/master.zip">https://github.com/berteh/mindslide/archive/master.zip</a>&#160;into &quot;mindslide&quot; directory (or pick any name you like)
+      </li>
+      <li>
+        download and upack <a href="https://github.com/hakimel/reveal.js/archive/master.zip">https://github.com/hakimel/reveal.js/archive/master.zip</a>&#160;into mindslide/reveal.js directory
+      </li>
+    </ol>
   </body>
 </html>
 
 </richcontent>
 </node>
-<node TEXT="copy your mindmap (and related images) as mm.xml file into mindslide directory" ID="ID_437559317" CREATED="1377867340943" MODIFIED="1377877081148"/>
+<node TEXT="copy your (freemind or freeplane) mindmap file (something.mm) as mm.xml file into mindslide directory" ID="ID_437559317" CREATED="1377867340943" MODIFIED="1377877569630"/>
+<node TEXT="copy its related images (if any) in their respective directory accessible from your webserver" ID="ID_1243868709" CREATED="1377877570655" MODIFIED="1377877600725"/>
 <node TEXT="browse to mindslide.html page and enjoy." ID="ID_143594672" CREATED="1377868268835" MODIFIED="1377877044138"/>
 </node>
 <node TEXT="Configure" ID="ID_1593867677" CREATED="1377867328934" MODIFIED="1377867331019">
