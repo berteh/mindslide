@@ -9,8 +9,8 @@ Mindslide uses the great (Reveal.js)[http://lab.hakim.se/reveal-js/] HTML presen
 
 MindMap Slide Export currently supports
 
-* simple & rich-text nodes, including code highlight @import url('print.css'); @page:right { margin: 1cm 2cm 1.3cm 4cm; }
-* clickable links (ctrl+K in freeplane)
+* simple & rich-text nodes
+* clickable links (ctrl+k in freeplane)
 * images
 * presenter notes (from the node notes), hit "s" to get the presenter view
 * easy navigation (space, arrows)
@@ -25,9 +25,11 @@ MindMap Slide Export currently supports
 
 in a directory served by your webserver do the following:
 
+```
 git clone https://github.com/berteh/mindslide.git
-cd mindslide
+dir mindslide
 git submodule update --init
+```
 
 or unzip the 2 archives https://github.com/berteh/mindslide/archive/master.zip in mindslide/ and https://github.com/hakimel/reveal.js/archive/master.zip in mindlide/reveal.js
 
@@ -37,3 +39,6 @@ To display your own mind map simply copy them to the web directory as mm.xml (or
 
 The process to install and use MindMap Slide Export is not user-friendly for now, but anyone familiar with web technologies should be able to try it out in a few minutes. If you want to help streamline this process dont hesitate to contribute!
 
+## Prerequesite
+
+You need a recent browser and a webserver (any server will do, on any OS).
