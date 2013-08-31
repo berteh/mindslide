@@ -31,6 +31,12 @@
 			p.item, #toc p.item:first-of-type { list-style:disc outside none;    display:list-item;    font-size: 80%;    text-align: left;}
 			p.item.complex {	list-style:circle;}
 			p.item:first-of-type, #titleSlide p.item { display:block; font-size: 100%; text-align: center; margin-bottom: 1ex}
+
+			/*restaure lists in nodes content, as reveal removes them*/
+			p.item ol {list-style:decimal outside none;}
+			p.item ul {list-style:square outside none;}
+			p.item li {display:list-item;}
+			p.item ol, p.item ul{display:block; margin: 0 0 1ex 2em;}
 		</style>
 
 		<!-- If the query includes 'print-pdf', use the PDF print sheet -->
@@ -60,7 +66,7 @@
 				<h1>THE END</h1>
 				<h3 id="author">Yours Respectfully</h3>
 				<p id="credits">
-					<small>Powered by <a href="freeplane.sourceforge.net/‎">Freeplane</a> and <a href="http://lab.hakim.se/reveal-js/#/">Reveal.js</a></small>
+					<small>Powered by <a href="http://freeplane.sourceforge.net/">Freeplane</a> and <a href="http://lab.hakim.se/reveal-js/#/">Reveal.js</a></small>
 				</p>
 			</section>
 
@@ -231,7 +237,7 @@
 					// Optional libraries used to extend on reveal.js
 					dependencies: [
 						{ src: 'reveal.js/lib/js/classList.js', condition: function() { return !document.body.classList; } },
-						// { src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+						{ src: 'reveal.js/plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
 						{ src: 'reveal.js/plugin/zoom-js/zoom.js', async: true, condition: function() { return !!document.body.classList; } },
 						{ src: 'reveal.js/plugin/notes/notes.js', async: true, condition: function() { return !!document.body.classList; } }
 					]
