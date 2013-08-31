@@ -40,7 +40,7 @@ or unzip the 2 archives https://github.com/berteh/mindslide/archive/master.zip i
 
 Visit http://your-host/mindslide/mindslide.html (or simply open your local mindslide.html with Firefox) and enjoy.
 
-To display your own mind map simply copy them to the web directory as mm.xml (or change the <link> element in the mindslide.html file).
+To display your own mind map simply copy them to the web directory as mm.xml (or change the related 'link' element in the header of mindslide.html file).
 
 The process to install and use MindMap Slide Export is not user-friendly for now, but anyone familiar with web technologies should be able to try it out in a few minutes. If you want to help streamline this process dont hesitate to contribute!
 
@@ -49,4 +49,12 @@ The process to install and use MindMap Slide Export is not user-friendly for now
 Use the [Mindslide issue tracker](https://github.com/berteh/mindslide/issues) for your questions / suggestions.
 
 Integration within Freeplan is [being discussed on the Freeplan forum](https://sourceforge.net/apps/phpbb/freeplane/viewtopic.php?f=1&t=750&p=3712#p3708).
+
+## Screenshots
+
+The (documentation and) ![example mindmap](assets/mindmap-slide-export-demo.png "Example and documentation MindMap in Freeplane") is rendered as nice HTML slides:
+
+The ![Features slide](assets/mindslide1-features.png "mindslide for Features node (automatic)") is the view generated for the "Features" node and its children.
+
+The ![Overview mode](assets/mindslide2-overview.png "overview mode for 2D navigation in your HTML presentation") is great to change the flow of your presentation.
 

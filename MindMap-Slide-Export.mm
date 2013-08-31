@@ -1,7 +1,7 @@
 <map version="freeplane 1.2.0">
 <!--To view this file, download free mind mapping software Freeplane from http://freeplane.sourceforge.net -->
 <attribute_registry SHOW_ATTRIBUTES="selected"/>
-<node TEXT="Freeplane Slides" ID="ID_1723255651" CREATED="1283093380553" MODIFIED="1377866384029"><hook NAME="MapStyle">
+<node TEXT="MindSlide:&#xa;Mindmap as HTML presentation" ID="ID_1723255651" CREATED="1283093380553" MODIFIED="1377982888685"><hook NAME="MapStyle">
     <properties show_icon_for_attributes="true" show_note_icons="true"/>
 
 <map_styles>
@@ -169,20 +169,6 @@
 </node>
 <node TEXT="Bugs" ID="ID_191827926" CREATED="1377874134734" MODIFIED="1377874136971">
 <node TEXT="Various things we should fix, any pointer how to do so is welcome." ID="ID_957082212" CREATED="1377874299104" MODIFIED="1377874323476"/>
-<node TEXT="encode &amp;gt; &lt; in text &lt;nodes&gt;" ID="ID_1880028966" CREATED="1377873970590" MODIFIED="1377874095396"><richcontent TYPE="NOTE">
-
-<html>
-  <head>
-    
-  </head>
-  <body>
-    <p>
-      encoding &lt;: see how the last word &quot;node&quot; is missing from the slides, while it shows in the mindmap.
-    </p>
-  </body>
-</html>
-</richcontent>
-</node>
 <node ID="ID_803125215" CREATED="1377874149125" MODIFIED="1377874256380"><richcontent TYPE="NODE">
 
 <html>
@@ -197,6 +183,21 @@
 </html>
 </richcontent>
 </node>
+<node TEXT="encode &amp;gt; &lt; in text &lt;nodes&gt;" ID="ID_1880028966" CREATED="1377873970590" MODIFIED="1377874095396"><richcontent TYPE="NOTE">
+
+<html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      encoding &lt;: see how the last word &quot;node&quot; is missing from the slides, while it shows in the mindmap.
+    </p>
+  </body>
+</html>
+</richcontent>
+</node>
+<node TEXT="improve styles, fonts and general support of richtext content, as for now some elements don&apos;t show." ID="ID_636303064" CREATED="1377982838721" MODIFIED="1377982867109"/>
 </node>
 </node>
 <node TEXT="Acknowledgment" POSITION="right" ID="ID_510184946" CREATED="1377867969615" MODIFIED="1377867975741">
@@ -212,7 +213,7 @@
 <node TEXT="The process to install and use MindMap Slide Export is not user-friendly for now, but anyone familiar with web technologies should be able to try it out in a few minutes. If you want to help streamline this process dont hesitate to contribute!" ID="ID_203268772" CREATED="1377870131765" MODIFIED="1377870202711">
 <arrowlink SHAPE="CUBIC_CURVE" COLOR="#000000" WIDTH="2" TRANSPARENCY="80" FONT_SIZE="9" FONT_FAMILY="SansSerif" DESTINATION="ID_1128763901" STARTINCLINATION="615;0;" ENDINCLINATION="615;0;" STARTARROW="NONE" ENDARROW="DEFAULT"/>
 </node>
-<node TEXT="Prerequesite: a webserver and recent browser" ID="ID_499646099" CREATED="1377876584807" MODIFIED="1377876995435"><richcontent TYPE="NOTE">
+<node TEXT="Prerequesite: Freeplane (or freemind) a webserver and recent browser. Some browser will work without webserver (incl. Firefox) others won&apos;t (Chrome)." ID="ID_499646099" CREATED="1377876584807" MODIFIED="1377975721442"><richcontent TYPE="NOTE">
 
 <html>
   <head>
@@ -220,7 +221,16 @@
   </head>
   <body>
     <p>
-      webserver is needed for javascript cannot load the mindmap file otherwise. if you find a way to make javascript open a local .mm file let me know!
+      webserver is needed for Chrome browser, otherwise javascript cannot load the mindmap file.
+    </p>
+    <p>
+      Firefox does not need the webserver, IExplorer and other browsers untested.
+    </p>
+    <p>
+      
+    </p>
+    <p>
+      &#160;if you find a way to make javascript open a local .mm file in any browser let me know!
     </p>
     <p>
       
@@ -233,7 +243,6 @@
     </p>
   </body>
 </html>
-
 </richcontent>
 </node>
 <node ID="ID_45909805" CREATED="1377867332134" MODIFIED="1377879248073"><richcontent TYPE="NODE">
@@ -273,7 +282,6 @@
     </ol>
   </body>
 </html>
-
 </richcontent>
 </node>
 <node TEXT="copy your (freemind or freeplane) mindmap file (something.mm) as mm.xml file into mindslide directory" ID="ID_437559317" CREATED="1377867340943" MODIFIED="1377877569630"/>
