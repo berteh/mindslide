@@ -52,9 +52,12 @@ Integration within Freeplan is [being discussed on the Freeplan forum](https://s
 
 ## Screenshots
 
-The (documentation and) ![example mindmap](assets/mindmap-slide-export-demo.png "Example and documentation MindMap in Freeplane") is rendered as nice HTML slides:
+The (documentation and) example mindmap is rendered (below) as a nice HTML presentation: ![example mindmap](assets/mindmap-slide-export-demo.png "Example and documentation MindMap in Freeplane") 
 
-The ![Features slide](assets/mindslide1-features.png "mindslide for Features node (automatic)") is the view generated for the "Features" node and its children.
+The *Features slide* is the view generated for the "Features" node and its children:
+![Features slide](assets/mindslide1-features.png "mindslide for Features node (automatic)")
 
-The ![Overview mode](assets/mindslide2-overview.png "overview mode for 2D navigation in your HTML presentation") is great to change the flow of your presentation.
+The *Overview mode* is great to change the flow of your presentation:
+![Overview mode](assets/mindslide2-overview.png "overview mode for 2D navigation in your HTML presentation")
 
+More features in the demo of [Reveal.js](http://lab.hakim.se/reveal-js/).
