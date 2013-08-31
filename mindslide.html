@@ -14,33 +14,32 @@
 
 		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
-		<link rel="stylesheet" href="../reveal.js/css/reveal.min.css">
-		<link rel="stylesheet" href="../reveal.js/css/theme/default.css" id="theme">
+		<link rel="stylesheet" href="reveal.js/css/reveal.min.css">
+		<link rel="stylesheet" href="reveal.js/css/theme/default.css" id="theme">
 
 		<!-- For syntax highlighting -->
-		<link rel="stylesheet" href="../reveal.js/lib/css/zenburn.css">
+		<link rel="stylesheet" href="reveal.js/lib/css/zenburn.css">
 
 		<!-- mindmap file url -->
 		<link rel="mindmap-data" href="./mm.xml" type="text/xml">		
 	
 		<style>
-a.slide {margin-left: 1em; font-size: smaller}
-.illustrations img{width:200px; float:right;}
+			a.slide {margin-left: 1em; font-size: smaller}
+			.illustrations img{width:200px; float:right;}
 
-/*next 3 elements to display nodes as list, comment them if you don't like bullet lists! */
-p.item, #toc p.item:first-of-type { list-style:disc outside none;    display:list-item;    font-size: 80%;    text-align: left;}
-p.item.complex {	list-style:circle;}
-#titleSlide p.item, p.item:first-of-type { display:block; font-size: 100%; text-align: center; margin-bottom: 1ex}
-
+			/*next 3 elements to display nodes as list, comment them if you don't like bullet lists! */
+			p.item, #toc p.item:first-of-type { list-style:disc outside none;    display:list-item;    font-size: 80%;    text-align: left;}
+			p.item.complex {	list-style:circle;}
+			p.item:first-of-type, #titleSlide p.item { display:block; font-size: 100%; text-align: center; margin-bottom: 1ex}
 		</style>
 
 		<!-- If the query includes 'print-pdf', use the PDF print sheet -->
 		<script>
-			document.write( '<link rel="stylesheet" href="../reveal.js/css/print/' + ( window.location.search.match( /print-pdf/gi ) ? 'pdf' : 'paper' ) + '.css" type="text/css" media="print">' );
+			document.write( '<link rel="stylesheet" href="reveal.js/css/print/' + ( window.location.search.match( /print-pdf/gi ) ? 'pdf' : 'paper' ) + '.css" type="text/css" media="print">' );
 		</script>
 
 		<!--[if lt IE 9]>
-		<script src="lib/js/html5shiv.js"></script>
+		<script src="reveal.js/lib/js/html5shiv.js"></script>
 		<![endif]-->
 	</head>
 
@@ -74,23 +73,21 @@ p.item.complex {	list-style:circle;}
 		
 		<script>
 
-		function node2text(node){	
-		//todo add images: hook[] [URI]			
+		function node2text(node){			
 			var res = []
 			if ($(node).is('[TEXT]')) { //simple text node				
 				res.push(($(node).attr('TEXT'))); 
-			} else {
+			} else { //rich text node
 				res.push($('>richcontent[TYPE="NODE"] body',node).contents());				
 			}
 
-			if ($(node).is('[LINK]')) { //with external link
+			if ($(node).is('[LINK]')) { //node with link
 				link = ($(' <a class="link external">').attr('href',$(node).attr('LINK'))). append(res);
 				res = link; 
 			}
 
-			if ($(node).is(':has(>arrowlink[DESTINATION])')) { //with connector
-				res.push ($(' <a class="link connector"> ↝</a>').attr('href','#/'+$('>arrowlink',node).attr('DESTINATION')));
-				//res = connect; 
+			if ($(node).is(':has(>arrowlink[DESTINATION])')) { //node with outgoing connector
+				res.push ($(' <a class="link connector"> ↝</a>').attr('href','#/'+$('>arrowlink',node).attr('DESTINATION')));				
 			}		
 
 			return res;
@@ -106,13 +103,12 @@ p.item.complex {	list-style:circle;}
 		}
 
 		//node content & notes (incl. simple children's) in single slide		
-		function prependFullContent(slide,node,lvl,simple_children){						
-			//titlpython -m SimpleHTTPServere
+		function prependFullContent(slide,node,lvl,simple_children){									
 	        slide.prepend($("<h"+lvl+">")
 				.html(node2text(node))
 				.attr('id', $(node).attr('ID')));
 
-	        //images
+	        //images //todo handle "unreachable" images (? make /tmp copies of images and change url accordingly?)
 	        var illustrations = $('<div class="illustrations">');
 	        var count=0;
 	        
@@ -154,6 +150,7 @@ p.item.complex {	list-style:circle;}
 				//.attr("data-children",complex_children.length+"-"+simple_children.length)
 				//.attr("data-lvl",lvl);
 			
+			//slide content is text of this slide + notes + direct children + notes of simple children
 			prependFullContent(contentSlide,node,lvl,simple_children);
 
 			if(complex_children.length){ //sub-tree node
@@ -188,7 +185,6 @@ p.item.complex {	list-style:circle;}
 			} else { //only simple children				
 				container.append(contentSlide);	
 			}
-
 		}
 
 		
@@ -240,24 +236,9 @@ p.item.complex {	list-style:circle;}
 						{ src: 'reveal.js/plugin/notes/notes.js', async: true, condition: function() { return !!document.body.classList; } }
 					]
 				});
-
-		    })
-
-		    
-
-
-		    
-        })
- 
-		
+		    })		    
+        })	
 		</script>
-			
-
 		
-		<script>
-
-			
-
-		</script>
 	</body>
 </html>
