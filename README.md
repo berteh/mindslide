@@ -2,6 +2,8 @@
 
 View mindmap as an HTML presentation (aka Freeplane/Freemind to powerpoint slideshow).
 
+Checkout our [online demonstration & documentation](http://berteh.github.io/mindslide/)!
+
 Mindslide uses the great  [Reveal.js](http://lab.hakim.se/reveal-js/) HTML presentation framework to make stunning slideshow presentations from your [Freeplane](http://sourceforge.net/projects/freeplane) (and possibly freemind) mindmaps.
 
 ## Features
@@ -21,14 +23,17 @@ MindMap Slide Export currently supports
 
 ## Prerequesite
 
-You need a recent browser and a webserver (any server will do, on any OS).
+You need a recent browser, Firefox is recommended.
 
-Firefox works without webserver, simply open the mindslide.html file. Chrome requires the webserver. IExplorer and others untested.
+If you use Chrome be sure to check our [additional installation instructions for Chrome](http://berteh.github.io/mindslide#/ID_1976302216).
 
 
 ## Installation
 
-in a directory served by your webserver do the following:
+Either unzip the 2 archives https://github.com/berteh/mindslide/archive/master.zip in mindslide/ and https://github.com/hakimel/reveal.js/archive/master.zip in mindlide/reveal.js
+
+
+Or install from source code repository:
 
 ```
 git clone https://github.com/berteh/mindslide.git
@@ -36,13 +41,9 @@ cd mindslide (or dir mindslide in windows)
 git submodule update --init
 ```
 
-or unzip the 2 archives https://github.com/berteh/mindslide/archive/master.zip in mindslide/ and https://github.com/hakimel/reveal.js/archive/master.zip in mindlide/reveal.js
+Copy your mindmap file (something.mm) as mm.xml in mindslide directory, open mindslide.html and enjoy.
 
-Visit http://your-host/mindslide/mindslide.html (or simply open your local mindslide.html with Firefox) and enjoy.
 
-To display your own mind map simply copy them to the web directory as mm.xml (or change the related 'link' element in the header of mindslide.html file).
-
-The process to install and use MindMap Slide Export is not user-friendly for now, but anyone familiar with web technologies should be able to try it out in a few minutes. If you want to help streamline this process dont hesitate to contribute!
 
 ## Help and support
 
