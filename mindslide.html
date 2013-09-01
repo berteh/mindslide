@@ -25,7 +25,7 @@
 	
 		<style>
 			a.slide {margin-left: 1em; font-size: smaller}
-			.illustrations img{width:200px; float:right;}
+			.illustrations img{width:300px; float:right; margin: 1ex;}
 
 			/*next 3 elements to display nodes as list, comment them if you don't like bullet lists! */
 			p.item, #toc p.item:first-of-type { list-style:disc outside none;    display:list-item;    font-size: 80%;    text-align: left;}
@@ -66,7 +66,7 @@
 				<h1>THE END</h1>
 				<h3 id="author">Yours Respectfully</h3>
 				<p id="credits">
-					<small>Powered by <a href="http://freeplane.sourceforge.net/">Freeplane</a> and <a href="http://lab.hakim.se/reveal-js/#/">Reveal.js</a></small>
+					<small>Powered by <a href="http://berteh.github.io/mindslide/">Mindslide</a> for <a href="http://freeplane.sourceforge.net/">Freeplane</a>, using <a href="http://lab.hakim.se/reveal-js/#/">Reveal.js</a></small>
 				</p>
 			</section>
 
@@ -118,6 +118,14 @@
 	        var illustrations = $('<div class="illustrations">');
 	        var count=0;
 	        
+	        //text content
+	        $('>node', node).each(function(){
+	        	classes = "item lvl"+lvl+(!!($(this).is(':has(>node)'))?" complex":" simple");
+	        	slide.append($('<p class="'+classes+'">')
+	        		.html(node2text(this))
+	        		.attr('data-href',$(this).attr('ID'))); 	        	
+	        })
+
 	        $('>hook[NAME="ExternalObject"][URI]', node).each(function(){
 	        	illustrations.append(hook2img(this))
 	        	count ++;
@@ -126,16 +134,12 @@
 	        	illustrations.append(hook2img(this))
 	        	count ++;
 	        })
-	        if (count>0)
-	        	slide.append(illustrations);
+	        if (count>0) { //insert images
+	        	var p = $('>p.item:first-of-type',slide).after(illustrations);
+	        	if (p.length==0) //slide with no text content
+	        		slide.append(illustrations);
+	        }
 
-	        //text content
-	        $('>node', node).each(function(){
-	        	classes = "item lvl"+lvl+(!!($(this).is(':has(>node)'))?" complex":" simple");
-	        	slide.append($('<p class="'+classes+'">')
-	        		.html(node2text(this))
-	        		.attr('data-href',$(this).attr('ID'))); 	        	
-	        })
 
 	        //notes
 	        var notes = [];
@@ -231,7 +235,7 @@
 				    //touch: true,
 				    overview: true,
 
-					theme: Reveal.getQueryHash().theme, // available themes are in /css/theme
+					theme: Reveal.getQueryHash().theme || 'default', // available themes are in /css/theme
 					transition: Reveal.getQueryHash().transition || 'default', // default/cube/page/concave/zoom/linear/fade/none
 
 					// Optional libraries used to extend on reveal.js

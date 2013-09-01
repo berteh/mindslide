@@ -1,6 +1,10 @@
-
-
-
+/*!
+ * Mindslide - turn your mindmap into HTML presentations
+ * http://berteh.github.io/mindslide/
+ * MIT licensed
+ *
+ * Copyright (C) 2013 Berteh, https://github.com/berteh
+ */
 
 function node2text(node){	
 	var res = []
