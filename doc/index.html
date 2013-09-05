@@ -1,36 +1,35 @@
 <html lang="en">
 <head>
 <META http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
-<title>MindSlide:
-Mindmap as HTML presentation</title>
+<title>MindSlide</title>
 <meta name="description" content="Freeplane mindmap HTML presentation">
-<meta name="author" content="Bertrand.Gregoire(@tudor.lu)">
+<meta name="author" content="Yours Respectfully">
 <meta name="generator" content="Mindslide at http://berteh.github.io/mindslide/">
+<!--Mindslide version 0.2-->
 <meta name="apple-mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-<link rel="stylesheet" href="reveal.js/css/reveal.min.css">
-<link rel="stylesheet" href="reveal.js/css/theme/default.css">
+<link rel="stylesheet" href="../reveal.js/css/reveal.min.css">
+<link rel="stylesheet" id="theme" href="../reveal.js/css/theme/default.css">
 <!--For syntax highlighting-->
-<link rel="stylesheet" href="reveal.js/lib/css/zenburn.css">
+<link rel="stylesheet" href="../reveal.js/lib/css/zenburn.css">
 <style>
-           a.link {margin-left: 1em; font-size: smaller}
-           .illustrations a {float:left; margin: 1ex 5px;}
+           a.connector, a.subsection {margin-left: 1em; font-size: smaller}
+           .illustrations a {float:left; margin: 1ex 5px; max-width:100%}
            .illustrations img {max-height:8em;}
 
            /* bullet lists layout */
-           .mindslide section>ul li {font-size: 90%;}
-           .mindslide section>ul>li:first-of-type, .mindslide section.title>ul li {list-style:none; display:block; font-size: 120%; margin-bottom:1ex}
-
+           .mindslide .content>ul li {font-size: 90%;}
+           .mindslide .content>ul>li:first-of-type, .mindslide .title>ul li {list-style:none; display:block; font-size: 120%; margin-bottom:1ex}           
 
         </style>
 <!--If the query includes 'print-pdf', use the PDF print sheet. works in Chrome, maybe not other browsers-->
 <script>
-        document.write( '<link rel="stylesheet" href="reveal.js/css/print/' + ( window.location.search.match( /print-pdf/gi ) ? 'pdf' : 'paper' ) + '.css" type="text/css" media="print" />' );
+        document.write( '<link rel="stylesheet" href="../reveal.js/css/print/' + ( window.location.search.match( /print-pdf/gi ) ? 'pdf' : 'paper' ) + '.css" type="text/css" media="print" />' );
         </script>
 <!--
             [if lt IE 9]>
-            <script src="reveal.js/lib/js/html5shiv.js"></script>
+            <script src="../reveal.js/lib/js/html5shiv.js"></script>
             <![endif]
         -->
 </head>
@@ -39,13 +38,18 @@ Mindmap as HTML presentation</title>
 <!--Any section element inside of this container is displayed as a slide-->
 <div class="slides mindslide">
 <section class="title" id="ID_1723255651">
-<h1>MindSlide:
-Mindmap as HTML presentation</h1>
+<h1>MindSlide</h1>
 <ul>
-<li>View your mindmap as slideshow</li>
-<li>hit space to navigate</li>
+<li>View your Mindmap as an HTML presentation / slideshow</li>
+<li>hit &lt;space&gt; to navigate</li>
 <li>
-<a href="https://github.com/berteh/mindslide" class="link external">MindSlide source repository</a>
+<a href="https://github.com/berteh/mindslide" class="link external">
+<body>
+<p>
+<small>MindSlide source code</small>
+</p>
+</body>
+</a>
 </li>
 </ul>
 </section>
@@ -56,6 +60,9 @@ Mindmap as HTML presentation</h1>
 </li>
 <li>Features<a href="#/ID_684843493" class="link subsection"> &#8628;</a>
 </li>
+<li>
+      Not supported <a href="#/ID_523970975" class="link subsection"> &#8628;</a>
+</li>
 <li>How To<a href="#/ID_317184146" class="link subsection"> &#8628;</a>
 </li>
 <li>Acknowledgments<a href="#/ID_510184946" class="link subsection"> &#8628;</a>
@@ -65,10 +72,9 @@ Mindmap as HTML presentation</h1>
 <section class="content" id="ID_1494003336">
 <h2>What is MindSlide?</h2>
 <ul>
-<li>Mindslide is a Mindmap viewer. It turns your Freeplane / Freemind mindmaps into a stunning HTML presentation in a few seconds.
-This very presentation has been generated from our documentation mindmap.</li>
+<li>Mindslide is a Mindmap viewer. It turns your Freeplane / Freemind mindmaps into a stunning HTML presentation in a few seconds.</li>
 <li>
-<a href="https://github.com/berteh/mindslide/blob/master/MindMap-Slide-Export.mm" class="link external">Demo mindmap</a>
+<a href="https://github.com/berteh/mindslide/blob/master/doc/MindSlide-Export.mm" class="link external">Demo mindmap</a>
 </li>
 <li>
 <a href="http://berteh.github.io/mindslide/" class="link external">Demo HTML presentation</a>
@@ -81,57 +87,67 @@ This very presentation has been generated from our documentation mindmap.</li>
 <a href="assets/mindmap-slide-export-demo.png" class="image" title="Demo mindmap"><img src="assets/mindmap-slide-export-demo.png" alt="Demo mindmap"></a><a href="assets/themes.jpg" class="image" title="Demo HTML presentation"><img src="assets/themes.jpg" alt="Demo HTML presentation"></a>
 </div>
 </section>
-<!--new subsection-->
-<section>
 <section class="content" id="ID_684843493">
 <h2>Features</h2>
 <ul>
 <li>MindSlide currently supports</li>
-<li>presenter notes (from the node notes), hit "s" to get the presenter view</li>
-<li>2D slides presentation and overview mode (hit 'escape' or 'o')</li>
-<li>easy navigation (space, arrows, click)</li>
 <li>
 <body>
 <p>
-      simple <b><font size="4">&amp; rich-text </font></b>nodes, including code highlight
+<a href="https://github.com/hakimel/reveal.js#speaker-notes">speaker notes</a>&nbsp;(from the node notes) <small>hit "s"</small>
+</p>
+</body>
+</li>
+<li>
+<body>
+<p>
+      2D flow + overview mode. <small>hit "escape" or "o"&nbsp; </small>&nbsp; easy navigation <small>(space, arrows, click)</small>
+</p>
+</body>
+</li>
+<li>
+<body>
+<p>
+      simple <font face="Courier New, Courier, Nimbus Mono L, serif, monospace"><b style="font-family: Courier New, Courier, Nimbus Mono L, serif, monospace">&amp; rich-text </b></font><font color="#e1a71c"><u>nodes</u></font>, including code highlight
     </p>
 <pre>
-<code class="css">@import url('print.css'); 
-@page:right { 
+<code class="css">@page:right { 
   margin: 1cm 2cm 1.3cm 4cm; 
 }</code>
 </pre>
 </body>
 </li>
 <li>
-<a href="http://google.com" class="link external">clickable links (ctrl+K in freeplane)</a>
+<a href="http://google.com" class="link external">
+<body>
+<p>
+      links on nodes. <small>ctrl+k in Freeplane</small>
+</p>
+</body>
+</a>
 </li>
-<li>images</li>
-<li>nodes connectors<a href="#/ID_212678608" class="link connector"> &#8605;</a>
+<li>images and nodes connectors<a href="#/ID_1494003336" class="link connector"> &#8605;</a>
 </li>
 <li>
 <body>
 <p>
-      gestures and more, including <font face="Helvetica, arial, freesans, clean, sans-serif">including&nbsp;</font><a href="https://github.com/hakimel/reveal.js#markup" style="text-decoration: none; text-transform: none; letter-spacing: normal; line-height: 25px; font-size: 15px; font-weight: normal; font-style: normal; text-indent: 0px; font-variant: normal; word-spacing: 0px; text-align: start; white-space: normal; font-family: Helvetica, arial, freesans, clean, sans-serif"><font face="Helvetica, arial, freesans, clean, sans-serif" size="15px">nested slides</font></a><font face="Helvetica, arial, freesans, clean, sans-serif">,&nbsp;</font><a href="https://github.com/hakimel/reveal.js#markdown" style="text-decoration: none; text-transform: none; letter-spacing: normal; line-height: 25px; font-size: 15px; font-weight: normal; font-style: normal; text-indent: 0px; font-variant: normal; word-spacing: 0px; text-align: start; white-space: normal; font-family: Helvetica, arial, freesans, clean, sans-serif"><font face="Helvetica, arial, freesans, clean, sans-serif" size="15px">markdown contents</font></a><font face="Helvetica, arial, freesans, clean, sans-serif">,&nbsp;</font><a href="https://github.com/hakimel/reveal.js#pdf-export" style="text-decoration: none; text-transform: none; letter-spacing: normal; line-height: 25px; font-size: 15px; font-weight: normal; font-style: normal; text-indent: 0px; font-variant: normal; word-spacing: 0px; text-align: start; white-space: normal; font-family: Helvetica, arial, freesans, clean, sans-serif"><font face="Helvetica, arial, freesans, clean, sans-serif" size="15px">PDF export</font></a><font face="Helvetica, arial, freesans, clean, sans-serif">,&nbsp;</font><a href="https://github.com/hakimel/reveal.js#speaker-notes" style="text-decoration: none; text-transform: none; letter-spacing: normal; line-height: 25px; font-size: 15px; font-weight: normal; font-style: normal; text-indent: 0px; font-variant: normal; word-spacing: 0px; text-align: start; white-space: normal; font-family: Helvetica, arial, freesans, clean, sans-serif"><font face="Helvetica, arial, freesans, clean, sans-serif" size="15px">speaker notes</font></a><font face="Helvetica, arial, freesans, clean, sans-serif">&nbsp;and a&nbsp;</font><a href="https://github.com/hakimel/reveal.js#api" style="text-decoration: none; text-transform: none; letter-spacing: normal; line-height: 25px; font-size: 15px; font-weight: normal; font-style: normal; text-indent: 0px; font-variant: normal; word-spacing: 0px; text-align: start; white-space: normal; font-family: Helvetica, arial, freesans, clean, sans-serif"><font face="Helvetica, arial, freesans, clean, sans-serif" size="15px">JavaScript API</font></a>
-</p>
+<a href="https://github.com/hakimel/reveal.js#leap-motion">gestures</a>, <a href="https://github.com/hakimel/reveal.js#markdown">markdown contents</a>, <a href="https://github.com/hakimel/reveal.js#pdf-export">PDF export</a>, <a href="https://github.com/hakimel/reveal.js#api">JavaScript API</a>&nbsp;and <a href="https://github.com/hakimel/reveal.js#instructions">more</a>.
+    </p>
 </body>
 </li>
 <li>
-<a href="https://github.com/hakimel/reveal.js/wiki/Browser-Support" class="link external">decent browser support and fall-back</a>
-</li>
-<li>
-      Not supported <a href="#/ID_523970975" class="link subsection"> &#8628;</a>
-</li>
-<li>Bugs<a href="#/ID_191827926" class="link subsection"> &#8628;</a>
+<a href="https://github.com/hakimel/reveal.js/wiki/Browser-Support" class="link external">works in most recent browsers</a>
 </li>
 </ul>
 <div class="illustrations">
-<a href="assets/freeplane-logo-2012.png" class="image" title="images"><img src="assets/freeplane-logo-2012.png" alt="images"></a>
+<a href="assets/chrome_firefox_opera_safari_ie_dolphin.png" class="image" title="works in most recent browsers"><img src="assets/chrome_firefox_opera_safari_ie_dolphin.png" alt="works in most recent browsers"></a>
 </div>
 </section>
+<!--new subsection-->
+<section>
 <section class="content" id="ID_523970975">
-<h3>
-      Not supported </h3>
+<h2>
+      Not supported </h2>
 <ul>
 <li>Many elements are still not supported. We welcome any pointers how to best do it, as well as help to do so!</li>
 <li>node and edge style</li>
@@ -142,18 +158,27 @@ This very presentation has been generated from our documentation mindmap.</li>
 <li>images zoom</li>
 <li>author information</li>
 <li>summary nodes</li>
+<li>Known Bugs<a href="#/ID_191827926" class="link subsection"> &#8628;</a>
+</li>
 <li>
 <a href="https://github.com/berteh/mindslide/issues" class="link external">Put your suggestions on our "issues" list!</a>
 </li>
 </ul>
 </section>
 <section class="content" id="ID_191827926">
-<h3>Bugs</h3>
+<h3>Known Bugs</h3>
 <ul>
 <li>Various things we should fix, any pointer how to do so is welcome.</li>
-<li>encode &amp;gt; &lt; in text &lt;nodes&gt;</li>
-<li>improve styles, fonts and general support of richtext content, as for now some elements don't show.</li>
+<li>
+<body>
+<p>
+      improve styles, fonts and general support of richtext content, as for now some elements don't show or <font size="3">not nicely</font>
+</p>
+</body>
+</li>
 <li>nodes with only an image show as list item anyway.</li>
+<li>rich text is not fully shown as simple text in indexes &amp; titles<a href="#/ID_523970975" class="link connector"> &#8605;</a>
+</li>
 <li>
 <a href="https://github.com/berteh/mindslide/issues" class="link external">Report your bugs on our "issues" list!</a>
 </li>
@@ -168,34 +193,25 @@ This very presentation has been generated from our documentation mindmap.</li>
 <li>Some help and instructions</li>
 <li>Requirements<a href="#/ID_965818761" class="link subsection"> &#8628;</a>
 </li>
-<li>Install xsl export variant<a href="#/ID_1405033759" class="link subsection"> &#8628;</a>
-</li>
-<li>Install javascript variant (not recommended)<a href="#/ID_728080742" class="link subsection"> &#8628;</a>
+<li>Install MindSlide<a href="#/ID_1405033759" class="link subsection"> &#8628;</a>
 </li>
 <li>Configure<a href="#/ID_1593867677" class="link subsection"> &#8628;</a>
 </li>
 <li>Contribute / Contact<a href="#/ID_1128763901" class="link subsection"> &#8628;</a>
-</li>
-<li>Other browsers<a href="#/ID_1976302216" class="link subsection"> &#8628;</a>
 </li>
 </ul>
 </section>
 <section class="content" id="ID_965818761">
 <h3>Requirements</h3>
 <ul>
-<li>We recommend to use Firefox. Most other recent browsers are supported but have not been tested or require additional software:<a href="#/ID_1976302216" class="link connector"> &#8605;</a>
-</li>
-<li>You need a recent browser with javascript support (firefox recommended)</li>
+<li>You need a recent browser with javascript support (Chrome and Firefox recommended)</li>
 <li>
 <a href="https://github.com/hakimel/reveal.js/wiki/Browser-Support" class="link external">browsers supported by reveal.js</a>
-</li>
-<li>
-<a href="http://jquery.com/browser-support/" class="link external">browsers supported by jquery</a>
 </li>
 </ul>
 </section>
 <section class="content" id="ID_1405033759">
-<h3>Install xsl export variant</h3>
+<h3>Install MindSlide</h3>
 <ul>
 <li>To install MindSlide takes about 2 minutes:</li>
 <li>
@@ -213,140 +229,68 @@ This very presentation has been generated from our documentation mindmap.</li>
 </ol>
 </body>
 </li>
-<li>copy mindslide/mindslide.xslt into your freeplane/resources/xslt directory</li>
-<li>launch freemind and select file &gt; export &gt; HTML document (html;html5) to export your HTML presentation</li>
+<li>copy mindslide/mindslide.xsl into your freeplane/resources/xslt directory</li>
+<li>launch freemind and select file &gt; export &gt; MindeSlide Presentation (.html) to export your mindmap</li>
 <li>
 <body>
 <p>
-<b>save the export in mindslide directory</b>! (for now)
+<b>save the HTML presentation in mindslide/doc directory</b>! (for now)
     </p>
 </body>
 </li>
-</ul>
-</section>
-<section class="content" id="ID_728080742">
-<h3>Install javascript variant (not recommended)</h3>
-<ul>
-<li>To install MindSlide takes about 3 minutes, you have 2 options:</li>
-<li>
-<body>
-<p>
-      Install from the archives:
-    </p>
-<ol>
-<li>
-        dowload and unpack <a href="https://github.com/berteh/mindslide/archive/master.zip">https://github.com/berteh/mindslide/archive/master.zip</a>&nbsp;into "mindslide" directory (or pick any name you like)
-      </li>
-<li>
-        download and upack <a href="https://github.com/hakimel/reveal.js/archive/master.zip">https://github.com/hakimel/reveal.js/archive/master.zip</a>&nbsp;into mindslide/reveal.js directory
-      </li>
-</ol>
-</body>
-</li>
-<li>
-<body>
-<p>
-      Or install from source code repository:
-    </p>
-<ul>
-<li>
-        git clone git@github.com:berteh/mindslide.git
-      </li>
-<li>
-        dir mindslide&nbsp;&nbsp;&nbsp;("cd mindslide" in linux/ubuntu/mac)
-      </li>
-<li>
-        git submodule update --init
-      </li>
-</ul>
-</body>
-</li>
-<li>copy your (freemind or freeplane) mindmap file (something.mm) as mm.xml file into mindslide directory</li>
-<li>copy its related images (if any) in their respective directory accessible from your webserver</li>
-<li>browse to mindslide.html page and enjoy.</li>
 </ul>
 </section>
 <section class="content" id="ID_1593867677">
 <h3>Configure</h3>
 <ul>
 <li>Many options are available</li>
-<li>edit directly the mindslide.xsl / .html file from your prefered theme, transition, extra behaviour or functionality.</li>
+<li>edit directly the mindslide.xsl (or the exported .html presentation file) for your prefered theme, transition, extra behaviour or functionality.</li>
 <li>
 <a href="https://github.com/hakimel/reveal.js#configuration" class="link external">see reveal.js configuration</a>
 </li>
 </ul>
 <div class="illustrations">
-<a href="assets/themes.jpg" class="image" title="edit directly the mindslide.xsl / .html file from your prefered theme, transition, extra behaviour or functionality."><img src="assets/themes.jpg" alt="edit directly the mindslide.xsl / .html file from your prefered theme, transition, extra behaviour or functionality."></a>
+<a href="assets/themes.jpg" class="image" title="edit directly the mindslide.xsl (or the exported .html presentation file) for your prefered theme, transition, extra behaviour or functionality."><img src="assets/themes.jpg" alt="edit directly the mindslide.xsl (or the exported .html presentation file) for your prefered theme, transition, extra behaviour or functionality."></a>
 </div>
 </section>
 <section class="content" id="ID_1128763901">
 <h3>Contribute / Contact</h3>
 <ul>
-<li>contributions are welcome in all kinds:</li>
+<li>Contributions are welcome in all kinds:</li>
 <li>
 <a href="https://github.com/berteh/mindslide" class="link external">Improve the code of MindSlide</a>
 </li>
 <li>
 <a href="https://github.com/berteh/mindslide/issues" class="link external">Share your ideas</a>
 </li>
-<li>Spread the word about MindSlide, and Freeplane, and Reveal.js</li>
-</ul>
-</section>
-<section class="content" id="ID_1976302216">
-<h3>Other browsers</h3>
-<ul>
-<li>MindSlide works works out-of-the box in Firefox. Other browsers will be added to this list when reported to work.</li>
-<li>
-<body>
-<p>
-<b>Chrome </b>is not able to load the data of your mindmap from a local file, you therefore need to run a webserver (any will do) and put mindslide in a web directory.
-    </p>
-</body>
-</li>
-<li>
-<body>
-<p>
-      if you have no webserver we recommend <b>Mongoose:</b>&nbsp;download it in your mindslide directory, execute and browse to http://localhost:8080/mindslide.html with your favorite browser.
-    </p>
-</body>
-</li>
-<li>
-<a href="http://code.google.com/p/mongoose/" class="link external">mongoose (easy web server)</a>
-</li>
-<li>
-<a href="http://localhost:8080/mindslide.html" class="link external">http://localhost:8080/mindslide.html</a>
-</li>
+<li>Spread the word about MindSlide, Freeplane, and Reveal.js</li>
 </ul>
 </section>
 </section>
 <section class="content" id="ID_510184946">
 <h2>Acknowledgments</h2>
 <ul>
-<li>This viewer tool relies on the fantastic reveal.js HTML presentation framework, the jQuery Javascript library, and Freeplane... to map your thoughts.</li>
 <li>
-<a href="http://lab.hakim.se/reveal-js/" class="link external">reveal.js</a>
-</li>
-<li>
-<a href="http://jquery.com/" class="link external">jQuery</a>
-</li>
-<li>
-<a href="http://freeplane.sourceforge.net" class="link external">download Freeplane, open-source mindmap editor</a>
+<body>
+<p>
+      This export tool relies on the fantastic <a href="http://lab.hakim.se/reveal-js/">reveal.js</a>&nbsp;HTML presentation framework, and <a href="http://freeplane.sourceforge.net">Freeplane</a>... to map your thoughts.
+    </p>
+</body>
 </li>
 </ul>
 </section>
 <section id="end">
 <h1>The End</h1>
 <h3 class="thanks">Thank You!</h3>
-<p id="author">Bertrand.Gregoire(@tudor.lu)</p>
+<p id="author">Yours Respectfully</p>
 <p id="credits">
 <small>Powered by <a href="http://berteh.github.io/mindslide/">Mindslide</a> for <a href="http://freeplane.sourceforge.net/">Freeplane</a>, using <a href="http://lab.hakim.se/reveal-js/#/">Reveal.js</a></small>
 </p>
 </section>
 </div>
 </div>
-<footer class="info">MindSlide:
-Mindmap as HTML presentation | <a href="http://berteh.github.io/mindslide/">Mindslide</a> v 0.1 |  <a href="http://freeplane.sourceforge.net/">Freeplane</a> map vfreeplane 1.2.0</footer>
-<script src="reveal.js/lib/js/head.min.js"></script><script src="reveal.js/js/reveal.min.js"></script><script>
+<footer class="info">MindSlide | <a href="http://berteh.github.io/mindslide/">Mindslide</a> v 0.2 |  <a href="http://freeplane.sourceforge.net/">Freeplane</a> map vfreeplane 1.2.0</footer>
+<script src="../reveal.js/lib/js/head.min.js"></script><script src="../reveal.js/js/reveal.min.js"></script><script>
             //run reveal.js
             // Full list of configuration options available here:
             // https://github.com/hakimel/reveal.js#configuration
@@ -364,10 +308,10 @@ Mindmap as HTML presentation | <a href="http://berteh.github.io/mindslide/">Mind
 
             // Optional libraries used to extend on reveal.js
             dependencies: [
-            { src: 'reveal.js/lib/js/classList.js', condition: function() { return !document.body.classList; } },
-            { src: 'reveal.js/plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
-            { src: 'reveal.js/plugin/zoom-js/zoom.js', async: true, condition: function() { return !!document.body.classList; } },
-            { src: 'reveal.js/plugin/notes/notes.js', async: true, condition: function() { return !!document.body.classList; } }
+            { src: '../reveal.js/lib/js/classList.js', condition: function() { return !document.body.classList; } },
+            { src: '../reveal.js/plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+            { src: '../reveal.js/plugin/zoom-js/zoom.js', async: true, condition: function() { return !!document.body.classList; } },
+            { src: '../reveal.js/plugin/notes/notes.js', async: true, condition: function() { return !!document.body.classList; } }
             ]
             });
         </script>

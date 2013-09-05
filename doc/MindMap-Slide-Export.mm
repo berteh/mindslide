@@ -1,7 +1,7 @@
 <map version="freeplane 1.2.0">
 <!--To view this file, download free mind mapping software Freeplane from http://freeplane.sourceforge.net -->
 <attribute_registry SHOW_ATTRIBUTES="selected"/>
-<node TEXT="MindSlide:&#xa;Mindmap as HTML presentation" ID="ID_1723255651" CREATED="1283093380553" MODIFIED="1377991563195"><hook NAME="MapStyle">
+<node TEXT="MindSlide" ID="ID_1723255651" CREATED="1283093380553" MODIFIED="1378377043488"><hook NAME="MapStyle" zoom="1.1">
     <properties show_icon_for_attributes="true" show_note_icons="true"/>
 
 <map_styles>
@@ -51,15 +51,15 @@
 </stylenode>
 </map_styles>
 </hook>
-<hook NAME="AutomaticEdgeColor" COUNTER="1"/>
+<hook NAME="AutomaticEdgeColor" COUNTER="5"/>
 <attribute NAME="version" VALUE="20130901" OBJECT="org.freeplane.features.format.FormattedNumber|20130901"/>
 <attribute NAME="Author" VALUE="Berteh"/>
-<node TEXT="View your mindmap as slideshow" POSITION="right" ID="ID_212678608" CREATED="1377866384042" MODIFIED="1377866414836">
+<node TEXT="View your Mindmap as an HTML presentation / slideshow" POSITION="right" ID="ID_212678608" CREATED="1377866384042" MODIFIED="1378374500407">
 <edge COLOR="#ff0000"/>
 </node>
-<node TEXT="hit space to navigate" POSITION="right" ID="ID_1655550133" CREATED="1377869126231" MODIFIED="1378371167694">
+<node TEXT="hit &lt;space&gt; to navigate" POSITION="right" ID="ID_1655550133" CREATED="1377869126231" MODIFIED="1378375996985">
 <edge COLOR="#ffff00"/>
-<font BOLD="true"/>
+<font BOLD="false"/>
 </node>
 <node POSITION="right" ID="ID_1180737403" CREATED="1377988602258" MODIFIED="1378371590287" LINK="https://github.com/berteh/mindslide"><richcontent TYPE="NODE">
 
@@ -73,14 +73,13 @@
     </p>
   </body>
 </html>
-
 </richcontent>
 <edge COLOR="#7c7c00"/>
 </node>
 <node TEXT="What is MindSlide?" POSITION="right" ID="ID_1494003336" CREATED="1377988920149" MODIFIED="1377988928576">
 <edge COLOR="#7c007c"/>
 <node TEXT="Mindslide is a Mindmap viewer. It turns your Freeplane / Freemind mindmaps into a stunning HTML presentation in a few seconds." ID="ID_1710792688" CREATED="1377988930783" MODIFIED="1378370787871"/>
-<node TEXT="Demo mindmap" ID="ID_153158510" CREATED="1377989004269" MODIFIED="1378221726629" LINK="https://github.com/berteh/mindslide/blob/master/MindMap-Slide-Export.mm">
+<node TEXT="Demo mindmap" ID="ID_153158510" CREATED="1377989004269" MODIFIED="1378377022272" LINK="https://github.com/berteh/mindslide/blob/master/doc/MindSlide-Export.mm">
 <hook URI="assets/mindmap-slide-export-demo.png" SIZE="0.044968728" NAME="ExternalObject"/>
 </node>
 <node TEXT="Demo HTML presentation" ID="ID_278725996" CREATED="1377988580544" MODIFIED="1378221776134" LINK="http://berteh.github.io/mindslide/">
@@ -88,7 +87,7 @@
 </node>
 <node TEXT="Freeplane software" ID="ID_905963232" CREATED="1377989067286" MODIFIED="1377991994588" LINK="http://freeplane.sourceforge.net"/>
 </node>
-<node TEXT="Features" POSITION="right" ID="ID_684843493" CREATED="1377866415613" MODIFIED="1377866934176">
+<node TEXT="Features" POSITION="right" ID="ID_684843493" CREATED="1377866415613" MODIFIED="1378374819775">
 <edge COLOR="#0000ff"/>
 <richcontent TYPE="NOTE">
 
@@ -104,7 +103,7 @@
 </html>
 </richcontent>
 <node TEXT="MindSlide currently supports" ID="ID_825683797" CREATED="1377866419355" MODIFIED="1377989164919"/>
-<node ID="ID_1792241167" CREATED="1377866789605" MODIFIED="1378370845784"><richcontent TYPE="NODE">
+<node ID="ID_1792241167" CREATED="1377866789605" MODIFIED="1378377194410"><richcontent TYPE="NODE">
 
 <html>
   <head>
@@ -112,11 +111,10 @@
   </head>
   <body>
     <p>
-      presenter notes (from the node notes), <small>hit &quot;s&quot; to get the presenter view</small>
+      <a href="https://github.com/hakimel/reveal.js#speaker-notes">speaker notes</a>&#160;(from the node notes) <small>hit &quot;s&quot;</small>
     </p>
   </body>
 </html>
-
 </richcontent>
 <richcontent TYPE="NOTE">
 
@@ -137,7 +135,7 @@
 </html>
 </richcontent>
 </node>
-<node ID="ID_1149617363" CREATED="1377869822244" MODIFIED="1378370881820"><richcontent TYPE="NODE">
+<node ID="ID_1149617363" CREATED="1377869822244" MODIFIED="1378377198254"><richcontent TYPE="NODE">
 
 <html>
   <head>
@@ -145,15 +143,13 @@
   </head>
   <body>
     <p>
-      2D slides presentation and overview mode. <small>hit &quot;escape&quot; or &quot;o&quot;</small>
+      2D flow + overview mode. <small>hit &quot;escape&quot; or &quot;o&quot;&#160; </small>&#160; easy navigation <small>(space, arrows, click)</small>
     </p>
   </body>
 </html>
-
 </richcontent>
 </node>
-<node TEXT="easy navigation (space, arrows, click)" ID="ID_1077356933" CREATED="1377867110013" MODIFIED="1377992140071"/>
-<node ID="ID_765812044" CREATED="1377866554077" MODIFIED="1378370732111"><richcontent TYPE="NODE">
+<node ID="ID_765812044" CREATED="1377866554077" MODIFIED="1378374696422"><richcontent TYPE="NODE">
 
 <html>
   <head>
@@ -161,18 +157,16 @@
   </head>
   <body>
     <p>
-      simple <b>&amp; rich-text </b><u><font color="#e1a71c">nodes</font></u>, including code highlight
+      simple <font face="Courier New, Courier, Nimbus Mono L, serif, monospace"><b style="font-family: Courier New, Courier, Nimbus Mono L, serif, monospace">&amp; rich-text </b></font><font color="#e1a71c"><u>nodes</u></font>, including code highlight
     </p>
-    <pre><code class="css">@import url('print.css'); 
-@page:right { 
+    <pre><code class="css">@page:right { 
   margin: 1cm 2cm 1.3cm 4cm; 
 }</code></pre>
   </body>
 </html>
-
 </richcontent>
 </node>
-<node ID="ID_594361534" CREATED="1377866613085" MODIFIED="1378370911594" LINK="http://google.com"><richcontent TYPE="NODE">
+<node ID="ID_594361534" CREATED="1377866613085" MODIFIED="1378377504510" LINK="https://github.com/berteh/mindslide"><richcontent TYPE="NODE">
 
 <html>
   <head>
@@ -180,14 +174,13 @@
   </head>
   <body>
     <p>
-      clickable links. <small>ctrl+k in freeplane</small>
+      links on nodes. <small>ctrl+k in Freeplane</small>
     </p>
   </body>
 </html>
-
 </richcontent>
 </node>
-<node TEXT="images" ID="ID_906971272" CREATED="1377866777469" MODIFIED="1378221881476"><richcontent TYPE="NOTE">
+<node TEXT="images and nodes connectors" ID="ID_906971272" CREATED="1377866777469" MODIFIED="1378377206959"><richcontent TYPE="NOTE">
 
 <html>
   <head>
@@ -203,12 +196,9 @@
   </body>
 </html>
 </richcontent>
-<hook URI="assets/freeplane-logo-2012.png" SIZE="0.2074074" NAME="ExternalObject"/>
+<arrowlink SHAPE="CUBIC_CURVE" COLOR="#000000" WIDTH="2" TRANSPARENCY="80" FONT_SIZE="9" FONT_FAMILY="SansSerif" DESTINATION="ID_1494003336" STARTINCLINATION="305;0;" ENDINCLINATION="590;0;" STARTARROW="NONE" ENDARROW="DEFAULT"/>
 </node>
-<node TEXT="nodes connectors" ID="ID_1507705772" CREATED="1377870785269" MODIFIED="1377991769191">
-<arrowlink SHAPE="CUBIC_CURVE" COLOR="#000000" WIDTH="2" TRANSPARENCY="80" FONT_SIZE="9" FONT_FAMILY="SansSerif" DESTINATION="ID_212678608" STARTINCLINATION="470;0;" ENDINCLINATION="470;0;" STARTARROW="NONE" ENDARROW="DEFAULT"/>
-</node>
-<node ID="ID_236559184" CREATED="1377867137693" MODIFIED="1378370660143"><richcontent TYPE="NODE">
+<node ID="ID_236559184" CREATED="1377867137693" MODIFIED="1378377202958"><richcontent TYPE="NODE">
 
 <html>
   <head>
@@ -216,15 +206,17 @@
   </head>
   <body>
     <p>
-      <a href="https://github.com/hakimel/reveal.js#leap-motion">gestures</a>, <a>nested slides</a>, <a href="https://github.com/hakimel/reveal.js#markdown">markdown contents</a>, <a href="https://github.com/hakimel/reveal.js#pdf-export">PDF export</a>, <a href="https://github.com/hakimel/reveal.js#speaker-notes">speaker notes</a>, <a href="https://github.com/hakimel/reveal.js#api">JavaScript API</a>&#160;and <a href="https://github.com/hakimel/reveal.js#instructions">more</a>.
+      <a href="https://github.com/hakimel/reveal.js#leap-motion">gestures</a>, <a href="https://github.com/hakimel/reveal.js#markdown">markdown contents</a>, <a href="https://github.com/hakimel/reveal.js#pdf-export">PDF export</a>, <a href="https://github.com/hakimel/reveal.js#api">JavaScript API</a>&#160;and <a href="https://github.com/hakimel/reveal.js#instructions">more</a>.
     </p>
   </body>
 </html>
-
 </richcontent>
 </node>
-<node TEXT="Works in most recent browsers" ID="ID_1942350131" CREATED="1377867277349" MODIFIED="1378371266041" LINK="https://github.com/hakimel/reveal.js/wiki/Browser-Support"/>
-<node ID="ID_523970975" CREATED="1377866449059" MODIFIED="1378170464474"><richcontent TYPE="NODE">
+<node TEXT="works in most recent browsers" ID="ID_1942350131" CREATED="1377867277349" MODIFIED="1378375703778" LINK="https://github.com/hakimel/reveal.js/wiki/Browser-Support">
+<hook URI="assets/chrome_firefox_opera_safari_ie_dolphin.png" SIZE="0.10520631" NAME="ExternalObject"/>
+</node>
+</node>
+<node POSITION="right" ID="ID_523970975" CREATED="1377866449059" MODIFIED="1378377167737" VSHIFT="9"><richcontent TYPE="NODE">
 
 <html>
   <head>
@@ -237,9 +229,11 @@
   </body>
 </html>
 </richcontent>
+<edge COLOR="#ff00ff"/>
 <node TEXT="Many elements are still not supported. We welcome any pointers how to best do it, as well as help to do so!" ID="ID_1524934682" CREATED="1377866451993" MODIFIED="1377992190353"/>
-<node TEXT="node and edge style" LOCALIZED_STYLE_REF="styles.subtopic" ID="ID_619242118" CREATED="1377866664573" MODIFIED="1377867897584">
+<node TEXT="node and edge style" LOCALIZED_STYLE_REF="styles.subtopic" ID="ID_619242118" CREATED="1377866664573" MODIFIED="1378374512953">
 <edge STYLE="linear" COLOR="#9f07a1"/>
+<font BOLD="true"/>
 </node>
 <node TEXT="node icons" ID="ID_61820982" CREATED="1377867678861" MODIFIED="1377867687023">
 <icon BUILTIN="idea"/>
@@ -259,9 +253,7 @@
 <node TEXT="summary nodes" ID="ID_1118203039" CREATED="1377991675973" MODIFIED="1377991681156">
 <hook NAME="SummaryNode"/>
 </node>
-<node TEXT="Put your suggestions on our &quot;issues&quot; list!" ID="ID_1954577764" CREATED="1377867391933" MODIFIED="1377992226508" LINK="https://github.com/berteh/mindslide/issues"/>
-</node>
-<node TEXT="Bugs" ID="ID_191827926" CREATED="1377874134734" MODIFIED="1377874136971">
+<node TEXT="Known Bugs" ID="ID_191827926" CREATED="1377874134734" MODIFIED="1378376093551">
 <node TEXT="Various things we should fix, any pointer how to do so is welcome." ID="ID_957082212" CREATED="1377874299104" MODIFIED="1377874323476"/>
 <node ID="ID_636303064" CREATED="1377982838721" MODIFIED="1378371232525"><richcontent TYPE="NODE">
 
@@ -275,7 +267,6 @@
     </p>
   </body>
 </html>
-
 </richcontent>
 <richcontent TYPE="NOTE">
 
@@ -289,12 +280,15 @@
     </p>
   </body>
 </html>
-
 </richcontent>
 </node>
 <node TEXT="nodes with only an image show as list item anyway." ID="ID_239280693" CREATED="1377994551775" MODIFIED="1377994572041"/>
+<node TEXT="rich text is not fully shown as simple text in indexes &amp; titles" ID="ID_1533222341" CREATED="1378377106810" MODIFIED="1378377548221">
+<arrowlink SHAPE="CUBIC_CURVE" COLOR="#000000" WIDTH="2" TRANSPARENCY="80" FONT_SIZE="9" FONT_FAMILY="SansSerif" DESTINATION="ID_523970975" STARTINCLINATION="545;0;" ENDINCLINATION="545;0;" STARTARROW="NONE" ENDARROW="DEFAULT"/>
+</node>
 <node TEXT="Report your bugs on our &quot;issues&quot; list!" ID="ID_551533464" CREATED="1377867391933" MODIFIED="1377992240334" LINK="https://github.com/berteh/mindslide/issues"/>
 </node>
+<node TEXT="Put your suggestions on our &quot;issues&quot; list!" ID="ID_1954577764" CREATED="1377867391933" MODIFIED="1377992226508" LINK="https://github.com/berteh/mindslide/issues"/>
 </node>
 <node TEXT="How To" POSITION="right" ID="ID_317184146" CREATED="1377867324171" MODIFIED="1377867326420">
 <edge COLOR="#ff00ff"/>
@@ -328,8 +322,8 @@
 </richcontent>
 </node>
 <node TEXT="copy mindslide/mindslide.xsl into your freeplane/resources/xslt directory" ID="ID_1487207699" CREATED="1378221411490" MODIFIED="1378371315022"/>
-<node TEXT="launch freemind and select file &gt; export &gt; HTML document (html;html5) to export your HTML presentation" ID="ID_916240691" CREATED="1378221446025" MODIFIED="1378221476026"/>
-<node ID="ID_765546127" CREATED="1378221476933" MODIFIED="1378371331245"><richcontent TYPE="NODE">
+<node TEXT="launch freemind and select file &gt; export &gt; MindeSlide Presentation (.html) to export your mindmap" ID="ID_916240691" CREATED="1378221446025" MODIFIED="1378376960147"/>
+<node ID="ID_765546127" CREATED="1378221476933" MODIFIED="1378376968625"><richcontent TYPE="NODE">
 
 <html>
   <head>
@@ -337,27 +331,39 @@
   </head>
   <body>
     <p>
-      <b>save the HTML presentation in mindslide directory</b>! (for now)
+      <b>save the HTML presentation in mindslide/doc directory</b>! (for now)
     </p>
   </body>
 </html>
-
 </richcontent>
 <font BOLD="false"/>
 </node>
 </node>
 <node TEXT="Configure" ID="ID_1593867677" CREATED="1377867328934" MODIFIED="1377867331019">
 <node TEXT="Many options are available" ID="ID_62454801" CREATED="1377867358677" MODIFIED="1377993859049"/>
-<node TEXT="edit directly the mindslide.xsl (or the exported .html presentation file) for your prefered theme, transition, extra behaviour or functionality." ID="ID_1538743762" CREATED="1377993859657" MODIFIED="1378370277753">
+<node TEXT="edit directly the mindslide.xsl (or the exported .html presentation file) for your prefered theme, transition, extra behaviour or functionality." ID="ID_1538743762" CREATED="1377993859657" MODIFIED="1378374846221">
 <hook URI="assets/themes.jpg" SIZE="0.48640913" NAME="ExternalObject"/>
+<richcontent TYPE="NOTE">
+
+<html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      &#160;
+    </p>
+  </body>
+</html>
+</richcontent>
 </node>
 <node TEXT="see reveal.js configuration" ID="ID_1201663334" CREATED="1377993908853" MODIFIED="1377993985014" LINK="https://github.com/hakimel/reveal.js#configuration"/>
 </node>
 <node TEXT="Contribute / Contact" ID="ID_1128763901" CREATED="1377867379405" MODIFIED="1377991801097">
-<node TEXT="contributions are welcome in all kinds:" ID="ID_756109089" CREATED="1377867407739" MODIFIED="1377991500751"/>
+<node TEXT="Contributions are welcome in all kinds:" ID="ID_756109089" CREATED="1377867407739" MODIFIED="1378374264424"/>
 <node TEXT="Improve the code of MindSlide" ID="ID_697225143" CREATED="1377988602258" MODIFIED="1377991136004" LINK="https://github.com/berteh/mindslide"/>
 <node TEXT="Share your ideas" ID="ID_1278307251" CREATED="1377867391933" MODIFIED="1377991159466" LINK="https://github.com/berteh/mindslide/issues"/>
-<node TEXT="Spread the word about MindSlide, and Freeplane, and Reveal.js" ID="ID_191461379" CREATED="1377867415556" MODIFIED="1377991493084"/>
+<node TEXT="Spread the word about MindSlide, Freeplane, and Reveal.js" ID="ID_191461379" CREATED="1377867415556" MODIFIED="1378374276151"/>
 </node>
 </node>
 <node TEXT="Acknowledgments" POSITION="right" ID="ID_510184946" CREATED="1377867969615" MODIFIED="1377991786445">
@@ -374,7 +380,6 @@
     </p>
   </body>
 </html>
-
 </richcontent>
 </node>
 </node>
