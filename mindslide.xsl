@@ -24,7 +24,7 @@
     <xsl:param name="subsectionLvl" select="2" /><!--nodes from this lvl are "heads" of a subsection, default is 2 (root's children), set to 0 if you want only linear flow (no 2D) -->
     <xsl:param name="revealDir" select="'reveal.js/'" /> <!-- path to reveal, must finish with a '/'.  must be absolute or relative to export save location. default is '<your freemind path>/resources/reveal.js/' --> 
     <xsl:param name="mapDir" select="'.'" /> <!-- path to map, to set html <base> from, hoping to improve portability of export. must be absolute or relative to export location. defaults is '.' -->
-    <xsl:param name="theme" select="'default'" /> <!-- moreover at https://github.com/hakimel/reveal.js#theming -->
+    <xsl:param name="theme" select="'default'" /> <!-- one of 'default', 'beige', 'sky', 'night', 'serif', 'simple'. Moreover at https://github.com/hakimel/reveal.js#theming -->
     
     <!-- User texts & i18n parameters -->    
     <xsl:param name="author" select="'Yours Respectfully'"/> <!-- author name (can be rich html)-->
@@ -57,15 +57,23 @@
         <link rel="stylesheet"><xsl:attribute name="href"><xsl:value-of select="concat($revealDir,'lib/css/zenburn.css')" /></xsl:attribute></link>
 
         <style>
-           a.connector, a.subsection {margin-left: 1ex; font-size: smaller}
-           .illustrations a {float:left; margin: 1ex 5px; max-width:100%}
-           .illustrations img {max-height:8em;}
+            a.connector, a.subsection {margin-left: 1ex; font-size: smaller}
+            .illustrations a {float:left; margin: 1ex 5px; max-width:100%}
+            .illustrations img {max-height:8em;}
+            .illustrations.w1 a {max-width:98%} 
+            .illustrations.w2 a {max-width:47%} 
+            .illustrations.w3 a, .illustrations.w6 a  {max-width:31%} 
+            .illustrations.w4 a, .illustrations.w7 a, .illustrations.w8 a {max-width:23%} 
+            .illustrations.w5 a, .illustrations.w9 a, .illustrations.w10 a {max-width:18%} 
 
-           /* bullet lists layout */
-           .mindslide .content>ul li {font-size: 90%;}
-           .mindslide .content>ul>li:first-of-type, .mindslide .title>ul li {list-style:none; display:block; font-size: 120%; margin-bottom:1ex}           
+            /* bullet lists layout */
+            .mindslide section.content>ul li {font-size: 90%;}
+            .mindslide section.content>ul>li:first-of-type, .mindslide section.title>ul li {list-style:none; display:block; font-size: 120%; margin-bottom:1ex}   
 
+            /*zenburn hack for inline code highlight*/
+            pre.inline, .inline code {display:inline; width:auto;}  
         </style>
+
         <xsl:comment>If the query includes 'print-pdf', use the PDF print sheet. works in Chrome, maybe not other browsers</xsl:comment>
         <script>
         document.write( '&lt;link rel="stylesheet" href="<xsl:value-of select="$revealDir"/>css/print/' + ( window.location.search.match( /print-pdf/gi ) ? 'pdf' : 'paper' ) + '.css" type="text/css" media="print" />' );
@@ -116,9 +124,13 @@
             //keyboard: true,
             //touch: true,
             overview: true,
+            center: true,
+            mouseWheel: true,
+            autoSlide: 0,
+            rtl: false,
 
             theme: Reveal.getQueryHash().theme, // available themes are in /css/theme
-            transition: Reveal.getQueryHash().transition || 'default', // default/cube/page/concave/zoom/linear/fade/none
+            transition: Reveal.getQueryHash().transition || 'concave', // default/cube/page/concave/zoom/linear/fade/none
 
             // Optional libraries used to extend on reveal.js
             dependencies: [
@@ -135,7 +147,7 @@
 
 <xsl:template match="node" mode="structure">
     <xsl:param name="level" tunnel="yes"/>  <!-- check if tunnel is supported in Freeplane -->
-    <xsl:choose>
+    <xsl:choose><!-- choose for starting or not new subsection -->
     <xsl:when test="($level = $subsectionLvl) and (node[node])"><!--complex children in new subsection-->
         <xsl:comment>new subsection</xsl:comment>
         <section>
@@ -153,7 +165,7 @@
 </xsl:template>
 
 <xsl:template match="node" mode="slide">
-    <xsl:param name="level" tunnel="yes"/>     
+    <xsl:param name="level" tunnel="yes"/>   
 
     <xsl:choose> <!--choose for layout -->
         <xsl:when test="($level &lt;= $titleMaxLvl) and (node[node])"><!--title layout-->
@@ -196,37 +208,31 @@
 </xsl:template>
 
 
-<xsl:template match="node" mode="indexEntry"><!--complex node as plain text link 'li, simple node as richtext 'li-->
+<xsl:template match="node[node]" mode="indexEntry"><!--complex node as plain text link 'li -->
     <li>
-        <xsl:choose>
-            <xsl:when test="node">
-                <xsl:apply-templates select="." mode="simpleText" />
-                <a>
-                   <xsl:attribute name="href"><xsl:value-of select="concat('#/',@ID)" /></xsl:attribute>
-                   <xsl:attribute name="class"><xsl:value-of select="'link subsection'" /></xsl:attribute>
-                   <xsl:text> ↴</xsl:text>
-                </a>
-            </xsl:when>
-            <xsl:otherwise>
-                <xsl:apply-templates select="." mode="richText"/>
-            </xsl:otherwise>
-        </xsl:choose>
+        <xsl:apply-templates select="." mode="simpleText" />
+        <a>
+           <xsl:attribute name="href"><xsl:value-of select="concat('#/',@ID)" /></xsl:attribute>
+           <xsl:attribute name="class"><xsl:value-of select="'link subsection'" /></xsl:attribute>
+           <xsl:text> ↴</xsl:text>
+        </a>           
     </li>
 </xsl:template>
+<xsl:template match="node[not(node)]" mode="indexEntry"><!--simple node as richtext 'li-->
+    <li><xsl:apply-templates select="." mode="richText"/></li>
+</xsl:template>
 
-<xsl:template match="node" mode="richText"><!--richest possible node content, handle link on node-->
-    <xsl:choose>
-        <xsl:when test="@LINK">
-            <a>
-               <xsl:attribute name="href"><xsl:value-of select="@LINK" /></xsl:attribute>
-               <xsl:attribute name="class"><xsl:value-of select="'link external'" /></xsl:attribute>
-               <xsl:text><xsl:apply-templates select="." mode="richContent"/></xsl:text>
-            </a>            
-        </xsl:when>
-        <xsl:otherwise>
-            <xsl:apply-templates select="." mode="richContent"/>
-        </xsl:otherwise>
-    </xsl:choose>
+<!--richest possible node content, opt. with link on node-->
+<xsl:template match="node[@LINK]" mode="richText">
+    <a>
+       <xsl:attribute name="href"><xsl:value-of select="@LINK" /></xsl:attribute>
+       <xsl:attribute name="class"><xsl:value-of select="'link external'" /></xsl:attribute>
+       <xsl:text><xsl:apply-templates select="." mode="richContent"/></xsl:text>
+    </a>            
+       
+</xsl:template>
+<xsl:template match="node[not(@LINK)]" mode="richText">
+    <xsl:apply-templates select="." mode="richContent"/>
 </xsl:template>
 
 <xsl:template match="node" mode="richContent"><!--richest possible node content, handle all but for links (->mode link) and images, gathered at the slide lvl (~for layout ease ~gallery)-->
@@ -241,14 +247,20 @@
 </xsl:template>
 
 
-<xsl:template name="imagesAndNotes" mode="hook">
+<xsl:template name="imagesAndNotes">
     <xsl:if test="(hook | node[not(node)]/hook)[@NAME='ExternalObject']"><!-- images of current node and simple children-->
-        <div class="illustrations">
-            <xsl:apply-templates select="hook" /><!-- hook mode is use to cancel current mode-->
-            <xsl:apply-templates select="node[not(node)]/hook"  mode="hook"/>
+        <div>
+            <xsl:attribute name="class">illustrations w<xsl:value-of select="count(descendant::hook[@NAME='ExternalObject'])" /></xsl:attribute>
+            <xsl:apply-templates select="hook" mode="hook" /><!-- hook mode is use to cancel current mode-->
+            <xsl:apply-templates select="node[not(node)]/hook" mode="hook"/>
         </div>
     </xsl:if>
-    <!-- add notes of current slide and simple children-->   
+    <xsl:if test="(richcontent | node[not(node)]/richcontent)[@TYPE='NOTE']"><!-- notes of current node and simple children-->
+        <aside class="notes">            
+            <xsl:copy-of select="richcontent[@TYPE='NOTE']" />
+            <xsl:copy-of select="node[not(node)]/richcontent[@TYPE='NOTE']" />
+        </aside>
+    </xsl:if>    
 </xsl:template>
 
 <xsl:template match="arrowlink">
