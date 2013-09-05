@@ -18,23 +18,22 @@
     <xsl:output method="html" indent="yes" encoding="ISO-8859-1" />
     <xsl:strip-space elements="*" />
 
-    <!--potential parameters -->
-    <xsl:variable name="titleMaxLvl" select="1" /><!--nodes down to this lvl are viewed as title slides, default is 1 (root node) -->
-    <xsl:variable name="subsectionLvl" select="2" /><!--nodes from this lvl are "heads" of a subsection, default is 2 (root's children), set to 0 if you want only linear flow (no 2D) -->
-    <xsl:variable name="revealDir" select="'../reveal.js/'" /> <!-- path to reveal, must finish with a '/'.  must be absolute or relative to export save location. default is 'reveal.js/' --> 
-    <xsl:variable name="mapDir" select="'.'" /> <!-- path to map, to set html <base> from, hoping to improve portability of export. must be absolute or relative to export location. defaults is '.' -->
+    <!-- configuration parameters -->
+    <xsl:param name="titleMaxLvl" select="1" /><!--nodes down to this lvl are viewed as title slides, default is 1 (root node) -->
+    <xsl:param name="subsectionLvl" select="2" /><!--nodes from this lvl are "heads" of a subsection, default is 2 (root's children), set to 0 if you want only linear flow (no 2D) -->
+    <xsl:param name="revealDir" select="'../reveal.js/'" /> <!-- path to reveal, must finish with a '/'.  must be absolute or relative to export save location. default is 'reveal.js/' --> 
+    <xsl:param name="mapDir" select="'.'" /> <!-- path to map, to set html <base> from, hoping to improve portability of export. must be absolute or relative to export location. defaults is '.' -->
+    <xsl:param name="theme" select="default" /> <!-- moreover at https://github.com/hakimel/reveal.js#theming -->
     
-    <!-- User texts & i18n, potential parameters -->    
-    <xsl:variable name="author" select="'Yours Respectfully'"/>
-    <xsl:variable name="end" select="'The End'"/>
-    <xsl:variable name="thanks" select="'Thank You!'"/>
-    <xsl:variable name="ToC" select="'Table of Content'"/><!-- title for Table of Content -->
-    <xsl:variable name="CoS" select="'Content of Section'"/><!-- title for Index of Subsection (if applicable, ie if $subsectionLvl > 1) -->
+    <!-- User texts & i18n parameters -->    
+    <xsl:param name="author" select="'Yours Respectfully'"/> <!-- author name (can be rich html)-->
+    <xsl:param name="end" select="'The End'"/><!-- end slide title -->
+    <xsl:param name="thanks" select="'Thank You!'"/> <!--end slide text -->
+    <xsl:param name="ToC" select="'Table of Content'"/><!-- title for Table of Content -->
+    <xsl:param name="CoS" select="'Content of Section'"/><!-- title for Index of Subsection (if applicable, ie if $subsectionLvl > 1) -->
 
     <!-- internal static variables -->
-    <xsl:variable name="mindslideVersion">0.1</xsl:variable>    
-    <xsl:variable name="lcletters">abcdefghijklmnopqrstuvwxyz</xsl:variable>
-    <xsl:variable name="ucletters">ABCDEFGHIJKLMNOPQRSTUVWXYZ</xsl:variable>
+    <xsl:variable name="mindslideVersion">0.2</xsl:variable>    
 
 
 <xsl:template match="/map">
@@ -44,27 +43,26 @@
         <title><xsl:apply-templates select="node" mode="simpleText" /></title>
         <meta name="description" content="Freeplane mindmap HTML presentation" />        
         <meta name="author"><xsl:attribute name="content"><xsl:value-of select="$author"/></xsl:attribute></meta>
-        <meta name="generator" content="Mindslide at http://berteh.github.io/mindslide/" />
+        <meta name="generator" content="Mindslide at http://berteh.github.io/mindslide/" /><xsl:comment>Mindslide version <xsl:value-of select="$mindslideVersion" /></xsl:comment>
 
         <meta name="apple-mobile-web-app-capable" content="yes" />
         <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
 
         <link rel="stylesheet"><xsl:attribute name="href"><xsl:value-of select="concat($revealDir,'css/reveal.min.css')" /></xsl:attribute></link>
-        <link rel="stylesheet"><xsl:attribute name="href"><xsl:value-of select="concat($revealDir,'css/theme/default.css')" /></xsl:attribute></link>
+        <link rel="stylesheet" id="theme"><xsl:attribute name="href"><xsl:value-of select="concat($revealDir,'css/theme/',$theme,'.css')" /></xsl:attribute></link>
 
         <xsl:comment>For syntax highlighting</xsl:comment> 
         <link rel="stylesheet"><xsl:attribute name="href"><xsl:value-of select="concat($revealDir,'lib/css/zenburn.css')" /></xsl:attribute></link>
 
         <style>
-           a.link {margin-left: 1em; font-size: smaller}
-           .illustrations a {float:left; margin: 1ex 5px;}
+           a.connector, a.subsection {margin-left: 1em; font-size: smaller}
+           .illustrations a {float:left; margin: 1ex 5px; max-width:100%}
            .illustrations img {max-height:8em;}
 
            /* bullet lists layout */
-           .mindslide section>ul li {font-size: 90%;}
-           .mindslide section>ul>li:first-of-type, .mindslide section.title>ul li {list-style:none; display:block; font-size: 120%; margin-bottom:1ex}
-
+           .mindslide .content>ul li {font-size: 90%;}
+           .mindslide .content>ul>li:first-of-type, .mindslide .title>ul li {list-style:none; display:block; font-size: 120%; margin-bottom:1ex}           
 
         </style>
         <xsl:comment>If the query includes 'print-pdf', use the PDF print sheet. works in Chrome, maybe not other browsers</xsl:comment>
