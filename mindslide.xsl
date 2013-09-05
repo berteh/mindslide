@@ -22,7 +22,7 @@
     <!-- configuration parameters -->
     <xsl:param name="titleMaxLvl" select="1" /><!--nodes down to this lvl are viewed as title slides, default is 1 (root node) -->
     <xsl:param name="subsectionLvl" select="2" /><!--nodes from this lvl are "heads" of a subsection, default is 2 (root's children), set to 0 if you want only linear flow (no 2D) -->
-    <xsl:param name="revealDir" select="'../reveal.js/'" /> <!-- path to reveal, must finish with a '/'.  must be absolute or relative to export save location. default is '<your freemind path>/resources/reveal.js/' --> 
+    <xsl:param name="revealDir" select="'reveal.js/'" /> <!-- path to reveal, must finish with a '/'.  must be absolute or relative to export save location. default is '<your freemind path>/resources/reveal.js/' --> 
     <xsl:param name="mapDir" select="'.'" /> <!-- path to map, to set html <base> from, hoping to improve portability of export. must be absolute or relative to export location. defaults is '.' -->
     <xsl:param name="theme" select="'default'" /> <!-- moreover at https://github.com/hakimel/reveal.js#theming -->
     

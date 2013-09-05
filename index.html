@@ -9,12 +9,12 @@
 <meta name="apple-mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-<link rel="stylesheet" href="../reveal.js/css/reveal.min.css">
-<link rel="stylesheet" id="theme" href="../reveal.js/css/theme/default.css">
+<link rel="stylesheet" href="reveal.js/css/reveal.min.css">
+<link rel="stylesheet" id="theme" href="reveal.js/css/theme/default.css">
 <!--For syntax highlighting-->
-<link rel="stylesheet" href="../reveal.js/lib/css/zenburn.css">
+<link rel="stylesheet" href="reveal.js/lib/css/zenburn.css">
 <style>
-           a.connector, a.subsection {margin-left: 1em; font-size: smaller}
+           a.connector, a.subsection {margin-left: 1ex; font-size: smaller}
            .illustrations a {float:left; margin: 1ex 5px; max-width:100%}
            .illustrations img {max-height:8em;}
 
@@ -25,11 +25,11 @@
         </style>
 <!--If the query includes 'print-pdf', use the PDF print sheet. works in Chrome, maybe not other browsers-->
 <script>
-        document.write( '<link rel="stylesheet" href="../reveal.js/css/print/' + ( window.location.search.match( /print-pdf/gi ) ? 'pdf' : 'paper' ) + '.css" type="text/css" media="print" />' );
+        document.write( '<link rel="stylesheet" href="reveal.js/css/print/' + ( window.location.search.match( /print-pdf/gi ) ? 'pdf' : 'paper' ) + '.css" type="text/css" media="print" />' );
         </script>
 <!--
             [if lt IE 9]>
-            <script src="../reveal.js/lib/js/html5shiv.js"></script>
+            <script src="reveal.js/lib/js/html5shiv.js"></script>
             <![endif]
         -->
 </head>
@@ -74,7 +74,7 @@
 <ul>
 <li>Mindslide is a Mindmap viewer. It turns your Freeplane / Freemind mindmaps into a stunning HTML presentation in a few seconds.</li>
 <li>
-<a href="https://github.com/berteh/mindslide/blob/master/doc/MindSlide-Export.mm" class="link external">Demo mindmap</a>
+<a href="https://github.com/berteh/mindslide/blob/master/MindSlide-Export.mm" class="link external">Demo mindmap</a>
 </li>
 <li>
 <a href="http://berteh.github.io/mindslide/" class="link external">Demo HTML presentation</a>
@@ -108,7 +108,7 @@
 <li>
 <body>
 <p>
-      simple <font face="Courier New, Courier, Nimbus Mono L, serif, monospace"><b style="font-family: Courier New, Courier, Nimbus Mono L, serif, monospace">&amp; rich-text </b></font><font color="#e1a71c"><u>nodes</u></font>, including code highlight
+      simple <font face="Courier New, Courier, Nimbus Mono L, serif, monospace"><b style="font-family: Courier New, Courier, Nimbus Mono L, serif, monospace">&amp; rich-text </b></font><u><font color="#e1a71c">nodes</font></u>, including code highlight
     </p>
 <pre>
 <code class="css">@page:right { 
@@ -118,7 +118,7 @@
 </body>
 </li>
 <li>
-<a href="http://google.com" class="link external">
+<a href="https://github.com/berteh/mindslide" class="link external">
 <body>
 <p>
       links on nodes. <small>ctrl+k in Freeplane</small>
@@ -234,7 +234,7 @@
 <li>
 <body>
 <p>
-<b>save the HTML presentation in mindslide/doc directory</b>! (for now)
+<b>save the HTML presentation in mindslide directory</b>! (for now)
     </p>
 </body>
 </li>
@@ -290,7 +290,7 @@
 </div>
 </div>
 <footer class="info">MindSlide | <a href="http://berteh.github.io/mindslide/">Mindslide</a> v 0.2 |  <a href="http://freeplane.sourceforge.net/">Freeplane</a> map vfreeplane 1.2.0</footer>
-<script src="../reveal.js/lib/js/head.min.js"></script><script src="../reveal.js/js/reveal.min.js"></script><script>
+<script src="reveal.js/lib/js/head.min.js"></script><script src="reveal.js/js/reveal.min.js"></script><script>
             //run reveal.js
             // Full list of configuration options available here:
             // https://github.com/hakimel/reveal.js#configuration
@@ -308,10 +308,10 @@
 
             // Optional libraries used to extend on reveal.js
             dependencies: [
-            { src: '../reveal.js/lib/js/classList.js', condition: function() { return !document.body.classList; } },
-            { src: '../reveal.js/plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
-            { src: '../reveal.js/plugin/zoom-js/zoom.js', async: true, condition: function() { return !!document.body.classList; } },
-            { src: '../reveal.js/plugin/notes/notes.js', async: true, condition: function() { return !!document.body.classList; } }
+            { src: 'reveal.js/lib/js/classList.js', condition: function() { return !document.body.classList; } },
+            { src: 'reveal.js/plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+            { src: 'reveal.js/plugin/zoom-js/zoom.js', async: true, condition: function() { return !!document.body.classList; } },
+            { src: 'reveal.js/plugin/notes/notes.js', async: true, condition: function() { return !!document.body.classList; } }
             ]
             });
         </script>

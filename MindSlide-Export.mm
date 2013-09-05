@@ -79,7 +79,7 @@
 <node TEXT="What is MindSlide?" POSITION="right" ID="ID_1494003336" CREATED="1377988920149" MODIFIED="1377988928576">
 <edge COLOR="#7c007c"/>
 <node TEXT="Mindslide is a Mindmap viewer. It turns your Freeplane / Freemind mindmaps into a stunning HTML presentation in a few seconds." ID="ID_1710792688" CREATED="1377988930783" MODIFIED="1378370787871"/>
-<node TEXT="Demo mindmap" ID="ID_153158510" CREATED="1377989004269" MODIFIED="1378377022272" LINK="https://github.com/berteh/mindslide/blob/master/doc/MindSlide-Export.mm">
+<node TEXT="Demo mindmap" ID="ID_153158510" CREATED="1377989004269" MODIFIED="1378383117983" LINK="https://github.com/berteh/mindslide/blob/master/MindSlide-Export.mm">
 <hook URI="assets/mindmap-slide-export-demo.png" SIZE="0.044968728" NAME="ExternalObject"/>
 </node>
 <node TEXT="Demo HTML presentation" ID="ID_278725996" CREATED="1377988580544" MODIFIED="1378221776134" LINK="http://berteh.github.io/mindslide/">
@@ -323,7 +323,7 @@
 </node>
 <node TEXT="copy mindslide/mindslide.xsl into your freeplane/resources/xslt directory" ID="ID_1487207699" CREATED="1378221411490" MODIFIED="1378371315022"/>
 <node TEXT="launch freemind and select file &gt; export &gt; MindeSlide Presentation (.html) to export your mindmap" ID="ID_916240691" CREATED="1378221446025" MODIFIED="1378376960147"/>
-<node ID="ID_765546127" CREATED="1378221476933" MODIFIED="1378376968625"><richcontent TYPE="NODE">
+<node ID="ID_765546127" CREATED="1378221476933" MODIFIED="1378383162779"><richcontent TYPE="NODE">
 
 <html>
   <head>
@@ -331,10 +331,11 @@
   </head>
   <body>
     <p>
-      <b>save the HTML presentation in mindslide/doc directory</b>! (for now)
+      <b>save the HTML presentation in mindslide directory</b>! (for now)
     </p>
   </body>
 </html>
+
 </richcontent>
 <font BOLD="false"/>
 </node>
