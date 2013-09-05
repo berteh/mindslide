@@ -103,7 +103,7 @@
 </html>
 </richcontent>
 <node TEXT="MindSlide currently supports" ID="ID_825683797" CREATED="1377866419355" MODIFIED="1377989164919"/>
-<node ID="ID_1792241167" CREATED="1377866789605" MODIFIED="1378377194410"><richcontent TYPE="NODE">
+<node ID="ID_1792241167" CREATED="1377866789605" MODIFIED="1378390549703"><richcontent TYPE="NODE">
 
 <html>
   <head>
@@ -128,11 +128,12 @@
     </p>
     <ul>
       <li>
-        <b><font face="Times New Roman">Rich text</font></b>&#160;<i>works in notes</i>&#160;too!
+        <font face="Times New Roman"><b>Rich text</b></font>&#160;<i>works in notes</i>&#160;too!
       </li>
     </ul>
   </body>
 </html>
+
 </richcontent>
 </node>
 <node ID="ID_1149617363" CREATED="1377869822244" MODIFIED="1378377198254"><richcontent TYPE="NODE">
@@ -180,7 +181,7 @@
 </html>
 </richcontent>
 </node>
-<node TEXT="images and nodes connectors" ID="ID_906971272" CREATED="1377866777469" MODIFIED="1378377206959"><richcontent TYPE="NOTE">
+<node TEXT="images and nodes connectors" ID="ID_906971272" CREATED="1377866777469" MODIFIED="1378389823591"><richcontent TYPE="NOTE">
 
 <html>
   <head>
@@ -188,15 +189,16 @@
   </head>
   <body>
     <p>
-      Images support is only partial as it depends on the webserver to serve them, usually relative adress in a sub-directory is fine.
+      Images support is only partial as it depends on the browser to find them , usually relative adress in a sub-directory is fine.
     </p>
     <p>
       Help in improving this part is higly welcome.
     </p>
   </body>
 </html>
+
 </richcontent>
-<arrowlink SHAPE="CUBIC_CURVE" COLOR="#000000" WIDTH="2" TRANSPARENCY="80" FONT_SIZE="9" FONT_FAMILY="SansSerif" DESTINATION="ID_1494003336" STARTINCLINATION="305;0;" ENDINCLINATION="590;0;" STARTARROW="NONE" ENDARROW="DEFAULT"/>
+<arrowlink SHAPE="CUBIC_CURVE" COLOR="#000000" WIDTH="2" TRANSPARENCY="80" FONT_SIZE="9" FONT_FAMILY="SansSerif" DESTINATION="ID_1494003336" STARTINCLINATION="299;-5;" ENDINCLINATION="590;0;" STARTARROW="NONE" ENDARROW="DEFAULT"/>
 </node>
 <node ID="ID_236559184" CREATED="1377867137693" MODIFIED="1378377202958"><richcontent TYPE="NODE">
 
@@ -255,7 +257,7 @@
 </node>
 <node TEXT="Known Bugs" ID="ID_191827926" CREATED="1377874134734" MODIFIED="1378376093551">
 <node TEXT="Various things we should fix, any pointer how to do so is welcome." ID="ID_957082212" CREATED="1377874299104" MODIFIED="1377874323476"/>
-<node ID="ID_636303064" CREATED="1377982838721" MODIFIED="1378371232525"><richcontent TYPE="NODE">
+<node ID="ID_636303064" CREATED="1377982838721" MODIFIED="1378389990790"><richcontent TYPE="NODE">
 
 <html>
   <head>
@@ -276,15 +278,44 @@
   </head>
   <body>
     <p>
-      not showing nicely: font size changed in rich-text editor.
+      not showing nicely: font size changed in rich-text editor ar usually displayed too small. current workaround is to edit html code view to use relative size (small, tiny) instead of absolute size (4, 5)...
     </p>
   </body>
 </html>
+
 </richcontent>
 </node>
-<node TEXT="nodes with only an image show as list item anyway." ID="ID_239280693" CREATED="1377994551775" MODIFIED="1377994572041"/>
-<node TEXT="rich text is not fully shown as simple text in indexes &amp; titles" ID="ID_1533222341" CREATED="1378377106810" MODIFIED="1378377548221">
+<node TEXT="nodes with only an image show as empty list item." ID="ID_239280693" CREATED="1377994551775" MODIFIED="1378389944327"><richcontent TYPE="NOTE">
+
+<html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      nodes containing but an image should not show as empty item. current workaround is to only add images on nodes that have some text.
+    </p>
+  </body>
+</html>
+
+</richcontent>
+</node>
+<node TEXT="rich text is not fully shown as simple text in indexes &amp; titles" ID="ID_1533222341" CREATED="1378377106810" MODIFIED="1378390168917">
 <arrowlink SHAPE="CUBIC_CURVE" COLOR="#000000" WIDTH="2" TRANSPARENCY="80" FONT_SIZE="9" FONT_FAMILY="SansSerif" DESTINATION="ID_523970975" STARTINCLINATION="545;0;" ENDINCLINATION="545;0;" STARTARROW="NONE" ENDARROW="DEFAULT"/>
+<richcontent TYPE="NOTE">
+
+<html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      rich text in title of linked slide is &quot;not supported <i><u>yet</u></i>&quot;<i>.</i>&#160; but then end &quot;yet&quot; does not show as it should. no current workaround.
+    </p>
+  </body>
+</html>
+
+</richcontent>
 </node>
 <node TEXT="Report your bugs on our &quot;issues&quot; list!" ID="ID_551533464" CREATED="1377867391933" MODIFIED="1377992240334" LINK="https://github.com/berteh/mindslide/issues"/>
 </node>
@@ -321,6 +352,24 @@
 </html>
 </richcontent>
 </node>
+<node ID="ID_817492504" CREATED="1378387620242" MODIFIED="1378387765917"><richcontent TYPE="NODE">
+
+<html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      (alternatively) you can also clone the source code:
+    </p>
+    <pre><code class="bash">git clone https://github.com/berteh/mindslide.git
+cd mindslide  # (dir mindslide on windows)
+git submodule update --init</code></pre>
+  </body>
+</html>
+
+</richcontent>
+</node>
 <node TEXT="copy mindslide/mindslide.xsl into your freeplane/resources/xslt directory" ID="ID_1487207699" CREATED="1378221411490" MODIFIED="1378371315022"/>
 <node TEXT="launch freemind and select file &gt; export &gt; MindeSlide Presentation (.html) to export your mindmap" ID="ID_916240691" CREATED="1378221446025" MODIFIED="1378376960147"/>
 <node ID="ID_765546127" CREATED="1378221476933" MODIFIED="1378383162779"><richcontent TYPE="NODE">
@@ -335,7 +384,6 @@
     </p>
   </body>
 </html>
-
 </richcontent>
 <font BOLD="false"/>
 </node>
@@ -360,11 +408,88 @@
 </node>
 <node TEXT="see reveal.js configuration" ID="ID_1201663334" CREATED="1377993908853" MODIFIED="1377993985014" LINK="https://github.com/hakimel/reveal.js#configuration"/>
 </node>
+<node TEXT="View Speakers Notes" ID="ID_1605694183" CREATED="1378390526444" MODIFIED="1378391591570">
+<node ID="ID_254618814" CREATED="1378390551836" MODIFIED="1378391585266"><richcontent TYPE="NODE">
+
+<html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      Speaker notes require the presentation be served by a <b>webserver</b>, they don't work from a local file.
+    </p>
+    <p>
+      
+    </p>
+    <p>
+      You can use a very simple webserver such as <a href="http://code.google.com/p/mongoose/">mongoose</a>&#160;that simply needs to be <a href="http://code.google.com/p/mongoose/downloads/list">downloaded</a>&#160;in mindslide directory and executed (clicked)... or execute the following line in mindslide directory if you have python installed:
+    </p>
+    <pre><code class="bash">python -m SimpleHTTPServer 8080</code></pre>
+    <p>
+      then browse to <a href="then browse to http://localhost:8080">http://localhost:8080</a>
+    </p>
+  </body>
+</html>
+
+</richcontent>
+</node>
+</node>
 <node TEXT="Contribute / Contact" ID="ID_1128763901" CREATED="1377867379405" MODIFIED="1377991801097">
 <node TEXT="Contributions are welcome in all kinds:" ID="ID_756109089" CREATED="1377867407739" MODIFIED="1378374264424"/>
-<node TEXT="Improve the code of MindSlide" ID="ID_697225143" CREATED="1377988602258" MODIFIED="1377991136004" LINK="https://github.com/berteh/mindslide"/>
 <node TEXT="Share your ideas" ID="ID_1278307251" CREATED="1377867391933" MODIFIED="1377991159466" LINK="https://github.com/berteh/mindslide/issues"/>
-<node TEXT="Spread the word about MindSlide, Freeplane, and Reveal.js" ID="ID_191461379" CREATED="1377867415556" MODIFIED="1378374276151"/>
+<node TEXT="Improve the code" ID="ID_1869571896" CREATED="1378387202453" MODIFIED="1378387207051">
+<node ID="ID_697225143" CREATED="1377988602258" MODIFIED="1378389000309"><richcontent TYPE="NODE">
+
+<html>
+  <head>
+    
+  </head>
+  <body>
+    <ol>
+      <li>
+        <a href="https://github.com/berteh/mindslide">Fork the code</a>&#160;on github
+      </li>
+      <li>
+        Create your feature branch:
+
+        <pre class="inline"><code class="bash">git checkout -b name-of-your-feature</code></pre>
+      </li>
+      <li>
+        Commit your changes:
+
+        <pre class="inline"><code class="bash">git commit -am 'name and explain your feature'</code></pre>
+      </li>
+      <li>
+        Push to the branch:
+
+        <pre class="inline"><code class="bash">git push origin name-of-your-feature</code></pre>
+      </li>
+      <li>
+        Create a <a href="https://github.com/berteh/mindslide/pulls">new Pull Request</a>
+      </li>
+    </ol>
+  </body>
+</html>
+
+</richcontent>
+</node>
+</node>
+<node ID="ID_191461379" CREATED="1377867415556" MODIFIED="1378387583711"><richcontent TYPE="NODE">
+
+<html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      Spread the word about <a href="http://berteh.github.io/mindslide/">Mindslide</a>, <a href="http://freeplane.sourceforge.net/">Freeplane</a>&#160;and <a href="http://lab.hakim.se/reveal-js/">Reveal.js</a>
+    </p>
+  </body>
+</html>
+
+</richcontent>
+</node>
 </node>
 </node>
 <node TEXT="Acknowledgments" POSITION="right" ID="ID_510184946" CREATED="1377867969615" MODIFIED="1377991786445">
