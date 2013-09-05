@@ -1,17 +1,18 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 
 <!--
-	MINDMAPEXPORTFILTER html;html5 %xslt_export.html
+	MINDMAPEXPORTFILTER html MindSlide Presentation
 	
 	License : This code released under the GPL  (http://www.gnu.org/copyleft/gpl.html) 
-	Document : mm2slide.xslt
+	Document : mindslide.xsl
 	Created on : 31 August, 2013.
 	Author : Berteh berteh@gmail.com
-	Description: transforms freeplane mm
-	format to reveal.js HTML presentation.
-    Handles crossrefs font declarations and colors. feel
-	free to customize it while leaving the ancient authors mentioned.
-	thank you ChangeLog: See: http://freeplane.sourceforge.net/
+	Description: transforms freeplane mm format to reveal.js HTML presentation.
+    Handles crossrefs, images, rich node and more.
+    Feel free to customize it while leaving the ancient authors mentioned.
+	Thank you 
+    Homepage: See: http://berteh.github.io/mindslide/
+    ChangeLog: See: https://github.com/berteh/mindslide
 -->
 
 <xsl:stylesheet version="1.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
@@ -21,9 +22,9 @@
     <!-- configuration parameters -->
     <xsl:param name="titleMaxLvl" select="1" /><!--nodes down to this lvl are viewed as title slides, default is 1 (root node) -->
     <xsl:param name="subsectionLvl" select="2" /><!--nodes from this lvl are "heads" of a subsection, default is 2 (root's children), set to 0 if you want only linear flow (no 2D) -->
-    <xsl:param name="revealDir" select="'../reveal.js/'" /> <!-- path to reveal, must finish with a '/'.  must be absolute or relative to export save location. default is 'reveal.js/' --> 
+    <xsl:param name="revealDir" select="'../reveal.js/'" /> <!-- path to reveal, must finish with a '/'.  must be absolute or relative to export save location. default is '<your freemind path>/resources/reveal.js/' --> 
     <xsl:param name="mapDir" select="'.'" /> <!-- path to map, to set html <base> from, hoping to improve portability of export. must be absolute or relative to export location. defaults is '.' -->
-    <xsl:param name="theme" select="default" /> <!-- moreover at https://github.com/hakimel/reveal.js#theming -->
+    <xsl:param name="theme" select="'default'" /> <!-- moreover at https://github.com/hakimel/reveal.js#theming -->
     
     <!-- User texts & i18n parameters -->    
     <xsl:param name="author" select="'Yours Respectfully'"/> <!-- author name (can be rich html)-->
@@ -56,7 +57,7 @@
         <link rel="stylesheet"><xsl:attribute name="href"><xsl:value-of select="concat($revealDir,'lib/css/zenburn.css')" /></xsl:attribute></link>
 
         <style>
-           a.connector, a.subsection {margin-left: 1em; font-size: smaller}
+           a.connector, a.subsection {margin-left: 1ex; font-size: smaller}
            .illustrations a {float:left; margin: 1ex 5px; max-width:100%}
            .illustrations img {max-height:8em;}
 
