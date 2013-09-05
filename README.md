@@ -2,46 +2,10 @@
 
 View mindmap as an HTML presentation (aka Freeplane/Freemind to powerpoint slideshow).
 
-Checkout our [online demonstration & documentation](http://berteh.github.io/mindslide/)!
-
-Mindslide uses the great  [Reveal.js](http://lab.hakim.se/reveal-js/) HTML presentation framework to make stunning slideshow presentations from your [Freeplane](http://sourceforge.net/projects/freeplane) (and possibly freemind) mindmaps.
-
-## Features
-
-MindMap Slide Export currently supports
-
-* simple & rich-text nodes
-* clickable links (ctrl+k in Freeplane)
-* images
-* presenter notes (from the node notes), hit "s" to get the presenter view
-* easy navigation (space, arrows)
-* gestures and [more](http://lab.hakim.se/reveal-js/), including nested slides, markdown contents, PDF export, speaker notes and a JavaScript API.
-* decent browser support and fall-back
-* 2D slides presentation and overview mode (hit 'escape' or 'o')
-* nodes connectors
+Checkout our **[online demonstration & documentation](http://berteh.github.io/mindslide/)**!
 
 
-## Prerequesite
-
-You need a recent browser, Firefox is recommended.
-
-If you use Chrome be sure to check our [additional installation instructions for Chrome](http://berteh.github.io/mindslide#/ID_1976302216).
-
-
-## Installation
-
-Either unzip the 2 archives https://github.com/berteh/mindslide/archive/master.zip in mindslide/ and https://github.com/hakimel/reveal.js/archive/master.zip in mindlide/reveal.js
-
-
-Or install from source code repository:
-
-```
-git clone https://github.com/berteh/mindslide.git
-cd mindslide (or dir mindslide in windows)
-git submodule update --init
-```
-
-Copy your mindmap file (something.mm) as mm.xml in mindslide directory, open mindslide.html and enjoy.
+Mindslide is an export extension for [Freeplane](http://sourceforge.net/projects/freeplane). It uses the [Reveal.js](http://lab.hakim.se/reveal-js/) HTML presentation framework to make stunning slideshow presentations from your Freeplan (and possibly Freemind) mindmaps.
 
 
 
@@ -51,14 +15,15 @@ Use the [Mindslide issue tracker](https://github.com/berteh/mindslide/issues) fo
 
 Integration within Freeplan is [being discussed on the Freeplan forum](https://sourceforge.net/apps/phpbb/freeplane/viewtopic.php?f=1&t=750&p=3712#p3708).
 
+
 ## Screenshots
 
-The (documentation and) example mindmap is rendered (below) as a nice HTML presentation: ![example mindmap](assets/mindmap-slide-export-demo.png "Example and documentation MindMap in Freeplane") 
+The (documentation and) [example mindmap](doc/MindSlide-Export.mm) is rendered (below) as a nice HTML presentation: ![example mindmap](doc/assets/mindmap-slide-export-demo.png "Example and documentation MindMap in Freeplane") 
 
 The *Features slide* is the view generated for the "Features" node and its children:
-![Features slide](assets/mindslide1-features.png "mindslide for Features node (automatic)")
+![Features slide](doc/assets/mindslide1-features.png "mindslide for Features node (automatic)")
 
 The *Overview mode* is great to change the flow of your presentation:
-![Overview mode](assets/mindslide2-overview.png "overview mode for 2D navigation in your HTML presentation")
+![Overview mode](doc/assets/mindslide2-overview.png "overview mode for 2D navigation in your HTML presentation")
 
 More features in the demo of [Reveal.js](http://lab.hakim.se/reveal-js/).
