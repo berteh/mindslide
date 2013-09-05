@@ -5,7 +5,7 @@ View mindmap as an HTML presentation (aka Freeplane/Freemind to powerpoint slide
 Checkout our **[online demonstration & documentation](http://berteh.github.io/mindslide/)**!
 
 
-Mindslide is an export extension for [Freeplane](http://sourceforge.net/projects/freeplane). It uses the [Reveal.js](http://lab.hakim.se/reveal-js/) HTML presentation framework to make stunning slideshow presentations from your Freeplan (and possibly Freemind) mindmaps.
+Mindslide is an export extension for [Freeplane](http://sourceforge.net/projects/freeplane). It uses the [Reveal.js](http://lab.hakim.se/reveal-js/) HTML presentation framework to make stunning slideshow presentations from your Freeplane (and possibly Freemind) mindmaps.
 
 
 
