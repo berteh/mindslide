@@ -57,15 +57,29 @@
 <node TEXT="View your mindmap as slideshow" POSITION="right" ID="ID_212678608" CREATED="1377866384042" MODIFIED="1377866414836">
 <edge COLOR="#ff0000"/>
 </node>
-<node TEXT="hit space to navigate" POSITION="right" ID="ID_1655550133" CREATED="1377869126231" MODIFIED="1377989195621">
+<node TEXT="hit space to navigate" POSITION="right" ID="ID_1655550133" CREATED="1377869126231" MODIFIED="1378371167694">
 <edge COLOR="#ffff00"/>
+<font BOLD="true"/>
 </node>
-<node TEXT="MindSlide source repository" POSITION="right" ID="ID_1180737403" CREATED="1377988602258" MODIFIED="1377991852582" LINK="https://github.com/berteh/mindslide">
+<node POSITION="right" ID="ID_1180737403" CREATED="1377988602258" MODIFIED="1378371590287" LINK="https://github.com/berteh/mindslide"><richcontent TYPE="NODE">
+
+<html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      <small>MindSlide source code</small>
+    </p>
+  </body>
+</html>
+
+</richcontent>
 <edge COLOR="#7c7c00"/>
 </node>
 <node TEXT="What is MindSlide?" POSITION="right" ID="ID_1494003336" CREATED="1377988920149" MODIFIED="1377988928576">
 <edge COLOR="#7c007c"/>
-<node TEXT="Mindslide is a Mindmap viewer. It turns your Freeplane / Freemind mindmaps into a stunning HTML presentation in a few seconds.&#xa;This very presentation has been generated from our documentation mindmap." ID="ID_1710792688" CREATED="1377988930783" MODIFIED="1378221307909"/>
+<node TEXT="Mindslide is a Mindmap viewer. It turns your Freeplane / Freemind mindmaps into a stunning HTML presentation in a few seconds." ID="ID_1710792688" CREATED="1377988930783" MODIFIED="1378370787871"/>
 <node TEXT="Demo mindmap" ID="ID_153158510" CREATED="1377989004269" MODIFIED="1378221726629" LINK="https://github.com/berteh/mindslide/blob/master/MindMap-Slide-Export.mm">
 <hook URI="assets/mindmap-slide-export-demo.png" SIZE="0.044968728" NAME="ExternalObject"/>
 </node>
@@ -90,7 +104,21 @@
 </html>
 </richcontent>
 <node TEXT="MindSlide currently supports" ID="ID_825683797" CREATED="1377866419355" MODIFIED="1377989164919"/>
-<node TEXT="presenter notes (from the node notes), hit &quot;s&quot; to get the presenter view" ID="ID_1792241167" CREATED="1377866789605" MODIFIED="1377992099891"><richcontent TYPE="NOTE">
+<node ID="ID_1792241167" CREATED="1377866789605" MODIFIED="1378370845784"><richcontent TYPE="NODE">
+
+<html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      presenter notes (from the node notes), <small>hit &quot;s&quot; to get the presenter view</small>
+    </p>
+  </body>
+</html>
+
+</richcontent>
+<richcontent TYPE="NOTE">
 
 <html>
   <head>
@@ -109,9 +137,7 @@
 </html>
 </richcontent>
 </node>
-<node TEXT="2D slides presentation and overview mode (hit &apos;escape&apos; or &apos;o&apos;)" ID="ID_1149617363" CREATED="1377869822244" MODIFIED="1377869849489"/>
-<node TEXT="easy navigation (space, arrows, click)" ID="ID_1077356933" CREATED="1377867110013" MODIFIED="1377992140071"/>
-<node ID="ID_765812044" CREATED="1377866554077" MODIFIED="1377868700769"><richcontent TYPE="NODE">
+<node ID="ID_1149617363" CREATED="1377869822244" MODIFIED="1378370881820"><richcontent TYPE="NODE">
 
 <html>
   <head>
@@ -119,7 +145,23 @@
   </head>
   <body>
     <p>
-      simple <font size="4"><b>&amp; rich-text </b></font>nodes, including code highlight
+      2D slides presentation and overview mode. <small>hit &quot;escape&quot; or &quot;o&quot;</small>
+    </p>
+  </body>
+</html>
+
+</richcontent>
+</node>
+<node TEXT="easy navigation (space, arrows, click)" ID="ID_1077356933" CREATED="1377867110013" MODIFIED="1377992140071"/>
+<node ID="ID_765812044" CREATED="1377866554077" MODIFIED="1378370732111"><richcontent TYPE="NODE">
+
+<html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      simple <b>&amp; rich-text </b><u><font color="#e1a71c">nodes</font></u>, including code highlight
     </p>
     <pre><code class="css">@import url('print.css'); 
 @page:right { 
@@ -127,9 +169,24 @@
 }</code></pre>
   </body>
 </html>
+
 </richcontent>
 </node>
-<node TEXT="clickable links (ctrl+K in freeplane)" ID="ID_594361534" CREATED="1377866613085" MODIFIED="1377870864921" LINK="http://google.com"/>
+<node ID="ID_594361534" CREATED="1377866613085" MODIFIED="1378370911594" LINK="http://google.com"><richcontent TYPE="NODE">
+
+<html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      clickable links. <small>ctrl+k in freeplane</small>
+    </p>
+  </body>
+</html>
+
+</richcontent>
+</node>
 <node TEXT="images" ID="ID_906971272" CREATED="1377866777469" MODIFIED="1378221881476"><richcontent TYPE="NOTE">
 
 <html>
@@ -151,7 +208,7 @@
 <node TEXT="nodes connectors" ID="ID_1507705772" CREATED="1377870785269" MODIFIED="1377991769191">
 <arrowlink SHAPE="CUBIC_CURVE" COLOR="#000000" WIDTH="2" TRANSPARENCY="80" FONT_SIZE="9" FONT_FAMILY="SansSerif" DESTINATION="ID_212678608" STARTINCLINATION="470;0;" ENDINCLINATION="470;0;" STARTARROW="NONE" ENDARROW="DEFAULT"/>
 </node>
-<node ID="ID_236559184" CREATED="1377867137693" MODIFIED="1378222057077"><richcontent TYPE="NODE">
+<node ID="ID_236559184" CREATED="1377867137693" MODIFIED="1378370660143"><richcontent TYPE="NODE">
 
 <html>
   <head>
@@ -159,14 +216,14 @@
   </head>
   <body>
     <p>
-      gestures and more, including <font face="Helvetica, arial, freesans, clean, sans-serif">including&#160;</font><a href="https://github.com/hakimel/reveal.js#markup" style="text-decoration: none; text-transform: none; letter-spacing: normal; line-height: 25px; font-size: 15px; font-weight: normal; font-style: normal; text-indent: 0px; font-variant: normal; word-spacing: 0px; text-align: start; white-space: normal; font-family: Helvetica, arial, freesans, clean, sans-serif"><font face="Helvetica, arial, freesans, clean, sans-serif" size="15px">nested slides</font></a><font face="Helvetica, arial, freesans, clean, sans-serif">,&#160;</font><a href="https://github.com/hakimel/reveal.js#markdown" style="text-decoration: none; text-transform: none; letter-spacing: normal; line-height: 25px; font-size: 15px; font-weight: normal; font-style: normal; text-indent: 0px; font-variant: normal; word-spacing: 0px; text-align: start; white-space: normal; font-family: Helvetica, arial, freesans, clean, sans-serif"><font face="Helvetica, arial, freesans, clean, sans-serif" size="15px">markdown contents</font></a><font face="Helvetica, arial, freesans, clean, sans-serif">,&#160;</font><a href="https://github.com/hakimel/reveal.js#pdf-export" style="text-decoration: none; text-transform: none; letter-spacing: normal; line-height: 25px; font-size: 15px; font-weight: normal; font-style: normal; text-indent: 0px; font-variant: normal; word-spacing: 0px; text-align: start; white-space: normal; font-family: Helvetica, arial, freesans, clean, sans-serif"><font face="Helvetica, arial, freesans, clean, sans-serif" size="15px">PDF export</font></a><font face="Helvetica, arial, freesans, clean, sans-serif">,&#160;</font><a href="https://github.com/hakimel/reveal.js#speaker-notes" style="text-decoration: none; text-transform: none; letter-spacing: normal; line-height: 25px; font-size: 15px; font-weight: normal; font-style: normal; text-indent: 0px; font-variant: normal; word-spacing: 0px; text-align: start; white-space: normal; font-family: Helvetica, arial, freesans, clean, sans-serif"><font face="Helvetica, arial, freesans, clean, sans-serif" size="15px">speaker notes</font></a><font face="Helvetica, arial, freesans, clean, sans-serif">&#160;and a&#160;</font><a href="https://github.com/hakimel/reveal.js#api" style="text-decoration: none; text-transform: none; letter-spacing: normal; line-height: 25px; font-size: 15px; font-weight: normal; font-style: normal; text-indent: 0px; font-variant: normal; word-spacing: 0px; text-align: start; white-space: normal; font-family: Helvetica, arial, freesans, clean, sans-serif"><font face="Helvetica, arial, freesans, clean, sans-serif" size="15px">JavaScript API</font></a>
+      <a href="https://github.com/hakimel/reveal.js#leap-motion">gestures</a>, <a>nested slides</a>, <a href="https://github.com/hakimel/reveal.js#markdown">markdown contents</a>, <a href="https://github.com/hakimel/reveal.js#pdf-export">PDF export</a>, <a href="https://github.com/hakimel/reveal.js#speaker-notes">speaker notes</a>, <a href="https://github.com/hakimel/reveal.js#api">JavaScript API</a>&#160;and <a href="https://github.com/hakimel/reveal.js#instructions">more</a>.
     </p>
   </body>
 </html>
 
 </richcontent>
 </node>
-<node TEXT="decent browser support and fall-back" ID="ID_1942350131" CREATED="1377867277349" MODIFIED="1377867291238" LINK="https://github.com/hakimel/reveal.js/wiki/Browser-Support"/>
+<node TEXT="Works in most recent browsers" ID="ID_1942350131" CREATED="1377867277349" MODIFIED="1378371266041" LINK="https://github.com/hakimel/reveal.js/wiki/Browser-Support"/>
 <node ID="ID_523970975" CREATED="1377866449059" MODIFIED="1378170464474"><richcontent TYPE="NODE">
 
 <html>
@@ -206,7 +263,7 @@
 </node>
 <node TEXT="Bugs" ID="ID_191827926" CREATED="1377874134734" MODIFIED="1377874136971">
 <node TEXT="Various things we should fix, any pointer how to do so is welcome." ID="ID_957082212" CREATED="1377874299104" MODIFIED="1377874323476"/>
-<node TEXT="encode &amp;gt; &lt; in text &lt;nodes&gt;" ID="ID_1880028966" CREATED="1377873970590" MODIFIED="1377874095396"><richcontent TYPE="NOTE">
+<node ID="ID_636303064" CREATED="1377982838721" MODIFIED="1378371232525"><richcontent TYPE="NODE">
 
 <html>
   <head>
@@ -214,13 +271,27 @@
   </head>
   <body>
     <p>
-      encoding &lt;: see how the last word &quot;node&quot; is missing from the slides, while it shows in the mindmap.
+      improve styles, fonts and general support of richtext content, as for now some elements don't show or <font size="3">not nicely</font>
     </p>
   </body>
 </html>
+
+</richcontent>
+<richcontent TYPE="NOTE">
+
+<html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      not showing nicely: font size changed in rich-text editor.
+    </p>
+  </body>
+</html>
+
 </richcontent>
 </node>
-<node TEXT="improve styles, fonts and general support of richtext content, as for now some elements don&apos;t show." ID="ID_636303064" CREATED="1377982838721" MODIFIED="1377982867109"/>
 <node TEXT="nodes with only an image show as list item anyway." ID="ID_239280693" CREATED="1377994551775" MODIFIED="1377994572041"/>
 <node TEXT="Report your bugs on our &quot;issues&quot; list!" ID="ID_551533464" CREATED="1377867391933" MODIFIED="1377992240334" LINK="https://github.com/berteh/mindslide/issues"/>
 </node>
@@ -229,14 +300,10 @@
 <edge COLOR="#ff00ff"/>
 <node TEXT="Some help and instructions" ID="ID_1813240819" CREATED="1377871672926" MODIFIED="1377871681845"/>
 <node TEXT="Requirements" ID="ID_965818761" CREATED="1377989485324" MODIFIED="1377989492718">
-<node TEXT="We recommend to use Firefox. Most other recent browsers are supported but have not been tested or require additional software:" ID="ID_1645145254" CREATED="1377989389434" MODIFIED="1377989888292">
-<arrowlink SHAPE="CUBIC_CURVE" COLOR="#000000" WIDTH="2" TRANSPARENCY="80" FONT_SIZE="9" FONT_FAMILY="SansSerif" DESTINATION="ID_1976302216" STARTINCLINATION="654;0;" ENDINCLINATION="654;0;" STARTARROW="NONE" ENDARROW="DEFAULT"/>
-</node>
-<node TEXT="You need a recent browser with javascript support (firefox recommended)" ID="ID_1012527012" CREATED="1377990060605" MODIFIED="1377990237290"/>
+<node TEXT="You need a recent browser with javascript support (Chrome and Firefox recommended)" ID="ID_1012527012" CREATED="1377990060605" MODIFIED="1378370192820"/>
 <node TEXT="browsers supported by reveal.js" ID="ID_1057729703" CREATED="1377990151771" MODIFIED="1377990207100" LINK="https://github.com/hakimel/reveal.js/wiki/Browser-Support"/>
-<node TEXT="browsers supported by jquery" ID="ID_1929843848" CREATED="1377990208712" MODIFIED="1377990219754" LINK="http://jquery.com/browser-support/"/>
 </node>
-<node TEXT="Install xsl export variant" ID="ID_1405033759" CREATED="1378221364979" MODIFIED="1378221374495">
+<node TEXT="Install MindSlide" ID="ID_1405033759" CREATED="1378221364979" MODIFIED="1378371390127">
 <node TEXT="To install MindSlide takes about 2 minutes:" ID="ID_1842474903" CREATED="1377989535791" MODIFIED="1378221401070"/>
 <node ID="ID_421999596" CREATED="1377867332134" MODIFIED="1378221389191"><richcontent TYPE="NODE">
 
@@ -258,12 +325,11 @@
     </ol>
   </body>
 </html>
-
 </richcontent>
 </node>
-<node TEXT="copy mindslide/mindslide.xslt into your freeplane/resources/xslt directory" ID="ID_1487207699" CREATED="1378221411490" MODIFIED="1378221431149"/>
+<node TEXT="copy mindslide/mindslide.xsl into your freeplane/resources/xslt directory" ID="ID_1487207699" CREATED="1378221411490" MODIFIED="1378371315022"/>
 <node TEXT="launch freemind and select file &gt; export &gt; HTML document (html;html5) to export your HTML presentation" ID="ID_916240691" CREATED="1378221446025" MODIFIED="1378221476026"/>
-<node ID="ID_765546127" CREATED="1378221476933" MODIFIED="1378221506800"><richcontent TYPE="NODE">
+<node ID="ID_765546127" CREATED="1378221476933" MODIFIED="1378371331245"><richcontent TYPE="NODE">
 
 <html>
   <head>
@@ -271,7 +337,7 @@
   </head>
   <body>
     <p>
-      <b>save the export in mindslide directory</b>! (for now)
+      <b>save the HTML presentation in mindslide directory</b>! (for now)
     </p>
   </body>
 </html>
@@ -280,64 +346,9 @@
 <font BOLD="false"/>
 </node>
 </node>
-<node TEXT="Install javascript variant (not recommended)" ID="ID_728080742" CREATED="1377867326429" MODIFIED="1378221364381">
-<node TEXT="To install MindSlide takes about 3 minutes, you have 2 options:" ID="ID_417211495" CREATED="1377989535791" MODIFIED="1377989559420"/>
-<node ID="ID_45909805" CREATED="1377867332134" MODIFIED="1377989604329"><richcontent TYPE="NODE">
-
-<html>
-  <head>
-    
-  </head>
-  <body>
-    <p>
-      Install from the archives:
-    </p>
-    <ol>
-      <li>
-        dowload and unpack <a href="https://github.com/berteh/mindslide/archive/master.zip">https://github.com/berteh/mindslide/archive/master.zip</a>&#160;into &quot;mindslide&quot; directory (or pick any name you like)
-      </li>
-      <li>
-        download and upack <a href="https://github.com/hakimel/reveal.js/archive/master.zip">https://github.com/hakimel/reveal.js/archive/master.zip</a>&#160;into mindslide/reveal.js directory
-      </li>
-    </ol>
-  </body>
-</html>
-</richcontent>
-</node>
-<node ID="ID_1345195639" CREATED="1377989605869" MODIFIED="1377992381533"><richcontent TYPE="NODE">
-
-<html>
-  <head>
-    
-  </head>
-  <body>
-    <p>
-      Or install from source code repository:
-    </p>
-    <ul>
-      <li>
-        git clone git@github.com:berteh/mindslide.git
-      </li>
-      <li>
-        dir mindslide&#160;&#160;&#160;(&quot;cd mindslide&quot; in linux/ubuntu/mac)
-      </li>
-      <li>
-        git submodule update --init
-      </li>
-    </ul>
-  </body>
-</html>
-</richcontent>
-</node>
-<node TEXT="copy your (freemind or freeplane) mindmap file (something.mm) as mm.xml file into mindslide directory" ID="ID_437559317" CREATED="1377867340943" MODIFIED="1377877569630"/>
-<node TEXT="copy its related images (if any) in their respective directory accessible from your webserver" ID="ID_1243868709" CREATED="1377877570655" MODIFIED="1377877600725"/>
-<node TEXT="browse to mindslide.html page and enjoy." ID="ID_143594672" CREATED="1377868268835" MODIFIED="1377990262364">
-<font BOLD="true"/>
-</node>
-</node>
 <node TEXT="Configure" ID="ID_1593867677" CREATED="1377867328934" MODIFIED="1377867331019">
 <node TEXT="Many options are available" ID="ID_62454801" CREATED="1377867358677" MODIFIED="1377993859049"/>
-<node TEXT="edit directly the mindslide.xsl / .html file from your prefered theme, transition, extra behaviour or functionality." ID="ID_1538743762" CREATED="1377993859657" MODIFIED="1378221536091">
+<node TEXT="edit directly the mindslide.xsl (or the exported .html presentation file) for your prefered theme, transition, extra behaviour or functionality." ID="ID_1538743762" CREATED="1377993859657" MODIFIED="1378370277753">
 <hook URI="assets/themes.jpg" SIZE="0.48640913" NAME="ExternalObject"/>
 </node>
 <node TEXT="see reveal.js configuration" ID="ID_1201663334" CREATED="1377993908853" MODIFIED="1377993985014" LINK="https://github.com/hakimel/reveal.js#configuration"/>
@@ -348,46 +359,24 @@
 <node TEXT="Share your ideas" ID="ID_1278307251" CREATED="1377867391933" MODIFIED="1377991159466" LINK="https://github.com/berteh/mindslide/issues"/>
 <node TEXT="Spread the word about MindSlide, and Freeplane, and Reveal.js" ID="ID_191461379" CREATED="1377867415556" MODIFIED="1377991493084"/>
 </node>
-<node TEXT="Other browsers" ID="ID_1976302216" CREATED="1377989505259" MODIFIED="1377995247586">
-<node TEXT="MindSlide works works out-of-the box in Firefox. Other browsers will be added to this list when reported to work." ID="ID_499646099" CREATED="1377876584807" MODIFIED="1377990399690"/>
-<node ID="ID_1184683154" CREATED="1377990340385" MODIFIED="1377990854096"><richcontent TYPE="NODE">
-
-<html>
-  <head>
-    
-  </head>
-  <body>
-    <p>
-      <b>Chrome </b>is not able to load the data of your mindmap from a local file, you therefore need to run a webserver (any will do) and put mindslide in a web directory.
-    </p>
-  </body>
-</html>
-</richcontent>
-</node>
-<node ID="ID_1317107856" CREATED="1377990491310" MODIFIED="1377992446567"><richcontent TYPE="NODE">
-
-<html>
-  <head>
-    
-  </head>
-  <body>
-    <p>
-      if you have no webserver we recommend <b>Mongoose:</b>&#160;download it in your mindslide directory, execute and browse to http://localhost:8080/mindslide.html with your favorite browser.
-    </p>
-  </body>
-</html>
-</richcontent>
-</node>
-<node TEXT="mongoose (easy web server)" ID="ID_810062039" CREATED="1377990512811" MODIFIED="1377990830258" LINK="http://code.google.com/p/mongoose/"/>
-<node TEXT="http://localhost:8080/mindslide.html" ID="ID_1748084873" CREATED="1377991025382" MODIFIED="1377991030467" LINK="http://localhost:8080/mindslide.html"/>
-</node>
 </node>
 <node TEXT="Acknowledgments" POSITION="right" ID="ID_510184946" CREATED="1377867969615" MODIFIED="1377991786445">
 <edge COLOR="#00ffff"/>
-<node TEXT="This viewer tool relies on the fantastic reveal.js HTML presentation framework, the jQuery Javascript library, and Freeplane... to map your thoughts." ID="ID_575828315" CREATED="1377867975744" MODIFIED="1377992476177"/>
-<node TEXT="reveal.js" ID="ID_433793022" CREATED="1377867989157" MODIFIED="1377868012946" LINK="http://lab.hakim.se/reveal-js/"/>
-<node TEXT="jQuery" ID="ID_698382885" CREATED="1377868045731" MODIFIED="1377868061347" LINK="http://jquery.com/"/>
-<node TEXT="download Freeplane, open-source mindmap editor" ID="ID_1569288018" CREATED="1377989067286" MODIFIED="1377989104541" LINK="http://freeplane.sourceforge.net"/>
+<node ID="ID_575828315" CREATED="1377867975744" MODIFIED="1378371575747"><richcontent TYPE="NODE">
+
+<html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      This export tool relies on the fantastic <a href="http://lab.hakim.se/reveal-js/">reveal.js</a>&#160;HTML presentation framework, and <a href="http://freeplane.sourceforge.net">Freeplane</a>... to map your thoughts.
+    </p>
+  </body>
+</html>
+
+</richcontent>
+</node>
 </node>
 </node>
 </map>
