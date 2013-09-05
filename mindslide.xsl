@@ -21,11 +21,11 @@
     <!--potential parameters -->
     <xsl:variable name="titleMaxLvl" select="1" /><!--nodes down to this lvl are viewed as title slides, default is 1 (root node) -->
     <xsl:variable name="subsectionLvl" select="2" /><!--nodes from this lvl are "heads" of a subsection, default is 2 (root's children), set to 0 if you want only linear flow (no 2D) -->
-    <xsl:variable name="revealDir" select="'reveal.js/'" /> <!-- ABSOLUTE path to reveal, must finish with a '/' and must be absolute since for base is mindmap location. default is reveal.js/ --> 
-    <xsl:variable name="mapDir" select="'.'" /> <!-- ABSOLUTE path to map, to set html <base> from, hoping to improve portability of export -->
+    <xsl:variable name="revealDir" select="'../reveal.js/'" /> <!-- path to reveal, must finish with a '/'.  must be absolute or relative to export save location. default is 'reveal.js/' --> 
+    <xsl:variable name="mapDir" select="'.'" /> <!-- path to map, to set html <base> from, hoping to improve portability of export. must be absolute or relative to export location. defaults is '.' -->
     
     <!-- User texts & i18n, potential parameters -->    
-    <xsl:variable name="author" select="'Bertrand.Gregoire(@tudor.lu)'"/>
+    <xsl:variable name="author" select="'Yours Respectfully'"/>
     <xsl:variable name="end" select="'The End'"/>
     <xsl:variable name="thanks" select="'Thank You!'"/>
     <xsl:variable name="ToC" select="'Table of Content'"/><!-- title for Table of Content -->
