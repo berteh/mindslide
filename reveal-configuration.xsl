@@ -7,28 +7,8 @@
         <xsl:comment>for custom header items</xsl:comment>
 
     </xsl:template>
-    <xsl:template name="reveal-config">
+    <xsl:template name="reveal-dependencies">
         <script>
-            //run reveal.js
-            // Full list of configuration options available here:
-            // https://github.com/hakimel/reveal.js#configuration
-            Reveal.initialize({
-            controls: true,
-            progress: true,
-            history: true,
-            center: true,
-            //keyboard: true,
-            //touch: true,
-            overview: true,
-            center: true,
-            mouseWheel: true,
-            autoSlide: 0,
-            rtl: false,
-
-            theme: Reveal.getQueryHash().theme, // available themes are in /css/theme
-            transition: Reveal.getQueryHash().transition || 'concave', //
-            default/cube/page/concave/zoom/linear/fade/none
-
             // Optional libraries used to extend on reveal.js
             dependencies: [
             { src: '<xsl:value-of select="$revealDir"/>lib/js/classList.js', condition: function() { return

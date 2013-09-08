@@ -22,16 +22,16 @@
     <!-- configuration parameters -->
     <xsl:param name="titleMaxLvl" select="1" /><!--nodes down to this lvl are viewed as title slides, default is 1 (root node) -->
     <xsl:param name="subsectionLvl" select="2" /><!--nodes from this lvl are "heads" of a subsection, default is 2 (root's children), set to 0 if you want only linear flow (no 2D) -->
-    <xsl:param name="revealDir" select="'reveal.js/'" /> <!-- path to reveal, must finish with a '/'.  must be absolute or relative to export save location. default is '<your freemind path>/resources/reveal.js/' --> 
+    <xsl:param name="revealDir" select="document('config.xml')/deck-config/reveal/base-dir" />
     <xsl:param name="mapDir" select="'.'" /> <!-- path to map, to set html <base> from, hoping to improve portability of export. must be absolute or relative to export location. defaults is '.' -->
-    <xsl:param name="theme" select="'default'" /> <!-- one of 'default', 'beige', 'sky', 'night', 'serif', 'simple'. Moreover at https://github.com/hakimel/reveal.js#theming -->
+    <xsl:param name="theme" select="document('config.xml')/deck-config/reveal/theme" />
     
     <!-- User texts & i18n parameters -->    
-    <xsl:param name="author" select="'Yours Respectfully'"/> <!-- author name (can be rich html)-->
-    <xsl:param name="end" select="'The End'"/><!-- end slide title -->
-    <xsl:param name="thanks" select="'Thank You!'"/> <!--end slide text -->
-    <xsl:param name="ToC" select="'Table of Content'"/><!-- title for Table of Content -->
-    <xsl:param name="CoS" select="'Content of Section'"/><!-- title for Index of Subsection (if applicable, ie if $subsectionLvl > 1) -->
+    <xsl:param name="author" select="document('config.xml')/deck-config/text/author-html"/>
+    <xsl:param name="end" select="document('config.xml')/deck-config/text/end"/>
+    <xsl:param name="thanks" select="document('config.xml')/deck-config/text/thanks"/>
+    <xsl:param name="ToC" select="document('config.xml')/deck-config/text/toc-title"/>
+    <xsl:param name="CoS" select="document('config.xml')/deck-config/text/cos-title"/>
 
     <!-- internal static variables -->
     <xsl:variable name="mindslideVersion">0.2</xsl:variable>    
@@ -98,7 +98,7 @@
                 <section id="end">
                 <h1><xsl:value-of select="$end"/></h1>
                 <h3 class="thanks"><xsl:value-of select="$thanks"/></h3>
-                <p id="author"><xsl:value-of select="$author"/></p>                
+                <p id="author"><xsl:copy-of select="$author"/></p>
                 <p id="credits">
                     <small>Powered by <a href="http://berteh.github.io/mindslide/">Mindslide</a> for <a href="http://freeplane.sourceforge.net/">Freeplane</a>, using <a href="http://lab.hakim.se/reveal-js/#/">Reveal.js</a></small>
                 </p>
@@ -113,9 +113,27 @@
 
         <script src="{concat($revealDir,'lib/js/head.min.js')}"></script>            
         <script src="{concat($revealDir,'js/reveal.min.js')}"></script>
-        
-        
-        <xsl:call-template name="reveal-config"/>
+
+
+        //run reveal.js
+        // Full list of configuration options available here:
+        // https://github.com/hakimel/reveal.js#configuration
+        Reveal.initialize({
+        controls: <xsl:value-of select="document('config.xml')/deck-config/reveal/controls"/>,
+        progress: <xsl:value-of select="document('config.xml')/deck-config/reveal/progress"/>,
+        history: <xsl:value-of select="document('config.xml')/deck-config/reveal/history"/>,
+        center: <xsl:value-of select="document('config.xml')/deck-config/reveal/center"/>,
+        keyboard: <xsl:value-of select="document('config.xml')/deck-config/reveal/keyboard"/>,
+        touch: <xsl:value-of select="document('config.xml')/deck-config/reveal/touch"/>,
+        overview: <xsl:value-of select="document('config.xml')/deck-config/reveal/overview"/>,
+        mouseWheel: <xsl:value-of select="document('config.xml')/deck-config/reveal/mouseWheel"/>,
+        autoSlide: <xsl:value-of select="document('config.xml')/deck-config/reveal/autoSlide"/>,
+        rtl: <xsl:value-of select="document('config.xml')/deck-config/reveal/rtl"/>,,
+
+        theme: Reveal.getQueryHash().theme, // available themes are in /css/theme
+        transition: Reveal.getQueryHash().transition || 'concave', // default/cube/page/concave/zoom/linear/fade/none
+
+        <xsl:call-template name="reveal-dependencies"/>
     </body>
     </html>
 </xsl:template>
