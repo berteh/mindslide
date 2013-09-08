@@ -113,27 +113,28 @@
 
         <script src="{concat($revealDir,'lib/js/head.min.js')}"></script>            
         <script src="{concat($revealDir,'js/reveal.min.js')}"></script>
+        <script>
 
+            //run reveal.js
+            // Full list of configuration options available here:
+            // https://github.com/hakimel/reveal.js#configuration
+            Reveal.initialize({
+            controls: <xsl:value-of select="document('config.xml')/deck-config/reveal/controls"/>,
+            progress: <xsl:value-of select="document('config.xml')/deck-config/reveal/progress"/>,
+            history: <xsl:value-of select="document('config.xml')/deck-config/reveal/history"/>,
+            center: <xsl:value-of select="document('config.xml')/deck-config/reveal/center"/>,
+            keyboard: <xsl:value-of select="document('config.xml')/deck-config/reveal/keyboard"/>,
+            touch: <xsl:value-of select="document('config.xml')/deck-config/reveal/touch"/>,
+            overview: <xsl:value-of select="document('config.xml')/deck-config/reveal/overview"/>,
+            mouseWheel: <xsl:value-of select="document('config.xml')/deck-config/reveal/mouseWheel"/>,
+            autoSlide: <xsl:value-of select="document('config.xml')/deck-config/reveal/autoSlide"/>,
+            rtl: <xsl:value-of select="document('config.xml')/deck-config/reveal/rtl"/>,
 
-        //run reveal.js
-        // Full list of configuration options available here:
-        // https://github.com/hakimel/reveal.js#configuration
-        Reveal.initialize({
-        controls: <xsl:value-of select="document('config.xml')/deck-config/reveal/controls"/>,
-        progress: <xsl:value-of select="document('config.xml')/deck-config/reveal/progress"/>,
-        history: <xsl:value-of select="document('config.xml')/deck-config/reveal/history"/>,
-        center: <xsl:value-of select="document('config.xml')/deck-config/reveal/center"/>,
-        keyboard: <xsl:value-of select="document('config.xml')/deck-config/reveal/keyboard"/>,
-        touch: <xsl:value-of select="document('config.xml')/deck-config/reveal/touch"/>,
-        overview: <xsl:value-of select="document('config.xml')/deck-config/reveal/overview"/>,
-        mouseWheel: <xsl:value-of select="document('config.xml')/deck-config/reveal/mouseWheel"/>,
-        autoSlide: <xsl:value-of select="document('config.xml')/deck-config/reveal/autoSlide"/>,
-        rtl: <xsl:value-of select="document('config.xml')/deck-config/reveal/rtl"/>,,
+            theme: Reveal.getQueryHash().theme, // available themes are in /css/theme
+            transition: Reveal.getQueryHash().transition || 'concave', // default/cube/page/concave/zoom/linear/fade/none
 
-        theme: Reveal.getQueryHash().theme, // available themes are in /css/theme
-        transition: Reveal.getQueryHash().transition || 'concave', // default/cube/page/concave/zoom/linear/fade/none
-
-        <xsl:call-template name="reveal-dependencies"/>
+            <xsl:call-template name="reveal-dependencies"/>
+        </script>
     </body>
     </html>
 </xsl:template>
