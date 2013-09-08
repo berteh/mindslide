@@ -15,7 +15,7 @@
     ChangeLog: See: https://github.com/berteh/mindslide
 -->
 
-<xsl:stylesheet version="1.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
+<xsl:stylesheet version="2.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
     <xsl:output method="html" indent="yes" encoding="ISO-8859-1" />
     <xsl:strip-space elements="*" />
 
@@ -36,7 +36,7 @@
     <!-- internal static variables -->
     <xsl:variable name="mindslideVersion">0.2</xsl:variable>    
 
-
+    <xsl:include href="reveal-configuration.xsl"/> 
 <xsl:template match="/map">
     <xsl:variable name="mapversion" select="@version" />
     <html lang="en">
@@ -50,11 +50,11 @@
         <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
 
-        <link rel="stylesheet"><xsl:attribute name="href"><xsl:value-of select="concat($revealDir,'css/reveal.min.css')" /></xsl:attribute></link>
-        <link rel="stylesheet" id="theme"><xsl:attribute name="href"><xsl:value-of select="concat($revealDir,'css/theme/',$theme,'.css')" /></xsl:attribute></link>
+        <link rel="stylesheet" href="{concat($revealDir,'css/reveal.min.css')}"></link>
+        <link rel="stylesheet" id="theme" href="{concat($revealDir,'css/theme/',$theme,'.css')}"></link>
 
         <xsl:comment>For syntax highlighting</xsl:comment> 
-        <link rel="stylesheet"><xsl:attribute name="href"><xsl:value-of select="concat($revealDir,'lib/css/zenburn.css')" /></xsl:attribute></link>
+        <link rel="stylesheet" href="{concat($revealDir,'lib/css/zenburn.css')}"></link>
 
         <style>
             a.connector, a.subsection {margin-left: 1ex; font-size: smaller}
@@ -83,6 +83,8 @@
             &lt;script src="<xsl:value-of select="$revealDir"/>lib/js/html5shiv.js">&lt;/script>
             &lt;![endif]
         </xsl:comment> 
+        
+        <xsl:call-template name="custom-links"/>
     </head>
     <body>
 
@@ -90,7 +92,7 @@
             <xsl:comment>Any section element inside of this container is displayed as a slide</xsl:comment>
             <div class="slides mindslide">
                 <xsl:apply-templates select="node" mode="structure">
-                    <xsl:with-param name="level" select="1"></xsl:with-param>
+                    <xsl:with-param name="level" select="1"/>
                 </xsl:apply-templates>
 
                 <section id="end">
@@ -109,38 +111,11 @@
             <xsl:apply-templates select="node" mode="simpleText" /> | <a href="http://berteh.github.io/mindslide/">Mindslide</a> v <xsl:value-of select="$mindslideVersion"/> |  <a href="http://freeplane.sourceforge.net/">Freeplane</a> map v<xsl:value-of select="$mapversion"/>
         </footer>
 
-        <script><xsl:attribute name="src"><xsl:value-of select="concat($revealDir,'lib/js/head.min.js')" /></xsl:attribute></script>            
-        <script><xsl:attribute name="src"><xsl:value-of select="concat($revealDir,'js/reveal.min.js')" /></xsl:attribute></script>
-
-        <script>
-            //run reveal.js
-            // Full list of configuration options available here:
-            // https://github.com/hakimel/reveal.js#configuration
-            Reveal.initialize({
-            controls: true,
-            progress: true,
-            history: true,
-            center: true,                   
-            //keyboard: true,
-            //touch: true,
-            overview: true,
-            center: true,
-            mouseWheel: true,
-            autoSlide: 0,
-            rtl: false,
-
-            theme: Reveal.getQueryHash().theme, // available themes are in /css/theme
-            transition: Reveal.getQueryHash().transition || 'concave', // default/cube/page/concave/zoom/linear/fade/none
-
-            // Optional libraries used to extend on reveal.js
-            dependencies: [
-            { src: '<xsl:value-of select="$revealDir"/>lib/js/classList.js', condition: function() { return !document.body.classList; } },
-            { src: '<xsl:value-of select="$revealDir"/>plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
-            { src: '<xsl:value-of select="$revealDir"/>plugin/zoom-js/zoom.js', async: true, condition: function() { return !!document.body.classList; } },
-            { src: '<xsl:value-of select="$revealDir"/>plugin/notes/notes.js', async: true, condition: function() { return !!document.body.classList; } }
-            ]
-            });
-        </script>
+        <script src="{concat($revealDir,'lib/js/head.min.js')}"></script>            
+        <script src="{concat($revealDir,'js/reveal.min.js')}"></script>
+        
+        
+        <xsl:call-template name="reveal-config"/>
     </body>
     </html>
 </xsl:template>
