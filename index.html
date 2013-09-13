@@ -39,6 +39,7 @@
             <script src="reveal.js/lib/js/html5shiv.js"></script>
             <![endif]
         -->
+<!--for custom header items-->
 </head>
 <body>
 <div class="reveal">
@@ -334,7 +335,7 @@ git submodule update --init</code>
 </pre>
 </body>
 </li>
-<li>copy mindslide/mindslide.xsl into your freeplane/resources/xslt directory</li>
+<li>copy mindslide/mindslide.xsl, mindslide/config.xml and mindslide/reveal-configuration.xsl into your freeplane/resources/xslt directory</li>
 <li>launch freemind and select file &gt; export &gt; MindeSlide Presentation (.html) to export your mindmap</li>
 <li>
 <body>
@@ -349,13 +350,14 @@ git submodule update --init</code>
 <h3>Configure</h3>
 <ul>
 <li>Many options are available</li>
-<li>edit directly the mindslide.xsl (or the exported .html presentation file) for your prefered theme, transition, extra behaviour or functionality.</li>
+<li>edit the config.xml in your freeplane/xslt directory (or the exported .html presentation file) for your prefered theme, transition, extra behaviour or functionality.</li>
+<li>developpers may load extra librairies by editing reveal-configuration.xsl in freeplane/xslt too.</li>
 <li>
 <a href="https://github.com/hakimel/reveal.js#configuration" class="link external">see reveal.js configuration</a>
 </li>
 </ul>
 <div class="illustrations w1">
-<a href="assets/themes.jpg" class="image" title="edit directly the mindslide.xsl (or the exported .html presentation file) for your prefered theme, transition, extra behaviour or functionality."><img src="assets/themes.jpg" alt="edit directly the mindslide.xsl (or the exported .html presentation file) for your prefered theme, transition, extra behaviour or functionality."></a>
+<a href="assets/themes.jpg" class="image" title="edit the config.xml in your freeplane/xslt directory (or the exported .html presentation file) for your prefered theme, transition, extra behaviour or functionality."><img src="assets/themes.jpg" alt="edit the config.xml in your freeplane/xslt directory (or the exported .html presentation file) for your prefered theme, transition, extra behaviour or functionality."></a>
 </div>
 <aside class="notes">
 <richcontent TYPE="NOTE">
@@ -388,7 +390,7 @@ git submodule update --init</code>
 <code class="bash">python -m SimpleHTTPServer 8080</code>
 </pre>
 <p>
-      then browse to <a href="then browse to http://localhost:8080">http://localhost:8080</a>
+      then browse to <a href="http://localhost:8080">http://localhost:8080</a>
 </p>
 </body>
 </li>
@@ -466,7 +468,9 @@ git submodule update --init</code>
 <section id="end">
 <h1>The End</h1>
 <h3 class="thanks">Thank You!</h3>
-<p id="author">Yours Respectfully</p>
+<p id="author">
+<author-html>Yours Respectfully</author-html>
+</p>
 <p id="credits">
 <small>Powered by <a href="http://berteh.github.io/mindslide/">Mindslide</a> for <a href="http://freeplane.sourceforge.net/">Freeplane</a>, using <a href="http://lab.hakim.se/reveal-js/#/">Reveal.js</a></small>
 </p>
@@ -475,6 +479,7 @@ git submodule update --init</code>
 </div>
 <footer class="info">MindSlide | <a href="http://berteh.github.io/mindslide/">Mindslide</a> v 0.2 |  <a href="http://freeplane.sourceforge.net/">Freeplane</a> map vfreeplane 1.2.0</footer>
 <script src="reveal.js/lib/js/head.min.js"></script><script src="reveal.js/js/reveal.min.js"></script><script>
+
             //run reveal.js
             // Full list of configuration options available here:
             // https://github.com/hakimel/reveal.js#configuration
@@ -482,11 +487,10 @@ git submodule update --init</code>
             controls: true,
             progress: true,
             history: true,
-            center: true,                   
-            //keyboard: true,
-            //touch: true,
-            overview: true,
             center: true,
+            keyboard: true,
+            touch: true,
+            overview: true,
             mouseWheel: true,
             autoSlide: 0,
             rtl: false,
@@ -494,14 +498,19 @@ git submodule update --init</code>
             theme: Reveal.getQueryHash().theme, // available themes are in /css/theme
             transition: Reveal.getQueryHash().transition || 'concave', // default/cube/page/concave/zoom/linear/fade/none
 
-            // Optional libraries used to extend on reveal.js
-            dependencies: [
-            { src: 'reveal.js/lib/js/classList.js', condition: function() { return !document.body.classList; } },
-            { src: 'reveal.js/plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
-            { src: 'reveal.js/plugin/zoom-js/zoom.js', async: true, condition: function() { return !!document.body.classList; } },
-            { src: 'reveal.js/plugin/notes/notes.js', async: true, condition: function() { return !!document.body.classList; } }
-            ]
-            });
-        </script>
+            
+        // Optional libraries used to extend on reveal.js
+        dependencies: [
+        { src: 'reveal.js/lib/js/classList.js', condition: function() { return
+        !document.body.classList; } },
+        { src: 'reveal.js/plugin/highlight/highlight.js', async: true, callback: function()
+        { hljs.initHighlightingOnLoad(); } },
+        { src: 'reveal.js/plugin/zoom-js/zoom.js', async: true, condition: function() {
+        return !!document.body.classList; } },
+        { src: 'reveal.js/plugin/notes/notes.js', async: true, condition: function() {
+        return !!document.body.classList; } }
+        ]
+        });
+    </script>
 </body>
 </html>

@@ -133,7 +133,6 @@
     </ul>
   </body>
 </html>
-
 </richcontent>
 </node>
 <node ID="ID_1149617363" CREATED="1377869822244" MODIFIED="1378377198254"><richcontent TYPE="NODE">
@@ -196,7 +195,6 @@
     </p>
   </body>
 </html>
-
 </richcontent>
 <arrowlink SHAPE="CUBIC_CURVE" COLOR="#000000" WIDTH="2" TRANSPARENCY="80" FONT_SIZE="9" FONT_FAMILY="SansSerif" DESTINATION="ID_1494003336" STARTINCLINATION="299;-5;" ENDINCLINATION="590;0;" STARTARROW="NONE" ENDARROW="DEFAULT"/>
 </node>
@@ -282,7 +280,6 @@
     </p>
   </body>
 </html>
-
 </richcontent>
 </node>
 <node TEXT="nodes with only an image show as empty list item." ID="ID_239280693" CREATED="1377994551775" MODIFIED="1378389944327"><richcontent TYPE="NOTE">
@@ -297,12 +294,9 @@
     </p>
   </body>
 </html>
-
 </richcontent>
 </node>
-<node TEXT="rich text is not fully shown as simple text in indexes &amp; titles" ID="ID_1533222341" CREATED="1378377106810" MODIFIED="1378390168917">
-<arrowlink SHAPE="CUBIC_CURVE" COLOR="#000000" WIDTH="2" TRANSPARENCY="80" FONT_SIZE="9" FONT_FAMILY="SansSerif" DESTINATION="ID_523970975" STARTINCLINATION="545;0;" ENDINCLINATION="545;0;" STARTARROW="NONE" ENDARROW="DEFAULT"/>
-<richcontent TYPE="NOTE">
+<node TEXT="rich text is not fully shown as simple text in indexes &amp; titles" ID="ID_1533222341" CREATED="1378377106810" MODIFIED="1378390168917"><richcontent TYPE="NOTE">
 
 <html>
   <head>
@@ -314,8 +308,8 @@
     </p>
   </body>
 </html>
-
 </richcontent>
+<arrowlink SHAPE="CUBIC_CURVE" COLOR="#000000" WIDTH="2" TRANSPARENCY="80" FONT_SIZE="9" FONT_FAMILY="SansSerif" DESTINATION="ID_523970975" STARTINCLINATION="545;0;" ENDINCLINATION="545;0;" STARTARROW="NONE" ENDARROW="DEFAULT"/>
 </node>
 <node TEXT="Report your bugs on our &quot;issues&quot; list!" ID="ID_551533464" CREATED="1377867391933" MODIFIED="1377992240334" LINK="https://github.com/berteh/mindslide/issues"/>
 </node>
@@ -367,10 +361,9 @@ cd mindslide  # (dir mindslide on windows)
 git submodule update --init</code></pre>
   </body>
 </html>
-
 </richcontent>
 </node>
-<node TEXT="copy mindslide/mindslide.xsl into your freeplane/resources/xslt directory" ID="ID_1487207699" CREATED="1378221411490" MODIFIED="1378371315022"/>
+<node TEXT="copy mindslide/mindslide.xsl, mindslide/config.xml and mindslide/reveal-configuration.xsl into your freeplane/resources/xslt directory" ID="ID_1487207699" CREATED="1378221411490" MODIFIED="1379066167787"/>
 <node TEXT="launch freemind and select file &gt; export &gt; MindeSlide Presentation (.html) to export your mindmap" ID="ID_916240691" CREATED="1378221446025" MODIFIED="1378376960147"/>
 <node ID="ID_765546127" CREATED="1378221476933" MODIFIED="1378383162779"><richcontent TYPE="NODE">
 
@@ -390,7 +383,7 @@ git submodule update --init</code></pre>
 </node>
 <node TEXT="Configure" ID="ID_1593867677" CREATED="1377867328934" MODIFIED="1377867331019">
 <node TEXT="Many options are available" ID="ID_62454801" CREATED="1377867358677" MODIFIED="1377993859049"/>
-<node TEXT="edit directly the mindslide.xsl (or the exported .html presentation file) for your prefered theme, transition, extra behaviour or functionality." ID="ID_1538743762" CREATED="1377993859657" MODIFIED="1378374846221">
+<node TEXT="edit the config.xml in your freeplane/xslt directory (or the exported .html presentation file) for your prefered theme, transition, extra behaviour or functionality." ID="ID_1538743762" CREATED="1377993859657" MODIFIED="1379066223883">
 <hook URI="assets/themes.jpg" SIZE="0.48640913" NAME="ExternalObject"/>
 <richcontent TYPE="NOTE">
 
@@ -406,10 +399,11 @@ git submodule update --init</code></pre>
 </html>
 </richcontent>
 </node>
+<node TEXT="developpers may load extra librairies by editing reveal-configuration.xsl in freeplane/xslt too." ID="ID_1691472387" CREATED="1379066226604" MODIFIED="1379066253209"/>
 <node TEXT="see reveal.js configuration" ID="ID_1201663334" CREATED="1377993908853" MODIFIED="1377993985014" LINK="https://github.com/hakimel/reveal.js#configuration"/>
 </node>
 <node TEXT="View Speakers Notes" ID="ID_1605694183" CREATED="1378390526444" MODIFIED="1378391591570">
-<node ID="ID_254618814" CREATED="1378390551836" MODIFIED="1378391585266"><richcontent TYPE="NODE">
+<node ID="ID_254618814" CREATED="1378390551836" MODIFIED="1378392970150"><richcontent TYPE="NODE">
 
 <html>
   <head>
@@ -427,11 +421,10 @@ git submodule update --init</code></pre>
     </p>
     <pre><code class="bash">python -m SimpleHTTPServer 8080</code></pre>
     <p>
-      then browse to <a href="then browse to http://localhost:8080">http://localhost:8080</a>
+      then browse to <a href="http://localhost:8080">http://localhost:8080</a>
     </p>
   </body>
 </html>
-
 </richcontent>
 </node>
 </node>
@@ -471,7 +464,6 @@ git submodule update --init</code></pre>
     </ol>
   </body>
 </html>
-
 </richcontent>
 </node>
 </node>
@@ -487,7 +479,6 @@ git submodule update --init</code></pre>
     </p>
   </body>
 </html>
-
 </richcontent>
 </node>
 </node>
