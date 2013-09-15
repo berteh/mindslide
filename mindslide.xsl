@@ -27,7 +27,7 @@
     <xsl:param name="theme" select="document('config.xml')/deck-config/reveal/theme" />
     
     <!-- User texts & i18n parameters -->    
-    <xsl:param name="author" select="document('config.xml')/deck-config/text/author-html"/>
+    <xsl:param name="author" select="document('config.xml')/deck-config/text/author-html/node()"/>
     <xsl:param name="end" select="document('config.xml')/deck-config/text/end"/>
     <xsl:param name="thanks" select="document('config.xml')/deck-config/text/thanks"/>
     <xsl:param name="ToC" select="document('config.xml')/deck-config/text/toc-title"/>
@@ -39,6 +39,7 @@
     <xsl:include href="reveal-configuration.xsl"/> 
 <xsl:template match="/map">
     <xsl:variable name="mapversion" select="@version" />
+    <xsl:text disable-output-escaping='yes'>&lt;!DOCTYPE html></xsl:text>
     <html lang="en">
     <head>
         <title><xsl:apply-templates select="node" mode="simpleText" /></title>
@@ -56,7 +57,7 @@
         <xsl:comment>For syntax highlighting</xsl:comment> 
         <link rel="stylesheet" href="{concat($revealDir,'lib/css/zenburn.css')}"></link>
 
-        <style>
+        <style type="text/css">
             a.connector, a.subsection {margin-left: 1ex; font-size: smaller}
             .illustrations a {float:left; margin: 1ex 5px; max-width:100%}
             .illustrations img {max-height:8em;}
@@ -75,7 +76,7 @@
         </style>
 
         <xsl:comment>If the query includes 'print-pdf', use the PDF print sheet. works in Chrome, maybe not other browsers</xsl:comment>
-        <script>
+        <script type="text/javascript">
         document.write( '&lt;link rel="stylesheet" href="<xsl:value-of select="$revealDir"/>css/print/' + ( window.location.search.match( /print-pdf/gi ) ? 'pdf' : 'paper' ) + '.css" type="text/css" media="print" />' );
         </script>
         <xsl:comment>
@@ -231,13 +232,13 @@
 
 <xsl:template match="node" mode="richContent"><!--richest possible node content, handle all but for links (->mode link) and images, gathered at the slide lvl (~for layout ease ~gallery)-->
     <xsl:value-of select="@TEXT"/>
-    <xsl:copy-of select="richcontent[@TYPE='NODE']/html/body"/>  <!--todo filter some of the default richcontent layout that messes with reveal, eg font sizes too small, maybe turn to relative?-->
+    <xsl:copy-of select="richcontent[@TYPE='NODE']/html/body/node()"/>  <!--todo filter some of the default richcontent layout that messes with reveal, eg font sizes too small, maybe turn to relative?-->
     <xsl:apply-templates select="arrowlink" /><!-- outwards node connectors --> 
 </xsl:template>
 
 <xsl:template match="node" mode="simpleText"><!--plain text -->
     <xsl:value-of select="@TEXT"/>
-    <xsl:value-of select="richcontent[@TYPE='NODE']/html/body/descendant::*/text()"/> <!--todo error: this XPath should get the text of all children in richcontent and seems to only get first lvl, to fix. -->
+    <xsl:value-of select="richcontent[@TYPE='NODE']/html/body/descendant::text()"/> <!--todo error: this XPath should get the text of all children in richcontent and seems to only get first lvl, to fix. -->
 </xsl:template>
 
 
@@ -251,8 +252,8 @@
     </xsl:if>
     <xsl:if test="(richcontent | node[not(node)]/richcontent)[@TYPE='NOTE']"><!-- notes of current node and simple children-->
         <aside class="notes">            
-            <xsl:copy-of select="richcontent[@TYPE='NOTE']" />
-            <xsl:copy-of select="node[not(node)]/richcontent[@TYPE='NOTE']" />
+            <xsl:copy-of select="richcontent[@TYPE='NOTE']/html/body/node()" />
+            <xsl:copy-of select="node[not(node)]/richcontent[@TYPE='NOTE']/html/body/node()" />
         </aside>
     </xsl:if>    
 </xsl:template>

@@ -1,4 +1,4 @@
-<html lang="en">
+<!DOCTYPE html><html lang="en">
 <head>
 <META http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
 <title>MindSlide</title>
@@ -13,7 +13,7 @@
 <link rel="stylesheet" id="theme" href="reveal.js/css/theme/default.css">
 <!--For syntax highlighting-->
 <link rel="stylesheet" href="reveal.js/lib/css/zenburn.css">
-<style>
+<style type="text/css">
             a.connector, a.subsection {margin-left: 1ex; font-size: smaller}
             .illustrations a {float:left; margin: 1ex 5px; max-width:100%}
             .illustrations img {max-height:8em;}
@@ -31,7 +31,7 @@
             pre.inline, .inline code {display:inline; width:auto;}  
         </style>
 <!--If the query includes 'print-pdf', use the PDF print sheet. works in Chrome, maybe not other browsers-->
-<script>
+<script type="text/javascript">
         document.write( '<link rel="stylesheet" href="reveal.js/css/print/' + ( window.location.search.match( /print-pdf/gi ) ? 'pdf' : 'paper' ) + '.css" type="text/css" media="print" />' );
         </script>
 <!--
@@ -52,11 +52,9 @@
 <li>hit &lt;space&gt; to navigate</li>
 <li>
 <a href="https://github.com/berteh/mindslide" class="link external">
-<body>
 <p>
 <small>MindSlide source code</small>
 </p>
-</body>
 </a>
 </li>
 </ul>
@@ -100,48 +98,38 @@
 <ul>
 <li>MindSlide currently supports</li>
 <li>
-<body>
 <p>
 <a href="https://github.com/hakimel/reveal.js#speaker-notes">speaker notes</a>&nbsp;(from the node notes) <small>hit "s"</small>
 </p>
-</body>
 </li>
 <li>
-<body>
 <p>
       2D flow + overview mode. <small>hit "escape" or "o"&nbsp; </small>&nbsp; easy navigation <small>(space, arrows, click)</small>
 </p>
-</body>
 </li>
 <li>
-<body>
 <p>
-      simple <font face="Courier New, Courier, Nimbus Mono L, serif, monospace"><b style="font-family: Courier New, Courier, Nimbus Mono L, serif, monospace">&amp; rich-text </b></font><font color="#e1a71c"><u>nodes</u></font>, including code highlight
+      simple <b style="font-family: Courier New, Courier, Nimbus Mono L, serif, monospace"><font face="Courier New, Courier, Nimbus Mono L, serif, monospace">&amp; rich-text </font></b><font color="#e1a71c"><u>nodes</u></font>, including code highlight
     </p>
 <pre>
 <code class="css">@page:right { 
   margin: 1cm 2cm 1.3cm 4cm; 
 }</code>
 </pre>
-</body>
 </li>
 <li>
 <a href="https://github.com/berteh/mindslide" class="link external">
-<body>
 <p>
       links on nodes. <small>ctrl+k in Freeplane</small>
 </p>
-</body>
 </a>
 </li>
 <li>images and nodes connectors<a href="#/ID_1494003336" class="link connector"> &#8605;</a>
 </li>
 <li>
-<body>
 <p>
 <a href="https://github.com/hakimel/reveal.js#leap-motion">gestures</a>, <a href="https://github.com/hakimel/reveal.js#markdown">markdown contents</a>, <a href="https://github.com/hakimel/reveal.js#pdf-export">PDF export</a>, <a href="https://github.com/hakimel/reveal.js#api">JavaScript API</a>&nbsp;and <a href="https://github.com/hakimel/reveal.js#instructions">more</a>.
     </p>
-</body>
 </li>
 <li>
 <a href="https://github.com/hakimel/reveal.js/wiki/Browser-Support" class="link external">works in most recent browsers</a>
@@ -151,24 +139,9 @@
 <a href="assets/chrome_firefox_opera_safari_ie_dolphin.png" class="image" title="works in most recent browsers"><img src="assets/chrome_firefox_opera_safari_ie_dolphin.png" alt="works in most recent browsers"></a>
 </div>
 <aside class="notes">
-<richcontent TYPE="NOTE">
-<html>
-<head>
-<META http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
-</head>
-<body>
 <p>
       The presenter notes are displayed in the presenter view.
     </p>
-</body>
-</html>
-</richcontent>
-<richcontent TYPE="NOTE">
-<html>
-<head>
-<META http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
-</head>
-<body>
 <p>
       The current slide aggregates all notes of the nodes it contains, but for the nodes that have children.
     </p>
@@ -177,24 +150,12 @@
 <font face="Times New Roman"><b>Rich text</b></font>&nbsp;<i>works in notes</i>&nbsp;too!
       </li>
 </ul>
-</body>
-</html>
-</richcontent>
-<richcontent TYPE="NOTE">
-<html>
-<head>
-<META http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
-</head>
-<body>
 <p>
       Images support is only partial as it depends on the browser to find them , usually relative adress in a sub-directory is fine.
     </p>
 <p>
       Help in improving this part is higly welcome.
     </p>
-</body>
-</html>
-</richcontent>
 </aside>
 </section>
 <!--new subsection-->
@@ -224,11 +185,9 @@
 <ul>
 <li>Various things we should fix, any pointer how to do so is welcome.</li>
 <li>
-<body>
 <p>
       improve styles, fonts and general support of richtext content, as for now some elements don't show or <font size="3">not nicely</font>
 </p>
-</body>
 </li>
 <li>nodes with only an image show as empty list item.</li>
 <li>rich text is not fully shown as simple text in indexes &amp; titles<a href="#/ID_523970975" class="link connector"> &#8605;</a>
@@ -238,42 +197,15 @@
 </li>
 </ul>
 <aside class="notes">
-<richcontent TYPE="NOTE">
-<html>
-<head>
-<META http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
-</head>
-<body>
 <p>
       not showing nicely: font size changed in rich-text editor ar usually displayed too small. current workaround is to edit html code view to use relative size (small, tiny) instead of absolute size (4, 5)...
     </p>
-</body>
-</html>
-</richcontent>
-<richcontent TYPE="NOTE">
-<html>
-<head>
-<META http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
-</head>
-<body>
 <p>
       nodes containing but an image should not show as empty item. current workaround is to only add images on nodes that have some text.
     </p>
-</body>
-</html>
-</richcontent>
-<richcontent TYPE="NOTE">
-<html>
-<head>
-<META http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
-</head>
-<body>
 <p>
       rich text in title of linked slide is "not supported <i><u>yet</u></i>"<i>.</i>&nbsp; but then end "yet" does not show as it should. no current workaround.
     </p>
-</body>
-</html>
-</richcontent>
 </aside>
 </section>
 </section>
@@ -309,7 +241,6 @@
 <ul>
 <li>To install MindSlide takes about 2 minutes:</li>
 <li>
-<body>
 <p>
       Install from the archives:
     </p>
@@ -321,10 +252,8 @@
         download and upack <a href="https://github.com/hakimel/reveal.js/archive/master.zip">https://github.com/hakimel/reveal.js/archive/master.zip</a>&nbsp;into mindslide/reveal.js directory
       </li>
 </ol>
-</body>
 </li>
 <li>
-<body>
 <p>
       (alternatively) you can also clone the source code:
     </p>
@@ -333,16 +262,13 @@
 cd mindslide  # (dir mindslide on windows)
 git submodule update --init</code>
 </pre>
-</body>
 </li>
 <li>copy mindslide/mindslide.xsl, mindslide/config.xml and mindslide/reveal-configuration.xsl into your freeplane/resources/xslt directory</li>
 <li>launch freemind and select file &gt; export &gt; MindeSlide Presentation (.html) to export your mindmap</li>
 <li>
-<body>
 <p>
 <b>save the HTML presentation in mindslide directory</b>! (for now)
     </p>
-</body>
 </li>
 </ul>
 </section>
@@ -360,25 +286,15 @@ git submodule update --init</code>
 <a href="assets/themes.jpg" class="image" title="edit the config.xml in your freeplane/xslt directory (or the exported .html presentation file) for your prefered theme, transition, extra behaviour or functionality."><img src="assets/themes.jpg" alt="edit the config.xml in your freeplane/xslt directory (or the exported .html presentation file) for your prefered theme, transition, extra behaviour or functionality."></a>
 </div>
 <aside class="notes">
-<richcontent TYPE="NOTE">
-<html>
-<head>
-<META http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
-</head>
-<body>
 <p>
       &nbsp;
     </p>
-</body>
-</html>
-</richcontent>
 </aside>
 </section>
 <section class="content" id="ID_1605694183">
 <h3>View Speakers Notes</h3>
 <ul>
 <li>
-<body>
 <p>
       Speaker notes require the presentation be served by a <b>webserver</b>, they don't work from a local file.
     </p>
@@ -392,7 +308,6 @@ git submodule update --init</code>
 <p>
       then browse to <a href="http://localhost:8080">http://localhost:8080</a>
 </p>
-</body>
 </li>
 </ul>
 </section>
@@ -406,11 +321,9 @@ git submodule update --init</code>
 <li>Improve the code<a href="#/ID_1869571896" class="link subsection"> &#8628;</a>
 </li>
 <li>
-<body>
 <p>
       Spread the word about <a href="http://berteh.github.io/mindslide/">Mindslide</a>, <a href="http://freeplane.sourceforge.net/">Freeplane</a>&nbsp;and <a href="http://lab.hakim.se/reveal-js/">Reveal.js</a>
 </p>
-</body>
 </li>
 </ul>
 </section>
@@ -418,7 +331,6 @@ git submodule update --init</code>
 <h4>Improve the code</h4>
 <ul>
 <li>
-<body>
 <ol>
 <li>
 <a href="https://github.com/berteh/mindslide">Fork the code</a>&nbsp;on github
@@ -448,7 +360,6 @@ git submodule update --init</code>
         Create a <a href="https://github.com/berteh/mindslide/pulls">new Pull Request</a>
 </li>
 </ol>
-</body>
 </li>
 </ul>
 </section>
@@ -457,20 +368,16 @@ git submodule update --init</code>
 <h2>Acknowledgments</h2>
 <ul>
 <li>
-<body>
 <p>
       This export tool relies on the fantastic <a href="http://lab.hakim.se/reveal-js/">reveal.js</a>&nbsp;HTML presentation framework, and <a href="http://freeplane.sourceforge.net">Freeplane</a>... to map your thoughts.
     </p>
-</body>
 </li>
 </ul>
 </section>
 <section id="end">
 <h1>The End</h1>
 <h3 class="thanks">Thank You!</h3>
-<p id="author">
-<author-html>Yours Respectfully</author-html>
-</p>
+<p id="author">Yours Respectfully</p>
 <p id="credits">
 <small>Powered by <a href="http://berteh.github.io/mindslide/">Mindslide</a> for <a href="http://freeplane.sourceforge.net/">Freeplane</a>, using <a href="http://lab.hakim.se/reveal-js/#/">Reveal.js</a></small>
 </p>
