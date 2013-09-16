@@ -238,7 +238,7 @@
 
 <xsl:template match="node" mode="simpleText"><!--plain text -->
     <xsl:value-of select="@TEXT"/>
-    <xsl:value-of select="richcontent[@TYPE='NODE']/html/body/descendant::text()"/> <!--todo error: this XPath should get the text of all children in richcontent and seems to only get first lvl, to fix. -->
+    <xsl:copy-of select="richcontent[@TYPE='NODE']/html/body//node()/text()"/> <!--todo error: this XPath should get the text of all children in richcontent and seems to only get first lvl, to fix. -->
 </xsl:template>
 
 

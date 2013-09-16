@@ -296,21 +296,6 @@
 </html>
 </richcontent>
 </node>
-<node TEXT="rich text is not fully shown as simple text in indexes &amp; titles" ID="ID_1533222341" CREATED="1378377106810" MODIFIED="1378390168917"><richcontent TYPE="NOTE">
-
-<html>
-  <head>
-    
-  </head>
-  <body>
-    <p>
-      rich text in title of linked slide is &quot;not supported <i><u>yet</u></i>&quot;<i>.</i>&#160; but then end &quot;yet&quot; does not show as it should. no current workaround.
-    </p>
-  </body>
-</html>
-</richcontent>
-<arrowlink SHAPE="CUBIC_CURVE" COLOR="#000000" WIDTH="2" TRANSPARENCY="80" FONT_SIZE="9" FONT_FAMILY="SansSerif" DESTINATION="ID_523970975" STARTINCLINATION="545;0;" ENDINCLINATION="545;0;" STARTARROW="NONE" ENDARROW="DEFAULT"/>
-</node>
 <node TEXT="Report your bugs on our &quot;issues&quot; list!" ID="ID_551533464" CREATED="1377867391933" MODIFIED="1377992240334" LINK="https://github.com/berteh/mindslide/issues"/>
 </node>
 <node TEXT="Put your suggestions on our &quot;issues&quot; list!" ID="ID_1954577764" CREATED="1377867391933" MODIFIED="1377992226508" LINK="https://github.com/berteh/mindslide/issues"/>
