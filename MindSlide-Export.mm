@@ -1,7 +1,7 @@
 <map version="freeplane 1.2.0">
 <!--To view this file, download free mind mapping software Freeplane from http://freeplane.sourceforge.net -->
 <attribute_registry SHOW_ATTRIBUTES="selected"/>
-<node TEXT="MindSlide" ID="ID_1723255651" CREATED="1283093380553" MODIFIED="1378377043488"><hook NAME="MapStyle" zoom="1.1">
+<node TEXT="MindSlide" ID="ID_1723255651" CREATED="1283093380553" MODIFIED="1401981525034"><hook NAME="MapStyle" zoom="1.1">
     <properties show_icon_for_attributes="true" show_note_icons="true"/>
 
 <map_styles>
@@ -51,7 +51,7 @@
 </stylenode>
 </map_styles>
 </hook>
-<hook NAME="AutomaticEdgeColor" COUNTER="5"/>
+<hook NAME="AutomaticEdgeColor" COUNTER="7"/>
 <attribute NAME="version" VALUE="20130901" OBJECT="org.freeplane.features.format.FormattedNumber|20130901"/>
 <attribute NAME="Author" VALUE="Berteh"/>
 <node TEXT="View your Mindmap as an HTML presentation / slideshow" POSITION="right" ID="ID_212678608" CREATED="1377866384042" MODIFIED="1378374500407">
@@ -149,7 +149,7 @@
 </html>
 </richcontent>
 </node>
-<node ID="ID_765812044" CREATED="1377866554077" MODIFIED="1378374696422"><richcontent TYPE="NODE">
+<node ID="ID_765812044" CREATED="1377866554077" MODIFIED="1401984309302"><richcontent TYPE="NODE">
 
 <html>
   <head>
@@ -157,13 +157,12 @@
   </head>
   <body>
     <p>
-      simple <font face="Courier New, Courier, Nimbus Mono L, serif, monospace"><b style="font-family: Courier New, Courier, Nimbus Mono L, serif, monospace">&amp; rich-text </b></font><font color="#e1a71c"><u>nodes</u></font>, including code highlight
+      simple <b style="font-family: Courier New, Courier, Nimbus Mono L, serif, monospace"><font face="Courier New, Courier, Nimbus Mono L, serif, monospace">&amp; rich-text </font></b><font color="#e1a71c"><u>nodes</u></font>, including code highlight
     </p>
-    <pre><code class="css">@page:right { 
-  margin: 1cm 2cm 1.3cm 4cm; 
-}</code></pre>
+    <pre><code class="css">@page:right { margin: 1cm 2cm 1.3cm 4cm; }</code></pre>
   </body>
 </html>
+
 </richcontent>
 </node>
 <node ID="ID_594361534" CREATED="1377866613085" MODIFIED="1378377504510" LINK="https://github.com/berteh/mindslide"><richcontent TYPE="NODE">
@@ -180,7 +179,7 @@
 </html>
 </richcontent>
 </node>
-<node TEXT="images and nodes connectors" ID="ID_906971272" CREATED="1377866777469" MODIFIED="1378389823591"><richcontent TYPE="NOTE">
+<node TEXT="images and nodes connectors" ID="ID_906971272" CREATED="1377866777469" MODIFIED="1401984402610"><richcontent TYPE="NOTE">
 
 <html>
   <head>
@@ -188,13 +187,14 @@
   </head>
   <body>
     <p>
-      Images support is only partial as it depends on the browser to find them , usually relative adress in a sub-directory is fine.
+      Images support is only partial as it depends on the browser to find them, usually relative adress in a sub-directory is fine.
     </p>
     <p>
       Help in improving this part is higly welcome.
     </p>
   </body>
 </html>
+
 </richcontent>
 <arrowlink SHAPE="CUBIC_CURVE" COLOR="#000000" WIDTH="2" TRANSPARENCY="80" FONT_SIZE="9" FONT_FAMILY="SansSerif" DESTINATION="ID_1494003336" STARTINCLINATION="299;-5;" ENDINCLINATION="590;0;" STARTARROW="NONE" ENDARROW="DEFAULT"/>
 </node>
@@ -211,6 +211,9 @@
   </body>
 </html>
 </richcontent>
+</node>
+<node TEXT="hidding nodes from slides" ID="ID_1778852033" CREATED="1401981390393" MODIFIED="1401984441020">
+<arrowlink SHAPE="CUBIC_CURVE" COLOR="#000000" WIDTH="2" TRANSPARENCY="80" FONT_SIZE="9" FONT_FAMILY="SansSerif" DESTINATION="ID_378704017" STARTINCLINATION="195;0;" ENDINCLINATION="195;0;" STARTARROW="NONE" ENDARROW="DEFAULT"/>
 </node>
 <node TEXT="works in most recent browsers" ID="ID_1942350131" CREATED="1377867277349" MODIFIED="1378375703778" LINK="https://github.com/hakimel/reveal.js/wiki/Browser-Support">
 <hook URI="assets/chrome_firefox_opera_safari_ie_dolphin.png" SIZE="0.10520631" NAME="ExternalObject"/>
@@ -386,6 +389,63 @@ git submodule update --init</code></pre>
 </node>
 <node TEXT="developpers may load extra librairies by editing reveal-configuration.xsl in freeplane/xslt too." ID="ID_1691472387" CREATED="1379066226604" MODIFIED="1379066253209"/>
 <node TEXT="see reveal.js configuration" ID="ID_1201663334" CREATED="1377993908853" MODIFIED="1377993985014" LINK="https://github.com/hakimel/reveal.js#configuration"/>
+</node>
+<node TEXT="Hide Nodes" ID="ID_378704017" CREATED="1401981390393" MODIFIED="1401981798026"><richcontent TYPE="NOTE">
+
+<html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      The original mindmap has more content in this node... but it does not show in your slides.
+    </p>
+    <p>
+      Great for creating content in Freeplane, and presenting only when it's ready.
+    </p>
+  </body>
+</html>
+</richcontent>
+<node TEXT="Great for creating content in Freeplane, and presenting only when it&apos;s ready." ID="ID_934607387" CREATED="1401982775751" MODIFIED="1401982777749">
+<node TEXT="Indeed" ID="ID_12152597" CREATED="1401982778911" MODIFIED="1401982789291">
+<attribute NAME="slide-hide" VALUE=""/>
+</node>
+</node>
+<node TEXT="Some nodes (and their children) can be excluded from the slides" ID="ID_63864419" CREATED="1401981397824" MODIFIED="1401983620699">
+<attribute NAME="slide-hide" VALUE=""/>
+<richcontent TYPE="NOTE">
+
+<html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      Notes of hidden nodes don't display either
+    </p>
+  </body>
+</html>
+
+</richcontent>
+<node TEXT="Children of hidden notes are hidden as well." ID="ID_1650241205" CREATED="1401981622444" MODIFIED="1401981764235"/>
+</node>
+<node ID="ID_1904486340" CREATED="1401981843061" MODIFIED="1401983782171"><richcontent TYPE="NODE">
+
+<html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      To hide a node from your mindslides simply add the attribute &quot;slide-hide&quot; to it:
+    </p>
+    <pre>      right-click &gt; edit attribute in-line &gt; add or select &quot;slide-hide&quot;</pre>
+  </body>
+</html>
+
+</richcontent>
+<hook URI="assets/hidden-node.png" SIZE="0.2695155" NAME="ExternalObject"/>
+</node>
 </node>
 <node TEXT="View Speakers Notes" ID="ID_1605694183" CREATED="1378390526444" MODIFIED="1378391591570">
 <node ID="ID_254618814" CREATED="1378390551836" MODIFIED="1378392970150"><richcontent TYPE="NODE">

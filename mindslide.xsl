@@ -1,21 +1,20 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-
-<!--
-	MINDMAPEXPORTFILTER html MindSlide Presentation
-	
-	License : This code released under the GPL  (http://www.gnu.org/copyleft/gpl.html) 
-	Document : mindslide.xsl
-	Created on : 31 August, 2013.
-	Author : Berteh berteh@gmail.com
-	Description: transforms freeplane mm format to reveal.js HTML presentation.
+<xsl:stylesheet version="2.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
+    <!--
+    MINDMAPEXPORTFILTER html MindSlide Presentation
+    
+    License : This code released under the GPL  (http://www.gnu.org/copyleft/gpl.html) 
+    Document : mindslide.xsl
+    Created on : 31 August, 2013.
+    Author : Berteh berteh@gmail.com
+    Description: transforms freeplane mm format to reveal.js HTML presentation.
     Handles crossrefs, images, rich node and more.
     Feel free to customize it while leaving the ancient authors mentioned.
-	Thank you 
+    Thank you 
     Homepage: See: http://berteh.github.io/mindslide/
     ChangeLog: See: https://github.com/berteh/mindslide
 -->
 
-<xsl:stylesheet version="2.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
     <xsl:output method="html" indent="yes" encoding="ISO-8859-1" />
     <xsl:strip-space elements="*" />
 
@@ -142,8 +141,10 @@
 
 <xsl:template match="node" mode="structure">
     <xsl:param name="level" tunnel="yes"/>  <!-- check if tunnel is supported in Freeplane -->
-    <xsl:choose><!-- choose for starting or not new subsection -->
-    <xsl:when test="($level = $subsectionLvl) and (node[node])"><!--complex children in new subsection-->
+    <xsl:choose><!-- choose for starting or not new subsection, or skipping -->
+    <xsl:when test="attribute[@NAME='slide-hide']"> <!-- skip node if the slide-hide attribute is present -->
+    </xsl:when>
+    <xsl:when test="($level = $subsectionLvl) and (node[node[not(attribute[@NAME='slide-hide'])]])"><!--complex children in new subsection-->
         <xsl:comment>new subsection</xsl:comment>
         <section>
             <xsl:apply-templates select="." mode="slide">
@@ -163,11 +164,11 @@
     <xsl:param name="level" tunnel="yes"/>   
 
     <xsl:choose> <!--choose for layout -->
-        <xsl:when test="($level &lt;= $titleMaxLvl) and (node[node])"><!--title layout-->
+        <xsl:when test="($level &lt;= $titleMaxLvl) and (node[node[not(attribute[@NAME='slide-hide'])]])"><!--title layout-->
            <section class="title"><xsl:attribute name="id"><xsl:value-of select="@ID" /></xsl:attribute>
                 <h1><xsl:apply-templates select="." mode="simpleText" /></h1>   <!--title slide is always h1, independent from level -->           
                 <ul>
-                    <xsl:apply-templates select="node[not(node)]" mode="indexEntry" /> <!--only text children in title slides-->
+                    <xsl:apply-templates select="node[not(node)][not(attribute[@NAME='slide-hide'])]" mode="indexEntry" /> <!--only text children in title slides-->
                 </ul>                
                 <xsl:call-template name="imagesAndNotes" />      
             </section>
@@ -179,7 +180,7 @@
                     </xsl:choose>
                 </h2>
                 <ul>
-                    <xsl:apply-templates select="node[node]" mode="indexEntry" /> <!--only complex children in toc-->
+                    <xsl:apply-templates select="node[node[not(attribute[@NAME='slide-hide'])]]" mode="indexEntry" /> <!--only complex children in toc-->
                 </ul>
                 <!--<footer><xsl:apply-templates select=".." mode="simpleText" /></footer> todo uncomment to get navigation crumble, but needs good css tuning-->
             </section>
@@ -189,21 +190,21 @@
             <section class="content"><xsl:attribute name="id"><xsl:value-of select="@ID" /></xsl:attribute>
                 <xsl:element name="{$h}"><xsl:apply-templates select="." mode="simpleText" /></xsl:element>
                 <ul>
-                    <xsl:apply-templates select="node" mode="indexEntry" />  <!--all children in title slides-->
+                    <xsl:apply-templates select="node[not(attribute[@NAME='slide-hide'])]" mode="indexEntry" />  <!--all non-hidden children in title slides-->
                 </ul>
                 <xsl:call-template name="imagesAndNotes" />     
             </section>            
         </xsl:otherwise>
     </xsl:choose>
         
-    <xsl:apply-templates select="node[node]" mode="structure"><!-- output complex children slides -->
+    <xsl:apply-templates select="node[node[not(attribute[@NAME='slide-hide'])]]" mode="structure"><!-- output complex children slides -->
         <xsl:with-param name="level" select="$level + 1" />
     </xsl:apply-templates> 
    
 </xsl:template>
 
 
-<xsl:template match="node[node]" mode="indexEntry"><!--complex node as plain text link 'li -->
+<xsl:template match="node[node[not(attribute[@NAME='slide-hide'])]]" mode="indexEntry"><!--complex node as plain text link 'li -->
     <li>
         <xsl:apply-templates select="." mode="simpleText" />
         <a>
@@ -213,7 +214,7 @@
         </a>           
     </li>
 </xsl:template>
-<xsl:template match="node[not(node)]" mode="indexEntry"><!--simple node as richtext 'li-->
+<xsl:template match="node[not(node[not(attribute[@NAME='slide-hide'])])]" mode="indexEntry"><!--simple node as richtext 'li-->
     <li><xsl:apply-templates select="." mode="richText"/></li>
 </xsl:template>
 
@@ -222,7 +223,7 @@
     <a>
        <xsl:attribute name="href"><xsl:value-of select="@LINK" /></xsl:attribute>
        <xsl:attribute name="class"><xsl:value-of select="'link external'" /></xsl:attribute>
-       <xsl:text><xsl:apply-templates select="." mode="richContent"/></xsl:text>
+       <xsl:apply-templates select="." mode="richContent"/>
     </a>            
        
 </xsl:template>

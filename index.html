@@ -109,12 +109,10 @@
 </li>
 <li>
 <p>
-      simple <font face="Courier New, Courier, Nimbus Mono L, serif, monospace"><b style="font-family: Courier New, Courier, Nimbus Mono L, serif, monospace">&amp; rich-text </b></font><u><font color="#e1a71c">nodes</font></u>, including code highlight
+      simple <b style="font-family: Courier New, Courier, Nimbus Mono L, serif, monospace"><font face="Courier New, Courier, Nimbus Mono L, serif, monospace">&amp; rich-text </font></b><font color="#e1a71c"><u>nodes</u></font>, including code highlight
     </p>
 <pre>
-<code class="css">@page:right { 
-  margin: 1cm 2cm 1.3cm 4cm; 
-}</code>
+<code class="css">@page:right { margin: 1cm 2cm 1.3cm 4cm; }</code>
 </pre>
 </li>
 <li>
@@ -130,6 +128,8 @@
 <p>
 <a href="https://github.com/hakimel/reveal.js#leap-motion">gestures</a>, <a href="https://github.com/hakimel/reveal.js#markdown">markdown contents</a>, <a href="https://github.com/hakimel/reveal.js#pdf-export">PDF export</a>, <a href="https://github.com/hakimel/reveal.js#api">JavaScript API</a>&nbsp;and <a href="https://github.com/hakimel/reveal.js#instructions">more</a>.
     </p>
+</li>
+<li>hidding nodes from slides<a href="#/ID_378704017" class="link connector"> &#8605;</a>
 </li>
 <li>
 <a href="https://github.com/hakimel/reveal.js/wiki/Browser-Support" class="link external">works in most recent browsers</a>
@@ -151,7 +151,7 @@
       </li>
 </ul>
 <p>
-      Images support is only partial as it depends on the browser to find them , usually relative adress in a sub-directory is fine.
+      Images support is only partial as it depends on the browser to find them, usually relative adress in a sub-directory is fine.
     </p>
 <p>
       Help in improving this part is higly welcome.
@@ -215,6 +215,8 @@
 <li>Install MindSlide<a href="#/ID_1405033759" class="link subsection"> &#8628;</a>
 </li>
 <li>Configure<a href="#/ID_1593867677" class="link subsection"> &#8628;</a>
+</li>
+<li>Hide Nodes<a href="#/ID_378704017" class="link subsection"> &#8628;</a>
 </li>
 <li>View Speakers Notes<a href="#/ID_1605694183" class="link subsection"> &#8628;</a>
 </li>
@@ -283,6 +285,33 @@ git submodule update --init</code>
 <aside class="notes">
 <p>
       &nbsp;
+    </p>
+</aside>
+</section>
+<section class="content" id="ID_378704017">
+<h3>Hide Nodes</h3>
+<ul>
+<li>Great for creating content in Freeplane, and presenting only when it's ready.</li>
+<li>
+<p>
+      To hide a node from your mindslides simply add the attribute "slide-hide" to it:
+    </p>
+<pre>      right-click &gt; edit attribute in-line &gt; add or select "slide-hide"</pre>
+</li>
+</ul>
+<div class="illustrations w1">
+<a href="assets/hidden-node.png" class="image" title="
+      To hide a node from your mindslides simply add the attribute &quot;slide-hide&quot; to it:
+          right-click > edit attribute in-line > add or select &quot;slide-hide&quot;"><img src="assets/hidden-node.png" alt="
+      To hide a node from your mindslides simply add the attribute &quot;slide-hide&quot; to it:
+          right-click > edit attribute in-line > add or select &quot;slide-hide&quot;"></a>
+</div>
+<aside class="notes">
+<p>
+      The original mindmap has more content in this node... but it does not show in your slides.
+    </p>
+<p>
+      Great for creating content in Freeplane, and presenting only when it's ready.
     </p>
 </aside>
 </section>
@@ -401,16 +430,12 @@ git submodule update --init</code>
             transition: Reveal.getQueryHash().transition || 'concave', // default/cube/page/concave/zoom/linear/fade/none
 
             
-        // Optional libraries used to extend on reveal.js
+        // Optional libraries used to extend on reveal.js - see https://github.com/hakimel/reveal.js#dependencies
         dependencies: [
-        { src: 'reveal.js/lib/js/classList.js', condition: function() { return
-        !document.body.classList; } },
-        { src: 'reveal.js/plugin/highlight/highlight.js', async: true, callback: function()
-        { hljs.initHighlightingOnLoad(); } },
-        { src: 'reveal.js/plugin/zoom-js/zoom.js', async: true, condition: function() {
-        return !!document.body.classList; } },
-        { src: 'reveal.js/plugin/notes/notes.js', async: true, condition: function() {
-        return !!document.body.classList; } }
+        { src: 'reveal.js/lib/js/classList.js', condition: function() { return !document.body.classList; } },
+        { src: 'reveal.js/plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+        { src: 'reveal.js/plugin/zoom-js/zoom.js', async: true, condition: function() { return !!document.body.classList; } },
+        { src: 'reveal.js/plugin/notes/notes.js', async: true, condition: function() { return !!document.body.classList; } }
         ]
         });
     </script>
