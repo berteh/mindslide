@@ -34,3 +34,9 @@ More features in the demo of [Reveal.js](http://lab.hakim.se/reveal-js/).
 
 ## Thanks
 A big "Thank You!"" to the original developpers of open-source software, and the community of contributors that supported/inspired them and more specifically [Hakim El Hattab](http://hakim.se) for Reveal.js, and Dimitry Polivaev and [contributors](http://freeplane.sourceforge.net/wiki/index.php/Contributors) for Freeplane.
+
+## Changelog 
+
+  * [v0.1](https://github.com/berteh/mindslide/releases/tag/v0.1) - 2013.09  - working JS implementation
+  * [v0.2](https://github.com/berteh/mindslide/releases/tag/v0.2) - 2013.09  - change to XSLT implementation, not integrated in Freeplane
+
