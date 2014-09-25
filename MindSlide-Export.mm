@@ -352,7 +352,7 @@ git submodule update --init</code></pre>
 </richcontent>
 </node>
 <node TEXT="copy mindslide/mindslide.xsl, mindslide/config.xml and mindslide/reveal-configuration.xsl into your freeplane/resources/xslt directory" ID="ID_1487207699" CREATED="1378221411490" MODIFIED="1379066167787"/>
-<node TEXT="launch freemind and select file &gt; export &gt; Using XSLT... &gt; MindeSlide Presentation (.html) to export your mindmap" ID="ID_916240691" CREATED="1378221446025" MODIFIED="1378376960147"/>
+<node TEXT="launch freemind and select file &gt; export &gt; Using XSLT... &gt; MindeSlid Presentation (.html) to export your mindmap" ID="ID_916240691" CREATED="1378221446025" MODIFIED="1378376960147"/>
 <node ID="ID_765546127" CREATED="1378221476933" MODIFIED="1378383162779"><richcontent TYPE="NODE">
 
 <html>
