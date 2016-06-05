@@ -189,11 +189,9 @@
 </li>
 <li>Install MindSlide<a href="#/ID_1405033759" class="link subsection"> &#8628;</a>
 </li>
-<li>Configure<a href="#/ID_1593867677" class="link subsection"> &#8628;</a>
+<li>Use MindSlide<a href="#/ID_1592220697" class="link subsection"> &#8628;</a>
 </li>
-<li>Hide Nodes<a href="#/ID_378704017" class="link subsection"> &#8628;</a>
-</li>
-<li>View Speakers Notes<a href="#/ID_1605694183" class="link subsection"> &#8628;</a>
+<li>Configure MindSlide<a href="#/ID_1593867677" class="link subsection"> &#8628;</a>
 </li>
 <li>Contribute / Contact<a href="#/ID_1128763901" class="link subsection"> &#8628;</a>
 </li>
@@ -236,37 +234,34 @@ git submodule update --init</code>
 </pre>
 </li>
 <li>copy mindslide/mindslide.xsl, mindslide/config.xml and mindslide/reveal-configuration.xsl into your freeplane/resources/xslt directory</li>
-<li>launch freemind and select file &gt; export &gt; Using XSLT... &gt; MindeSlid Presentation (.html) to export your mindmap</li>
-<li>
-<p>
-<b>save the HTML presentation in mindslide directory</b>! (for now)
-    </p>
-</li>
 </ul>
 </section>
-<section class="content" id="ID_1593867677">
-<h3>Configure</h3>
+<section class="content" id="ID_1592220697">
+<h3>Use MindSlide</h3>
 <ul>
-<li>Many options are available</li>
-<li>edit the config.xml in your freeplane/xslt directory (or the exported .html presentation file) for your prefered theme, transition, extra behaviour or functionality.</li>
-<li>developpers may load extra librairies by editing reveal-configuration.xsl in freeplane/xslt too.</li>
+<li>Easy as pie:</li>
+<li>launch freemind, edit your mindmap to your liking.</li>
 <li>
-<a href="https://github.com/hakimel/reveal.js#configuration" class="link external">see reveal.js configuration</a>
+<p>
+      select <i>file &gt; export &gt; Animation MindSlide (.html)</i>&nbsp;to export your mindmap
+    </p>
+</li>
+<li>
+<p>
+<b>save the HTML presentation in mindslide directory</b>! <small>(or edit settings in config.xml to use the online CDN as base directory)</small>
+</p>
+<a href="#/ID_1593867677" class="link connector"> &#8605;</a>
+</li>
+<li>Hide Nodes<a href="#/ID_378704017" class="link subsection"> &#8628;</a>
+</li>
+<li>View Speakers Notes<a href="#/ID_1605694183" class="link subsection"> &#8628;</a>
 </li>
 </ul>
-<div class="illustrations w1">
-<a href="assets/themes.jpg" class="image" title="edit the config.xml in your freeplane/xslt directory (or the exported .html presentation file) for your prefered theme, transition, extra behaviour or functionality."><img src="assets/themes.jpg" alt="edit the config.xml in your freeplane/xslt directory (or the exported .html presentation file) for your prefered theme, transition, extra behaviour or functionality."></a>
-</div>
-<aside class="notes">
-<p>
-      &nbsp;
-    </p>
-</aside>
 </section>
 <section class="content" id="ID_378704017">
-<h3>Hide Nodes</h3>
+<h4>Hide Nodes</h4>
 <ul>
-<li>Great for creating content in Freeplane, and presenting only when it's ready.</li>
+<li>Great functionaliy for creating content in Freeplane, and presenting only when it's ready.</li>
 <li>
 <p>
       To hide a node from your mindslides simply add the attribute "slide-hide" to it:
@@ -291,8 +286,9 @@ git submodule update --init</code>
 </aside>
 </section>
 <section class="content" id="ID_1605694183">
-<h3>View Speakers Notes</h3>
+<h4>View Speakers Notes</h4>
 <ul>
+<li>Including preview of the next slide, notes for current slide, and timer.</li>
 <li>
 <p>
       Speaker notes require the presentation be served by a <b>webserver</b>, they don't work from a local file.
@@ -309,6 +305,25 @@ git submodule update --init</code>
 </p>
 </li>
 </ul>
+</section>
+<section class="content" id="ID_1593867677">
+<h3>Configure MindSlide</h3>
+<ul>
+<li>Many options are available</li>
+<li>edit the config.xml in your freeplane/xslt directory (or the exported .html presentation file) for your prefered theme, transition, extra behaviour or functionality.</li>
+<li>developpers may load extra librairies by editing reveal-configuration.xsl in freeplane/xslt too.</li>
+<li>
+<a href="https://github.com/hakimel/reveal.js#configuration" class="link external">see reveal.js configuration</a>
+</li>
+</ul>
+<div class="illustrations w1">
+<a href="assets/themes.jpg" class="image" title="edit the config.xml in your freeplane/xslt directory (or the exported .html presentation file) for your prefered theme, transition, extra behaviour or functionality."><img src="assets/themes.jpg" alt="edit the config.xml in your freeplane/xslt directory (or the exported .html presentation file) for your prefered theme, transition, extra behaviour or functionality."></a>
+</div>
+<aside class="notes">
+<p>
+      &nbsp;
+    </p>
+</aside>
 </section>
 <section class="content" id="ID_1128763901">
 <h3>Contribute / Contact</h3>

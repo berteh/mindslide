@@ -150,7 +150,6 @@
     </p>
   </body>
 </html>
-
 </richcontent>
 </node>
 <node ID="ID_765812044" CREATED="1377866554077" MODIFIED="1401984309302"><richcontent TYPE="NODE">
@@ -186,7 +185,6 @@
     </p>
   </body>
 </html>
-
 </richcontent>
 <arrowlink SHAPE="CUBIC_CURVE" COLOR="#000000" WIDTH="2" TRANSPARENCY="80" FONT_SIZE="9" FONT_FAMILY="SansSerif" DESTINATION="ID_1494003336" STARTINCLINATION="299;-5;" ENDINCLINATION="590;0;" STARTARROW="NONE" ENDARROW="DEFAULT"/>
 </node>
@@ -221,7 +219,6 @@
     </p>
   </body>
 </html>
-
 </richcontent>
 </node>
 <node ID="ID_904082165" CREATED="1465150543428" MODIFIED="1465160670703"><richcontent TYPE="NODE">
@@ -236,7 +233,6 @@
     </p>
   </body>
 </html>
-
 </richcontent>
 </node>
 <node TEXT="slides shuffling" ID="ID_897064875" CREATED="1465150601857" MODIFIED="1465150637310"/>
@@ -252,7 +248,6 @@
     </p>
   </body>
 </html>
-
 </richcontent>
 </node>
 </node>
@@ -306,8 +301,11 @@ git submodule update --init</code></pre>
 </richcontent>
 </node>
 <node TEXT="copy mindslide/mindslide.xsl, mindslide/config.xml and mindslide/reveal-configuration.xsl into your freeplane/resources/xslt directory" ID="ID_1487207699" CREATED="1378221411490" MODIFIED="1379066167787"/>
-<node TEXT="launch freemind and select file &gt; export &gt; Using XSLT... &gt; MindeSlid Presentation (.html) to export your mindmap" ID="ID_916240691" CREATED="1378221446025" MODIFIED="1378376960147"/>
-<node ID="ID_765546127" CREATED="1378221476933" MODIFIED="1378383162779"><richcontent TYPE="NODE">
+</node>
+<node TEXT="Use MindSlide" ID="ID_1592220697" CREATED="1465162473408" MODIFIED="1465162589552">
+<node TEXT="Easy as pie:" ID="ID_445118759" CREATED="1465162491212" MODIFIED="1465162894153"/>
+<node TEXT="launch freemind, edit your mindmap to your liking." ID="ID_916240691" CREATED="1378221446025" MODIFIED="1465162526342"/>
+<node ID="ID_1269583054" CREATED="1465162527207" MODIFIED="1465162733776"><richcontent TYPE="NODE">
 
 <html>
   <head>
@@ -315,34 +313,29 @@ git submodule update --init</code></pre>
   </head>
   <body>
     <p>
-      <b>save the HTML presentation in mindslide directory</b>! (for now)
+      select <i>file &gt; export &gt; Animation MindSlide (.html)</i>&#160;to export your mindmap
     </p>
   </body>
 </html>
+
+</richcontent>
+</node>
+<node ID="ID_765546127" CREATED="1378221476933" MODIFIED="1465162830638"><richcontent TYPE="NODE">
+
+<html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      <b>save the HTML presentation in mindslide directory</b>! <small>(or edit settings in config.xml to use the online CDN as base directory)</small>
+    </p>
+  </body>
+</html>
+
 </richcontent>
 <font BOLD="false"/>
-</node>
-</node>
-<node TEXT="Configure" ID="ID_1593867677" CREATED="1377867328934" MODIFIED="1377867331019">
-<node TEXT="Many options are available" ID="ID_62454801" CREATED="1377867358677" MODIFIED="1377993859049"/>
-<node TEXT="edit the config.xml in your freeplane/xslt directory (or the exported .html presentation file) for your prefered theme, transition, extra behaviour or functionality." ID="ID_1538743762" CREATED="1377993859657" MODIFIED="1379066223883">
-<hook URI="assets/themes.jpg" SIZE="0.48640913" NAME="ExternalObject"/>
-<richcontent TYPE="NOTE">
-
-<html>
-  <head>
-    
-  </head>
-  <body>
-    <p>
-      &#160;
-    </p>
-  </body>
-</html>
-</richcontent>
-</node>
-<node TEXT="developpers may load extra librairies by editing reveal-configuration.xsl in freeplane/xslt too." ID="ID_1691472387" CREATED="1379066226604" MODIFIED="1379066253209"/>
-<node TEXT="see reveal.js configuration" ID="ID_1201663334" CREATED="1377993908853" MODIFIED="1377993985014" LINK="https://github.com/hakimel/reveal.js#configuration"/>
+<arrowlink SHAPE="CUBIC_CURVE" COLOR="#000000" WIDTH="2" TRANSPARENCY="80" FONT_SIZE="9" FONT_FAMILY="SansSerif" DESTINATION="ID_1593867677" STARTINCLINATION="598;0;" ENDINCLINATION="598;0;" STARTARROW="NONE" ENDARROW="DEFAULT"/>
 </node>
 <node TEXT="Hide Nodes" ID="ID_378704017" CREATED="1401981390393" MODIFIED="1401981798026"><richcontent TYPE="NOTE">
 
@@ -360,7 +353,7 @@ git submodule update --init</code></pre>
   </body>
 </html>
 </richcontent>
-<node TEXT="Great for creating content in Freeplane, and presenting only when it&apos;s ready." ID="ID_934607387" CREATED="1401982775751" MODIFIED="1401982777749">
+<node TEXT="Great functionaliy for creating content in Freeplane, and presenting only when it&apos;s ready." ID="ID_934607387" CREATED="1401982775751" MODIFIED="1465162858061">
 <node TEXT="Indeed" ID="ID_12152597" CREATED="1401982778911" MODIFIED="1401982789291">
 <attribute NAME="slide-hide" VALUE=""/>
 </node>
@@ -400,6 +393,7 @@ git submodule update --init</code></pre>
 </node>
 </node>
 <node TEXT="View Speakers Notes" ID="ID_1605694183" CREATED="1378390526444" MODIFIED="1378391591570">
+<node TEXT="Including preview of the next slide, notes for current slide, and timer." ID="ID_996228764" CREATED="1465162982945" MODIFIED="1465163037591"/>
 <node ID="ID_254618814" CREATED="1378390551836" MODIFIED="1378392970150"><richcontent TYPE="NODE">
 
 <html>
@@ -424,6 +418,28 @@ git submodule update --init</code></pre>
 </html>
 </richcontent>
 </node>
+</node>
+</node>
+<node TEXT="Configure MindSlide" ID="ID_1593867677" CREATED="1377867328934" MODIFIED="1465162622225">
+<node TEXT="Many options are available" ID="ID_62454801" CREATED="1377867358677" MODIFIED="1377993859049"/>
+<node TEXT="edit the config.xml in your freeplane/xslt directory (or the exported .html presentation file) for your prefered theme, transition, extra behaviour or functionality." ID="ID_1538743762" CREATED="1377993859657" MODIFIED="1379066223883">
+<hook URI="assets/themes.jpg" SIZE="0.48640913" NAME="ExternalObject"/>
+<richcontent TYPE="NOTE">
+
+<html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      &#160;
+    </p>
+  </body>
+</html>
+</richcontent>
+</node>
+<node TEXT="developpers may load extra librairies by editing reveal-configuration.xsl in freeplane/xslt too." ID="ID_1691472387" CREATED="1379066226604" MODIFIED="1379066253209"/>
+<node TEXT="see reveal.js configuration" ID="ID_1201663334" CREATED="1377993908853" MODIFIED="1377993985014" LINK="https://github.com/hakimel/reveal.js#configuration"/>
 </node>
 <node TEXT="Contribute / Contact" ID="ID_1128763901" CREATED="1377867379405" MODIFIED="1377991801097">
 <node TEXT="Contributions are welcome in all kinds:" ID="ID_756109089" CREATED="1377867407739" MODIFIED="1378374264424"/>

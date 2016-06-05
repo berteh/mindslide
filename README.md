@@ -1,4 +1,5 @@
 #Mindslide
+#Mindslide
 
 View mindmap as an HTML animation / presentation (aka Freeplane/Freemind to powerpoint slideshow).
 
@@ -10,6 +11,13 @@ Mindslide is an export extension for [Freeplane](http://sourceforge.net/projects
 ## HowTO
 - [Install](http://berteh.github.io/mindslide/#/ID_1405033759)
 - [Contribute](http://berteh.github.io/mindslide/#/ID_1128763901)
+
+Using Mindslide is then easy as pie:
+- launch freemind, edit your mindmap to your liking.
+- select file > export > Animation MindSlide (.html) to export your mindmap
+- save the HTML presentation in mindslide directory! (or edit settings in config.xml to use the CDN as base directory)
+
+More information for additional features [online]((http://berteh.github.io/mindslide/#/ID_1592220697), such as hiding nodes (or drafts) from your mindmap, or using speaker notes.
 
 
 ## Help and support
