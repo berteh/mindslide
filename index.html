@@ -5,14 +5,14 @@
 <meta name="description" content="Freeplane mindmap HTML presentation">
 <meta name="author" content="Yours Respectfully">
 <meta name="generator" content="Mindslide at http://berteh.github.io/mindslide/">
-<!--Mindslide version 0.2-->
+<!--Mindslide version 0.3-->
 <meta name="apple-mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-<link rel="stylesheet" href="reveal.js/css/reveal.min.css">
-<link rel="stylesheet" id="theme" href="reveal.js/css/theme/default.css">
+<link rel="stylesheet" href=" http://cdn.bootcss.com/reveal.js/3.3.0/css/reveal.css">
+<link rel="stylesheet" id="theme" href=" http://cdn.bootcss.com/reveal.js/3.3.0/css/theme/moon.css">
 <!--For syntax highlighting-->
-<link rel="stylesheet" href="reveal.js/lib/css/zenburn.css">
+<link rel="stylesheet" href=" http://cdn.bootcss.com/reveal.js/3.3.0/lib/css/zenburn.css">
 <style type="text/css">
             a.connector, a.subsection {margin-left: 1ex; font-size: smaller}
             .illustrations a {float:left; margin: 1ex 5px; max-width:100%}
@@ -24,6 +24,7 @@
             .illustrations.w5 a, .illustrations.w9 a, .illustrations.w10 a {max-width:18%} 
 
             /* bullet lists layout */
+			.mindslide li p {margin: 0 0;}
             .mindslide section.content>ul li {font-size: 90%;}
             .mindslide section.content>ul>li:first-of-type, .mindslide section.title>ul li {list-style:none; display:block; font-size: 120%; margin-bottom:1ex}   
 
@@ -32,14 +33,14 @@
         </style>
 <!--If the query includes 'print-pdf', use the PDF print sheet. works in Chrome, maybe not other browsers-->
 <script type="text/javascript">
-        document.write( '<link rel="stylesheet" href="reveal.js/css/print/' + ( window.location.search.match( /print-pdf/gi ) ? 'pdf' : 'paper' ) + '.css" type="text/css" media="print" />' );
+        document.write( '<link rel="stylesheet" href=" http://cdn.bootcss.com/reveal.js/3.3.0/css/print/' + ( window.location.search.match( /print-pdf/gi ) ? 'pdf' : 'paper' ) + '.css" type="text/css" media="print" />' );
         </script>
 <!--
             [if lt IE 9]>
-            <script src="reveal.js/lib/js/html5shiv.js"></script>
+            <script src=" http://cdn.bootcss.com/reveal.js/3.3.0/lib/js/html5shiv.js"></script>
             <![endif]
         -->
-<!--for custom header items-->
+<!--placeholder for custom header items-->
 </head>
 <body>
 <div class="reveal">
@@ -66,10 +67,10 @@
 </li>
 <li>Features<a href="#/ID_684843493" class="link subsection"> &#8628;</a>
 </li>
+<li>How To<a href="#/ID_317184146" class="link subsection"> &#8628;</a>
+</li>
 <li>
       Not supported yet<a href="#/ID_523970975" class="link subsection"> &#8628;</a>
-</li>
-<li>How To<a href="#/ID_317184146" class="link subsection"> &#8628;</a>
 </li>
 <li>Acknowledgments<a href="#/ID_510184946" class="link subsection"> &#8628;</a>
 </li>
@@ -88,11 +89,16 @@
 <li>
 <a href="http://freeplane.sourceforge.net" class="link external">Freeplane software</a>
 </li>
+<li>
+<a href="https://github.com/hakimel/reveal.js/wiki/Browser-Support" class="link external">works in most recent browsers, desktop and mobile devices</a>
+</li>
 </ul>
-<div class="illustrations w2">
-<a href="assets/mindmap-slide-export-demo.png" class="image" title="Demo mindmap"><img src="assets/mindmap-slide-export-demo.png" alt="Demo mindmap"></a><a href="assets/themes.jpg" class="image" title="Demo HTML presentation"><img src="assets/themes.jpg" alt="Demo HTML presentation"></a>
+<div class="illustrations w3">
+<a href="assets/mindmap-slide-export-demo.png" class="image" title="Demo mindmap"><img src="assets/mindmap-slide-export-demo.png" alt="Demo mindmap"></a><a href="assets/themes.jpg" class="image" title="Demo HTML presentation"><img src="assets/themes.jpg" alt="Demo HTML presentation"></a><a href="assets/chrome_firefox_opera_safari_ie_dolphin.png" class="image" title="works in most recent browsers, desktop and mobile devices"><img src="assets/chrome_firefox_opera_safari_ie_dolphin.png" alt="works in most recent browsers, desktop and mobile devices"></a>
 </div>
 </section>
+<!--new subsection-->
+<section>
 <section class="content" id="ID_684843493">
 <h2>Features</h2>
 <ul>
@@ -104,40 +110,29 @@
 </li>
 <li>
 <p>
-      2D flow + overview mode. <small>hit "escape" or "o"&nbsp; </small>&nbsp; easy navigation <small>(space, arrows, click)</small>
+      2D overview <small>(hit "esc" or "o")</small>&nbsp;easy navigation <small>(space, arrows, click, touch)</small>&nbsp;help <small>(?)</small>
 </p>
 </li>
 <li>
 <p>
-      simple <b style="font-family: Courier New, Courier, Nimbus Mono L, serif, monospace"><font face="Courier New, Courier, Nimbus Mono L, serif, monospace">&amp; rich-text </font></b><font color="#e1a71c"><u>nodes</u></font>, including code highlight
+      simple <font face="Courier New, Courier, Nimbus Mono L, serif, monospace"><b style="font-family: Courier New, Courier, Nimbus Mono L, serif, monospace">&amp; rich-text </b></font><font color="#e1a71c"><u>nodes</u></font>, including code highlight
     </p>
 <pre>
 <code class="css">@page:right { margin: 1cm 2cm 1.3cm 4cm; }</code>
 </pre>
 </li>
-<li>
-<a href="https://github.com/berteh/mindslide" class="link external">
-<p>
-      links on nodes. <small>ctrl+k in Freeplane</small>
-</p>
-</a>
-</li>
-<li>images and nodes connectors<a href="#/ID_1494003336" class="link connector"> &#8605;</a>
+<li>links, images and nodes connectors<a href="#/ID_1494003336" class="link connector"> &#8605;</a>
 </li>
 <li>
 <p>
 <a href="https://github.com/hakimel/reveal.js#leap-motion">gestures</a>, <a href="https://github.com/hakimel/reveal.js#markdown">markdown contents</a>, <a href="https://github.com/hakimel/reveal.js#pdf-export">PDF export</a>, <a href="https://github.com/hakimel/reveal.js#api">JavaScript API</a>&nbsp;and <a href="https://github.com/hakimel/reveal.js#instructions">more</a>.
     </p>
 </li>
-<li>hidding nodes from slides<a href="#/ID_378704017" class="link connector"> &#8605;</a>
+<li>hidding mindmap nodes from slides<a href="#/ID_378704017" class="link connector"> &#8605;</a>
 </li>
-<li>
-<a href="https://github.com/hakimel/reveal.js/wiki/Browser-Support" class="link external">works in most recent browsers</a>
+<li>Recent improvements<a href="#/ID_1665333044" class="link subsection"> &#8628;</a>
 </li>
 </ul>
-<div class="illustrations w1">
-<a href="assets/chrome_firefox_opera_safari_ie_dolphin.png" class="image" title="works in most recent browsers"><img src="assets/chrome_firefox_opera_safari_ie_dolphin.png" alt="works in most recent browsers"></a>
-</div>
 <aside class="notes">
 <p>
       The presenter notes are displayed in the presenter view.
@@ -154,54 +149,34 @@
       Images support is only partial as it depends on the browser to find them, usually relative adress in a sub-directory is fine.
     </p>
 <p>
-      Help in improving this part is higly welcome.
+      Help in improving this part is highly welcome.
+    </p>
+<p>
+      Nodes connectors display with a cute "tilde character", any better idea is welcome (a small preview of the target slide on hover would be great, for instance)
     </p>
 </aside>
 </section>
-<!--new subsection-->
-<section>
-<section class="content" id="ID_523970975">
-<h2>
-      Not supported yet</h2>
+<section class="content" id="ID_1665333044">
+<h3>Recent improvements</h3>
 <ul>
-<li>Many elements are still not supported. We welcome any pointers how to best do it, as well as help to do so!</li>
-<li>node and edge style</li>
-<li>node icons</li>
-<li>clouds</li>
-<li>"post-it" nodes are not marked differently from other nodes</li>
-<li>node attributes</li>
-<li>images zoom</li>
-<li>author information</li>
-<li>summary nodes</li>
-<li>Known Bugs<a href="#/ID_191827926" class="link subsection"> &#8628;</a>
+<li>Reveal.js now allows for</li>
+<li>
+<p>
+      more stunning transitions, including <i>fade, slide, convex, concave, zoom</i>.
+    </p>
 </li>
 <li>
-<a href="https://github.com/berteh/mindslide/issues" class="link external">Put your suggestions on our "issues" list!</a>
+<p>
+      parallax background (see <a href="http://berteh.github.io/mindslide/?parallaxBackgroundImage=https%3A%2F%2Fs3.amazonaws.com%2Fhakim-static%2Freveal-js%2Freveal-parallax-1.jpg&amp;parallaxBackgroundSize=2100px%20900px#/ID_1723255651">demo</a>)
+    </p>
+</li>
+<li>slides shuffling</li>
+<li>
+<p>
+      auto advancing slides (see <a href="https://github.com/hakimel/reveal.js#auto-sliding">documentation</a>)
+    </p>
 </li>
 </ul>
-</section>
-<section class="content" id="ID_191827926">
-<h3>Known Bugs</h3>
-<ul>
-<li>Various things we should fix, any pointer how to do so is welcome.</li>
-<li>
-<p>
-      improve styles, fonts and general support of richtext content, as for now some elements don't show or <font size="3">not nicely</font>
-</p>
-</li>
-<li>nodes with only an image show as empty list item.</li>
-<li>
-<a href="https://github.com/berteh/mindslide/issues" class="link external">Report your bugs on our "issues" list!</a>
-</li>
-</ul>
-<aside class="notes">
-<p>
-      not showing nicely: font size changed in rich-text editor ar usually displayed too small. current workaround is to edit html code view to use relative size (small, tiny) instead of absolute size (4, 5)...
-    </p>
-<p>
-      nodes containing but an image should not show as empty item. current workaround is to only add images on nodes that have some text.
-    </p>
-</aside>
 </section>
 </section>
 <!--new subsection-->
@@ -214,11 +189,9 @@
 </li>
 <li>Install MindSlide<a href="#/ID_1405033759" class="link subsection"> &#8628;</a>
 </li>
-<li>Configure<a href="#/ID_1593867677" class="link subsection"> &#8628;</a>
+<li>Use MindSlide<a href="#/ID_1592220697" class="link subsection"> &#8628;</a>
 </li>
-<li>Hide Nodes<a href="#/ID_378704017" class="link subsection"> &#8628;</a>
-</li>
-<li>View Speakers Notes<a href="#/ID_1605694183" class="link subsection"> &#8628;</a>
+<li>Configure MindSlide<a href="#/ID_1593867677" class="link subsection"> &#8628;</a>
 </li>
 <li>Contribute / Contact<a href="#/ID_1128763901" class="link subsection"> &#8628;</a>
 </li>
@@ -261,37 +234,34 @@ git submodule update --init</code>
 </pre>
 </li>
 <li>copy mindslide/mindslide.xsl, mindslide/config.xml and mindslide/reveal-configuration.xsl into your freeplane/resources/xslt directory</li>
-<li>launch freemind and select file &gt; export &gt; Using XSLT... &gt; MindSlide Presentation (.html) to export your mindmap</li>
-<li>
-<p>
-<b>save the HTML presentation in mindslide directory</b>! (for now)
-    </p>
-</li>
 </ul>
 </section>
-<section class="content" id="ID_1593867677">
-<h3>Configure</h3>
+<section class="content" id="ID_1592220697">
+<h3>Use MindSlide</h3>
 <ul>
-<li>Many options are available</li>
-<li>edit the config.xml in your freeplane/xslt directory (or the exported .html presentation file) for your prefered theme, transition, extra behaviour or functionality.</li>
-<li>developpers may load extra librairies by editing reveal-configuration.xsl in freeplane/xslt too.</li>
+<li>Easy as pie:</li>
+<li>launch freemind, edit your mindmap to your liking.</li>
 <li>
-<a href="https://github.com/hakimel/reveal.js#configuration" class="link external">see reveal.js configuration</a>
+<p>
+      select <i>file &gt; export &gt; Animation MindSlide (.html)</i>&nbsp;to export your mindmap
+    </p>
+</li>
+<li>
+<p>
+<b>save the HTML presentation in mindslide directory</b>! <small>(or edit settings in config.xml to use the online CDN as base directory)</small>
+</p>
+<a href="#/ID_1593867677" class="link connector"> &#8605;</a>
+</li>
+<li>Hide Nodes<a href="#/ID_378704017" class="link subsection"> &#8628;</a>
+</li>
+<li>View Speakers Notes<a href="#/ID_1605694183" class="link subsection"> &#8628;</a>
 </li>
 </ul>
-<div class="illustrations w1">
-<a href="assets/themes.jpg" class="image" title="edit the config.xml in your freeplane/xslt directory (or the exported .html presentation file) for your prefered theme, transition, extra behaviour or functionality."><img src="assets/themes.jpg" alt="edit the config.xml in your freeplane/xslt directory (or the exported .html presentation file) for your prefered theme, transition, extra behaviour or functionality."></a>
-</div>
-<aside class="notes">
-<p>
-      &nbsp;
-    </p>
-</aside>
 </section>
 <section class="content" id="ID_378704017">
-<h3>Hide Nodes</h3>
+<h4>Hide Nodes</h4>
 <ul>
-<li>Great for creating content in Freeplane, and presenting only when it's ready.</li>
+<li>Great functionaliy for creating content in Freeplane, and presenting only when it's ready.</li>
 <li>
 <p>
       To hide a node from your mindslides simply add the attribute "slide-hide" to it:
@@ -316,8 +286,9 @@ git submodule update --init</code>
 </aside>
 </section>
 <section class="content" id="ID_1605694183">
-<h3>View Speakers Notes</h3>
+<h4>View Speakers Notes</h4>
 <ul>
+<li>Including preview of the next slide, notes for current slide, and timer.</li>
 <li>
 <p>
       Speaker notes require the presentation be served by a <b>webserver</b>, they don't work from a local file.
@@ -334,6 +305,25 @@ git submodule update --init</code>
 </p>
 </li>
 </ul>
+</section>
+<section class="content" id="ID_1593867677">
+<h3>Configure MindSlide</h3>
+<ul>
+<li>Many options are available</li>
+<li>edit the config.xml in your freeplane/xslt directory (or the exported .html presentation file) for your prefered theme, transition, extra behaviour or functionality.</li>
+<li>developpers may load extra librairies by editing reveal-configuration.xsl in freeplane/xslt too.</li>
+<li>
+<a href="https://github.com/hakimel/reveal.js#configuration" class="link external">see reveal.js configuration</a>
+</li>
+</ul>
+<div class="illustrations w1">
+<a href="assets/themes.jpg" class="image" title="edit the config.xml in your freeplane/xslt directory (or the exported .html presentation file) for your prefered theme, transition, extra behaviour or functionality."><img src="assets/themes.jpg" alt="edit the config.xml in your freeplane/xslt directory (or the exported .html presentation file) for your prefered theme, transition, extra behaviour or functionality."></a>
+</div>
+<aside class="notes">
+<p>
+      &nbsp;
+    </p>
+</aside>
 </section>
 <section class="content" id="ID_1128763901">
 <h3>Contribute / Contact</h3>
@@ -388,6 +378,49 @@ git submodule update --init</code>
 </ul>
 </section>
 </section>
+<!--new subsection-->
+<section>
+<section class="content" id="ID_523970975">
+<h2>
+      Not supported yet</h2>
+<ul>
+<li>Many elements are still not supported. We welcome any pointers how to best do it, as well as help to do so!</li>
+<li>node and edge style, icons and clouds</li>
+<li>free "post-it" nodes are not marked differently from other nodes</li>
+<li>node attributes, zoom on images, author informations</li>
+<li>packaging presentation with all its dependencies in a single portable file.</li>
+<li>summary nodes</li>
+<li>
+<a href="https://github.com/berteh/mindslide/issues" class="link external">Put your suggestions on our "issues" list!</a>
+</li>
+<li>Known Bugs<a href="#/ID_191827926" class="link subsection"> &#8628;</a>
+</li>
+</ul>
+</section>
+<section class="content" id="ID_191827926">
+<h3>Known Bugs</h3>
+<ul>
+<li>Various things we should fix, any pointer how to do so is welcome.</li>
+<li>
+<p>
+      improve styles, fonts and general support of richtext content, as for now some elements don't show or <font size="3">not nicely</font>
+</p>
+</li>
+<li>nodes with only an image show as empty list item.</li>
+<li>
+<a href="https://github.com/berteh/mindslide/issues" class="link external">Report your bugs on our "issues" list!</a>
+</li>
+</ul>
+<aside class="notes">
+<p>
+      not showing nicely: font size changed in rich-text editor ar usually displayed too small. current workaround is to edit html code view to use relative size (small, tiny) instead of absolute size (4, 5)...
+    </p>
+<p>
+      nodes containing but an image should not show as empty item. current workaround is to only add images on nodes that have some text.
+    </p>
+</aside>
+</section>
+</section>
 <section class="content" id="ID_510184946">
 <h2>Acknowledgments</h2>
 <ul>
@@ -408,35 +441,57 @@ git submodule update --init</code>
 </section>
 </div>
 </div>
-<footer class="info">MindSlide | <a href="http://berteh.github.io/mindslide/">Mindslide</a> v 0.2 |  <a href="http://freeplane.sourceforge.net/">Freeplane</a> map vfreeplane 1.2.0</footer>
-<script src="reveal.js/lib/js/head.min.js"></script><script src="reveal.js/js/reveal.min.js"></script><script>
+<footer class="info">MindSlide | <a href="http://berteh.github.io/mindslide/">Mindslide</a> v 0.3 |  <a href="http://freeplane.sourceforge.net/">Freeplane</a> map vfreeplane 1.3.0</footer>
+<script src=" http://cdn.bootcss.com/reveal.js/3.3.0/lib/js/head.min.js"></script><script src=" http://cdn.bootcss.com/reveal.js/3.3.0/js/reveal.js"></script><script>
 
-            //run reveal.js
-            // Full list of configuration options available here:
-            // https://github.com/hakimel/reveal.js#configuration
-            Reveal.initialize({
-            controls: true,
-            progress: true,
-            history: true,
-            center: true,
-            keyboard: true,
-            touch: true,
-            overview: true,
-            mouseWheel: true,
-            autoSlide: 0,
-            rtl: false,
+	//run reveal.js
+	// Full list of configuration options available here:
+	// https://github.com/hakimel/reveal.js#configuration
+	Reveal.initialize({
+		controls: true,
+		progress: true,
+		slideNumber: false,
+		history: true,
+		keyboard: true,
+		overview: true,
+		center: true,
+		touch: true,
+		loop: false,
+		rtl: false,
+		shuffle: false,
+		fragments: true,
+		embedded: false,
+		help: true,
+		showNotes: false,
+		autoSlide: 0,
+		autoSlideStoppable: true,
+		autoSlideMethod: Reveal.navigateNext,
+		mouseWheel: true,
+		hideAddressBar: true,
+		previewLinks: false,
+		transition: 'slide',
+		transitionSpeed: 'default',
+		backgroundTransition: 'slide',
+		viewDistance: 3,
+		parallaxBackgroundImage: '',
+		parallaxBackgroundSize: '',
+		parallaxBackgroundHorizontal: null,
+		parallaxBackgroundVertical: null,
 
-            theme: Reveal.getQueryHash().theme, // available themes are in /css/theme
-            transition: Reveal.getQueryHash().transition || 'concave', // default/cube/page/concave/zoom/linear/fade/none
+		theme: Reveal.getQueryHash().theme || 'moon',
+		transition: Reveal.getQueryHash().transition || 'slide',
 
-            
+		
         // Optional libraries used to extend on reveal.js - see https://github.com/hakimel/reveal.js#dependencies
         dependencies: [
-        { src: 'reveal.js/lib/js/classList.js', condition: function() { return !document.body.classList; } },
-        { src: 'reveal.js/plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
-        { src: 'reveal.js/plugin/zoom-js/zoom.js', async: true, condition: function() { return !!document.body.classList; } },
-        { src: 'reveal.js/plugin/notes/notes.js', async: true, condition: function() { return !!document.body.classList; } }
-        ]
+        { src: ' http://cdn.bootcss.com/reveal.js/3.3.0/lib/js/classList.js', condition: function() { return !document.body.classList; } },
+        { src: ' http://cdn.bootcss.com/reveal.js/3.3.0/plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+        { src: ' http://cdn.bootcss.com/reveal.js/3.3.0/plugin/zoom-js/zoom.js', async: true, condition: function() { return !!document.body.classList; } },
+        { src: ' http://cdn.bootcss.com/reveal.js/3.3.0/plugin/notes/notes.js', async: true, condition: function() { return !!document.body.classList; } }
+        //{ src: ' http://cdn.bootcss.com/reveal.js/3.3.0/plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+        //{ src: ' http://cdn.bootcss.com/reveal.js/3.3.0/plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+		//{ src: ' http://cdn.bootcss.com/reveal.js/3.3.0/plugin/math/math.js', async: true }
+		]
         });
     </script>
 </body>
