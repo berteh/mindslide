@@ -1,7 +1,7 @@
-<map version="freeplane 1.2.0">
+<map version="freeplane 1.3.0">
 <!--To view this file, download free mind mapping software Freeplane from http://freeplane.sourceforge.net -->
 <attribute_registry SHOW_ATTRIBUTES="selected"/>
-<node TEXT="MindSlide" ID="ID_1723255651" CREATED="1283093380553" MODIFIED="1401981525034"><hook NAME="MapStyle" zoom="1.1">
+<node TEXT="MindSlide" ID="ID_1723255651" CREATED="1283093380553" MODIFIED="1465149865500"><hook NAME="MapStyle">
     <properties show_icon_for_attributes="true" show_note_icons="true"/>
 
 <map_styles>
@@ -51,7 +51,7 @@
 </stylenode>
 </map_styles>
 </hook>
-<hook NAME="AutomaticEdgeColor" COUNTER="7"/>
+<hook NAME="AutomaticEdgeColor" COUNTER="11"/>
 <attribute NAME="version" VALUE="20130901" OBJECT="org.freeplane.features.format.FormattedNumber|20130901"/>
 <attribute NAME="Author" VALUE="Berteh"/>
 <node TEXT="View your Mindmap as an HTML presentation / slideshow" POSITION="right" ID="ID_212678608" CREATED="1377866384042" MODIFIED="1378374500407">
@@ -86,6 +86,9 @@
 <hook URI="assets/themes.jpg" SIZE="0.09344211" NAME="ExternalObject"/>
 </node>
 <node TEXT="Freeplane software" ID="ID_905963232" CREATED="1377989067286" MODIFIED="1377991994588" LINK="http://freeplane.sourceforge.net"/>
+<node TEXT="works in most recent browsers, desktop and mobile devices" ID="ID_1942350131" CREATED="1377867277349" MODIFIED="1465156730339" LINK="https://github.com/hakimel/reveal.js/wiki/Browser-Support">
+<hook URI="assets/chrome_firefox_opera_safari_ie_dolphin.png" SIZE="0.10520631" NAME="ExternalObject"/>
+</node>
 </node>
 <node TEXT="Features" POSITION="right" ID="ID_684843493" CREATED="1377866415613" MODIFIED="1378374819775">
 <edge COLOR="#0000ff"/>
@@ -135,7 +138,7 @@
 </html>
 </richcontent>
 </node>
-<node ID="ID_1149617363" CREATED="1377869822244" MODIFIED="1378377198254"><richcontent TYPE="NODE">
+<node ID="ID_1149617363" CREATED="1377869822244" MODIFIED="1465157125889"><richcontent TYPE="NODE">
 
 <html>
   <head>
@@ -143,10 +146,11 @@
   </head>
   <body>
     <p>
-      2D flow + overview mode. <small>hit &quot;escape&quot; or &quot;o&quot;&#160; </small>&#160; easy navigation <small>(space, arrows, click)</small>
+      2D overview <small>(hit &quot;esc&quot; or &quot;o&quot;)</small>&#160;easy navigation <small>(space, arrows, click, touch)</small>&#160;help <small>(?)</small>
     </p>
   </body>
 </html>
+
 </richcontent>
 </node>
 <node ID="ID_765812044" CREATED="1377866554077" MODIFIED="1401984309302"><richcontent TYPE="NODE">
@@ -162,24 +166,9 @@
     <pre><code class="css">@page:right { margin: 1cm 2cm 1.3cm 4cm; }</code></pre>
   </body>
 </html>
-
 </richcontent>
 </node>
-<node ID="ID_594361534" CREATED="1377866613085" MODIFIED="1378377504510" LINK="https://github.com/berteh/mindslide"><richcontent TYPE="NODE">
-
-<html>
-  <head>
-    
-  </head>
-  <body>
-    <p>
-      links on nodes. <small>ctrl+k in Freeplane</small>
-    </p>
-  </body>
-</html>
-</richcontent>
-</node>
-<node TEXT="images and nodes connectors" ID="ID_906971272" CREATED="1377866777469" MODIFIED="1401984402610"><richcontent TYPE="NOTE">
+<node TEXT="links, images and nodes connectors" ID="ID_906971272" CREATED="1377866777469" MODIFIED="1465156872458"><richcontent TYPE="NOTE">
 
 <html>
   <head>
@@ -190,7 +179,10 @@
       Images support is only partial as it depends on the browser to find them, usually relative adress in a sub-directory is fine.
     </p>
     <p>
-      Help in improving this part is higly welcome.
+      Help in improving this part is highly welcome.
+    </p>
+    <p>
+      Nodes connectors display with a cute &quot;tilde character&quot;, any better idea is welcome (a small preview of the target slide on hover would be great, for instance)
     </p>
   </body>
 </html>
@@ -212,14 +204,12 @@
 </html>
 </richcontent>
 </node>
-<node TEXT="hidding nodes from slides" ID="ID_1778852033" CREATED="1401981390393" MODIFIED="1401984441020">
+<node TEXT="hidding mindmap nodes from slides" ID="ID_1778852033" CREATED="1401981390393" MODIFIED="1465157157161">
 <arrowlink SHAPE="CUBIC_CURVE" COLOR="#000000" WIDTH="2" TRANSPARENCY="80" FONT_SIZE="9" FONT_FAMILY="SansSerif" DESTINATION="ID_378704017" STARTINCLINATION="195;0;" ENDINCLINATION="195;0;" STARTARROW="NONE" ENDARROW="DEFAULT"/>
 </node>
-<node TEXT="works in most recent browsers" ID="ID_1942350131" CREATED="1377867277349" MODIFIED="1378375703778" LINK="https://github.com/hakimel/reveal.js/wiki/Browser-Support">
-<hook URI="assets/chrome_firefox_opera_safari_ie_dolphin.png" SIZE="0.10520631" NAME="ExternalObject"/>
-</node>
-</node>
-<node POSITION="right" ID="ID_523970975" CREATED="1377866449059" MODIFIED="1378377167737" VSHIFT="9"><richcontent TYPE="NODE">
+<node TEXT="Recent improvements" ID="ID_1665333044" CREATED="1465150488181" MODIFIED="1465154916675">
+<node TEXT="Reveal.js now allows for" ID="ID_1332528980" CREATED="1465150512936" MODIFIED="1465150573725"/>
+<node ID="ID_834703833" CREATED="1465150561649" MODIFIED="1465150712625"><richcontent TYPE="NODE">
 
 <html>
   <head>
@@ -227,38 +217,14 @@
   </head>
   <body>
     <p>
-      Not supported <i>yet</i>
+      more stunning transitions, including <i>fade, slide, convex, concave, zoom</i>.
     </p>
   </body>
 </html>
+
 </richcontent>
-<edge COLOR="#ff00ff"/>
-<node TEXT="Many elements are still not supported. We welcome any pointers how to best do it, as well as help to do so!" ID="ID_1524934682" CREATED="1377866451993" MODIFIED="1377992190353"/>
-<node TEXT="node and edge style" LOCALIZED_STYLE_REF="styles.subtopic" ID="ID_619242118" CREATED="1377866664573" MODIFIED="1378374512953">
-<edge STYLE="linear" COLOR="#9f07a1"/>
-<font BOLD="true"/>
 </node>
-<node TEXT="node icons" ID="ID_61820982" CREATED="1377867678861" MODIFIED="1377867687023">
-<icon BUILTIN="idea"/>
-</node>
-<node TEXT="clouds" ID="ID_76335890" CREATED="1377867559109" MODIFIED="1377991711224">
-<cloud COLOR="#f0f0f0" SHAPE="ARC"/>
-</node>
-<node TEXT="&quot;post-it&quot; nodes are not marked differently from other nodes" ID="ID_1946776085" CREATED="1377991599034" MODIFIED="1377991706232" HGAP="300" VSHIFT="20">
-<hook NAME="FreeNode"/>
-</node>
-<node TEXT="node attributes" ID="ID_342942951" CREATED="1377867582227" MODIFIED="1377991675978">
-<attribute NAME="my_attribute" VALUE="its value"/>
-<hook NAME="FirstGroupNode"/>
-</node>
-<node TEXT="images zoom" ID="ID_1233357582" CREATED="1377868243683" MODIFIED="1377868246939"/>
-<node TEXT="author information" ID="ID_1903910892" CREATED="1377869094748" MODIFIED="1377869106955"/>
-<node TEXT="summary nodes" ID="ID_1118203039" CREATED="1377991675973" MODIFIED="1377991681156">
-<hook NAME="SummaryNode"/>
-</node>
-<node TEXT="Known Bugs" ID="ID_191827926" CREATED="1377874134734" MODIFIED="1378376093551">
-<node TEXT="Various things we should fix, any pointer how to do so is welcome." ID="ID_957082212" CREATED="1377874299104" MODIFIED="1377874323476"/>
-<node ID="ID_636303064" CREATED="1377982838721" MODIFIED="1378389990790"><richcontent TYPE="NODE">
+<node ID="ID_904082165" CREATED="1465150543428" MODIFIED="1465160670703"><richcontent TYPE="NODE">
 
 <html>
   <head>
@@ -266,12 +232,15 @@
   </head>
   <body>
     <p>
-      improve styles, fonts and general support of richtext content, as for now some elements don't show or <font size="3">not nicely</font>
+      parallax background (see <a href="http://berteh.github.io/mindslide/?parallaxBackgroundImage=https%3A%2F%2Fs3.amazonaws.com%2Fhakim-static%2Freveal-js%2Freveal-parallax-1.jpg&amp;parallaxBackgroundSize=2100px%20900px#/ID_1723255651">demo</a>)
     </p>
   </body>
 </html>
+
 </richcontent>
-<richcontent TYPE="NOTE">
+</node>
+<node TEXT="slides shuffling" ID="ID_897064875" CREATED="1465150601857" MODIFIED="1465150637310"/>
+<node ID="ID_1775784778" CREATED="1465150637859" MODIFIED="1465156978805"><richcontent TYPE="NODE">
 
 <html>
   <head>
@@ -279,29 +248,14 @@
   </head>
   <body>
     <p>
-      not showing nicely: font size changed in rich-text editor ar usually displayed too small. current workaround is to edit html code view to use relative size (small, tiny) instead of absolute size (4, 5)...
+      auto advancing slides (see <a href="https://github.com/hakimel/reveal.js#auto-sliding">documentation</a>)
     </p>
   </body>
 </html>
-</richcontent>
-</node>
-<node TEXT="nodes with only an image show as empty list item." ID="ID_239280693" CREATED="1377994551775" MODIFIED="1378389944327"><richcontent TYPE="NOTE">
 
-<html>
-  <head>
-    
-  </head>
-  <body>
-    <p>
-      nodes containing but an image should not show as empty item. current workaround is to only add images on nodes that have some text.
-    </p>
-  </body>
-</html>
 </richcontent>
 </node>
-<node TEXT="Report your bugs on our &quot;issues&quot; list!" ID="ID_551533464" CREATED="1377867391933" MODIFIED="1377992240334" LINK="https://github.com/berteh/mindslide/issues"/>
 </node>
-<node TEXT="Put your suggestions on our &quot;issues&quot; list!" ID="ID_1954577764" CREATED="1377867391933" MODIFIED="1377992226508" LINK="https://github.com/berteh/mindslide/issues"/>
 </node>
 <node TEXT="How To" POSITION="right" ID="ID_317184146" CREATED="1377867324171" MODIFIED="1377867326420">
 <edge COLOR="#ff00ff"/>
@@ -425,7 +379,6 @@ git submodule update --init</code></pre>
     </p>
   </body>
 </html>
-
 </richcontent>
 <node TEXT="Children of hidden notes are hidden as well." ID="ID_1650241205" CREATED="1401981622444" MODIFIED="1401981764235"/>
 </node>
@@ -442,7 +395,6 @@ git submodule update --init</code></pre>
     <pre>      right-click &gt; edit attribute in-line &gt; add or select &quot;slide-hide&quot;</pre>
   </body>
 </html>
-
 </richcontent>
 <hook URI="assets/hidden-node.png" SIZE="0.2695155" NAME="ExternalObject"/>
 </node>
@@ -528,7 +480,86 @@ git submodule update --init</code></pre>
 </node>
 </node>
 </node>
-<node TEXT="Acknowledgments" POSITION="right" ID="ID_510184946" CREATED="1377867969615" MODIFIED="1377991786445">
+<node POSITION="right" ID="ID_523970975" CREATED="1377866449059" MODIFIED="1465157553908" VSHIFT="9"><richcontent TYPE="NODE">
+
+<html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      Not supported <i>yet</i>
+    </p>
+  </body>
+</html>
+</richcontent>
+<edge COLOR="#ff00ff"/>
+<node TEXT="Many elements are still not supported. We welcome any pointers how to best do it, as well as help to do so!" ID="ID_1524934682" CREATED="1377866451993" MODIFIED="1377992190353"/>
+<node TEXT="node and edge style, icons and clouds" LOCALIZED_STYLE_REF="styles.subtopic" ID="ID_619242118" CREATED="1377866664573" MODIFIED="1465157569736">
+<icon BUILTIN="idea"/>
+<edge STYLE="sharp_bezier" COLOR="#3300cc" WIDTH="4"/>
+<font BOLD="true"/>
+<cloud COLOR="#f0f0f0" SHAPE="ARC"/>
+</node>
+<node TEXT="free &quot;post-it&quot; nodes are not marked differently from other nodes" ID="ID_1946776085" CREATED="1377991599034" MODIFIED="1465157553903" HGAP="440" VSHIFT="-10">
+<hook NAME="FreeNode"/>
+</node>
+<node TEXT="node attributes, zoom on images, author informations" ID="ID_342942951" CREATED="1377867582227" MODIFIED="1465157394676">
+<attribute NAME="my_attribute" VALUE="its value"/>
+<hook NAME="FirstGroupNode"/>
+</node>
+<node TEXT="packaging presentation with all its dependencies in a single portable file." ID="ID_1539497673" CREATED="1465150821434" MODIFIED="1465157252853"/>
+<node TEXT="summary nodes" ID="ID_1118203039" CREATED="1377991675973" MODIFIED="1377991681156">
+<hook NAME="SummaryNode"/>
+</node>
+<node TEXT="Put your suggestions on our &quot;issues&quot; list!" ID="ID_1954577764" CREATED="1377867391933" MODIFIED="1377992226508" LINK="https://github.com/berteh/mindslide/issues"/>
+<node TEXT="Known Bugs" ID="ID_191827926" CREATED="1377874134734" MODIFIED="1378376093551">
+<node TEXT="Various things we should fix, any pointer how to do so is welcome." ID="ID_957082212" CREATED="1377874299104" MODIFIED="1377874323476"/>
+<node ID="ID_636303064" CREATED="1377982838721" MODIFIED="1378389990790"><richcontent TYPE="NODE">
+
+<html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      improve styles, fonts and general support of richtext content, as for now some elements don't show or <font size="3">not nicely</font>
+    </p>
+  </body>
+</html>
+</richcontent>
+<richcontent TYPE="NOTE">
+
+<html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      not showing nicely: font size changed in rich-text editor ar usually displayed too small. current workaround is to edit html code view to use relative size (small, tiny) instead of absolute size (4, 5)...
+    </p>
+  </body>
+</html>
+</richcontent>
+</node>
+<node TEXT="nodes with only an image show as empty list item." ID="ID_239280693" CREATED="1377994551775" MODIFIED="1378389944327"><richcontent TYPE="NOTE">
+
+<html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      nodes containing but an image should not show as empty item. current workaround is to only add images on nodes that have some text.
+    </p>
+  </body>
+</html>
+</richcontent>
+</node>
+<node TEXT="Report your bugs on our &quot;issues&quot; list!" ID="ID_551533464" CREATED="1377867391933" MODIFIED="1377992240334" LINK="https://github.com/berteh/mindslide/issues"/>
+</node>
+</node>
+<node TEXT="Acknowledgments" POSITION="right" ID="ID_510184946" CREATED="1377867969615" MODIFIED="1465149865500">
 <edge COLOR="#00ffff"/>
 <node ID="ID_575828315" CREATED="1377867975744" MODIFIED="1378371575747"><richcontent TYPE="NODE">
 

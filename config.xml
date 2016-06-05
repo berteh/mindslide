@@ -1,19 +1,72 @@
 <deck-config>
     <reveal>
-        <!-- path to reveal, must finish with a '/'.  must be absolute or relative to export save location. default is '<your freemind path>/resources/reveal.js/' -->
-        <base-dir>reveal.js/</base-dir>
-        <!-- one of 'default', 'beige', 'sky', 'night', 'serif', 'simple'. Moreover at https://github.com/hakimel/reveal.js#theming -->
-        <theme>default</theme>
+        <!-- path to reveal, must finish with a '/'.  
+			must be either absolute or relative to export save location. -->
+        <base-dir>reveal.js/</base-dir> <!-- typically reveal.js/ or http://cdn.bootcss.com/reveal.js/3.3.0/ -->
+        <!-- visual style. Moreover at https://github.com/hakimel/reveal.js#theming -->
+        <theme>moon</theme> <!-- beige/black/blood/league/moon/night/serif/simple/sky/solarized/white -->        
+		<!-- Display controls in the bottom right corner-->
         <controls>true</controls>
+		<!-- Display a presentation progress bar-->
         <progress>true</progress>
+		<!-- Display the page number of the current slide-->
+        <slideNumber>false</slideNumber>
+		<!-- Push each slide change to the browser history-->
         <history>true</history>
-        <center>true</center>
-        <keyboard>true</keyboard>
-        <touch>true</touch>
+		<!-- Enable keyboard shortcuts for navigation-->
+		<keyboard>true</keyboard>
+		<!-- Enable the slide overview mode-->
         <overview>true</overview>
-        <mouseWheel>true</mouseWheel>
-        <autoSlide>0</autoSlide>
+		<!-- Vertical centering of slides-->
+        <center>true</center>
+		<!-- Enables touch navigation on devices with touch input-->
+        <touch>true</touch>
+		<!-- Loop the presentation-->
+        <loop>false</loop>
+		<!-- Change the presentation direction to be RTL-->
         <rtl>false</rtl>
+		<!-- Randomizes the order of slides each time the presentation loads-->
+        <shuffle>false</shuffle>
+		<!-- Turns fragments on and off globally-->
+        <fragments>true</fragments>
+		<!-- Flags if the presentation is running in an embedded mode,
+			i.e. contained within a limited portion of the screen-->
+		<embedded>false</embedded>
+		<!-- Flags if we should show a help overlay when the questionmark key is pressed-->
+		<help>true</help>
+		<!-- Flags if speaker notes should be visible to all viewers-->
+		<showNotes>false</showNotes>
+		<!-- Number of milliseconds between automatically proceeding to the
+			next slide, disabled when set to 0, this value can be overwritten
+			by using a data-autoslide attribute on your slides-->
+		<autoSlide>0</autoSlide>
+		<!-- Stop auto-sliding after user input-->
+		<autoSlideStoppable>true</autoSlideStoppable>
+		<!-- Use this method for navigation when auto-sliding-->
+		<autoSlideMethod>Reveal.navigateNext</autoSlideMethod>
+		<!-- Enable slide navigation via mouse wheel-->
+		<mouseWheel>true</mouseWheel>
+		<!-- Hides the address bar on mobile devices-->
+		<hideAddressBar>true</hideAddressBar>
+		<!-- Opens links in an iframe preview overlay-->
+		<previewLinks>false</previewLinks>
+		<!-- Transition style-->
+		<transition>slide</transition> <!-- none/fade/slide/convex/concave/zoom-->
+		<!-- Transition speed-->
+		<transitionSpeed>default</transitionSpeed> <!-- default/fast/slow-->
+		<!-- Transition style for full page slide backgrounds-->
+		<backgroundTransition>slide</backgroundTransition> <!-- none/fade/slide/convex/concave/zoom-->
+		<!-- Number of slides away from the current that are visible-->
+		<viewDistance>3</viewDistance>
+		<!-- Parallax background image-->
+		<parallaxBackgroundImage></parallaxBackgroundImage> <!-- e.g. https://s3.amazonaws.com/hakim-static/reveal-js/reveal-parallax-1.jpg -->
+		<!-- Parallax background size-->
+		<parallaxBackgroundSize></parallaxBackgroundSize> <!-- CSS syntax, e.g. 2100px 900px-->
+		<!-- Number of pixels to move the parallax background per slide
+			- Calculated automatically unless specified
+			- Set to 0 to disable movement along an axis-->
+		<parallaxBackgroundHorizontal>null</parallaxBackgroundHorizontal>
+		<parallaxBackgroundVertical>null</parallaxBackgroundVertical>
     </reveal>
     <text>
         <!-- author name (can be rich html)-->
@@ -27,4 +80,11 @@
         <!-- title for Index of Subsection (if applicable, ie if $subsectionLvl > 1) -->
         <cos-title>Content of Section</cos-title>
     </text>
+	<transform>
+		<!--nodes down to this level are viewed as title slides, default is 1 (root node) -->
+		<titlesLevel>1</titlesLevel>
+		<!--nodes of this level are transformed as "heads" of a subsection. Children of these nodes are transformed into subsection (vertical slides in Reveal.js.
+			default is 2 (root's children), set to 0 if you want only linear flow (no 2D) -->
+		<subsectionsLevel>2</subsectionsLevel>  
+	</transform>
 </deck-config>

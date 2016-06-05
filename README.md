@@ -1,11 +1,11 @@
 #Mindslide
 
-View mindmap as an HTML presentation (aka Freeplane/Freemind to powerpoint slideshow).
+View mindmap as an HTML animation / presentation (aka Freeplane/Freemind to powerpoint slideshow).
 
 Checkout our **[online demonstration & documentation](http://berteh.github.io/mindslide/)**!
 
 
-Mindslide is an export extension for [Freeplane](http://sourceforge.net/projects/freeplane). It uses the [Reveal.js](http://lab.hakim.se/reveal-js/) HTML presentation framework to make stunning slideshow presentations from your Freeplane (and possibly Freemind) mindmaps.
+Mindslide is an export extension for [Freeplane](http://sourceforge.net/projects/freeplane). It uses the [Reveal.js](http://lab.hakim.se/reveal-js/) HTML presentation framework to make stunning slideshow presentations and animations from your Freeplane (and possibly Freemind) mindmaps.
 
 ## HowTO
 - [Install](http://berteh.github.io/mindslide/#/ID_1405033759)
@@ -16,7 +16,7 @@ Mindslide is an export extension for [Freeplane](http://sourceforge.net/projects
 
 Use the [Mindslide issue tracker](https://github.com/berteh/mindslide/issues) for your questions / suggestions.
 
-Integration within Freeplan is [being discussed on the Freeplane forum](https://sourceforge.net/apps/phpbb/freeplane/viewtopic.php?f=1&t=750&p=3712#p3708).
+Integration within Freeplane is [being discussed on the Freeplane forum](https://sourceforge.net/apps/phpbb/freeplane/viewtopic.php?f=1&t=750&p=3712#p3708).
 
 
 ## Screenshots
@@ -39,4 +39,5 @@ A big "Thank You!"" to the original developpers of open-source software, and the
 
   * [v0.1](https://github.com/berteh/mindslide/releases/tag/v0.1) - 2013.09  - working JS implementation
   * [v0.2](https://github.com/berteh/mindslide/releases/tag/v0.2) - 2013.09  - change to XSLT implementation, not integrated in Freeplane
+  * [v0.3](https://github.com/berteh/mindslide/releases/tag/v0.3) - 2016.06  - compatibility with latest Reveal.js for more options, themes, and stunning visual animation effects, including parallax background.
 
