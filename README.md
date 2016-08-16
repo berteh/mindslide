@@ -17,7 +17,7 @@ Using Mindslide is then easy as pie:
 - select file > export > Animation MindSlide (.html) to export your mindmap
 - save the HTML presentation in mindslide directory! (or edit settings in config.xml to use the CDN as base directory)
 
-More information for additional features [online]((http://berteh.github.io/mindslide/#/ID_1592220697), such as hiding nodes (or drafts) from your mindmap, or using speaker notes.
+More information for additional features [online](http://berteh.github.io/mindslide/#/ID_1592220697), such as hiding nodes (or drafts) from your mindmap, or viewing nodes notes as speaker notes.
 
 
 ## Help and support
@@ -53,5 +53,6 @@ Most free CDN already host reveal.js resources, but to get the speakers notes to
 
   * [v0.1](https://github.com/berteh/mindslide/releases/tag/v0.1) - 2013.09  - working JS implementation
   * [v0.2](https://github.com/berteh/mindslide/releases/tag/v0.2) - 2013.09  - change to XSLT implementation, not integrated in Freeplane
-  * [v0.3](https://github.com/berteh/mindslide/releases/tag/v0.3) - 2016.06  - compatibility with latest Reveal.js for more options, themes, and stunning visual animation effects, including parallax background.
+  * [v0.3](https://github.com/berteh/mindslide/releases/tag/v0.3) - 2016.06  - compatibility with latest Reveal.js for more options, themes, and stunning visual animation effects, including parallax background (view [example](http://lab.hakim.se/reveal-js/?parallaxBackgroundImage=https%3A%2F%2Fs3.amazonaws.com%2Fhakim-static%2Freveal-js%2Freveal-parallax-1.jpg&parallaxBackgroundSize=2100px%20900px))
+  * [v0.4](https://github.com/berteh/mindslide/releases/tag/v0.4) - 2016.08  - better documentation for CDN-hosted use
 
