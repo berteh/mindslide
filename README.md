@@ -24,8 +24,8 @@ More information for additional features [online]((http://berteh.github.io/minds
 
 Use the [Mindslide issue tracker](https://github.com/berteh/mindslide/issues) for your questions / suggestions.
 
-Integration within Freeplane is [being discussed on the Freeplane forum](https://sourceforge.net/apps/phpbb/freeplane/viewtopic.php?f=1&t=750&p=3712#p3708).
-
+Integration within Freeplane is [being discussed on the Freeplane forum](https://sourceforge.net/apps/phpbb/freeplane/viewtopic.php?f=1&t=750&p=3712#p3708)
+ and [here](https://sourceforge.net/p/freeplane/discussion/758437/thread/6a6fed27/#b5c3/3bcf)
 
 ## Screenshots
 
@@ -42,6 +42,12 @@ More features in the demo of [Reveal.js](http://lab.hakim.se/reveal-js/).
 
 ## Thanks
 A big "Thank You!"" to the original developpers of open-source software, and the community of contributors that supported/inspired them and more specifically [Hakim El Hattab](http://hakim.se) for Reveal.js, and Dimitry Polivaev and [contributors](http://freeplane.sourceforge.net/wiki/index.php/Contributors) for Freeplane.
+
+## FAQ
+
+For presenting while having access to the internet you can use a CDN-hosted reveal.js.
+Most free CDN already host reveal.js resources, but to get the speakers notes to work you need one that hosts html files as well, and so far only 
+```http://cdn.rawgit.com/hakimel/reveal.js/3.3.0/``` does. If you found others kindly let us know.
 
 ## Changelog 
 

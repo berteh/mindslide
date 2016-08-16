@@ -2,7 +2,7 @@
     <reveal>
         <!-- path to reveal, must finish with a '/'.  
 			must be either absolute or relative to export save location. -->
-        <base-dir>reveal.js/</base-dir> <!-- typically reveal.js/ or http://cdn.bootcss.com/reveal.js/3.3.0/ -->
+        <base-dir>reveal.js/</base-dir> <!-- typically reveal.js/ or or https://cdn.rawgit.com/hakimel/reveal.js/3.3.0/ or http://cdn.bootcss.com/reveal.js/3.3.0/ (faster, but no speaker notes.html there)-->
         <!-- visual style. Moreover at https://github.com/hakimel/reveal.js#theming -->
         <theme>moon</theme> <!-- beige/black/blood/league/moon/night/serif/simple/sky/solarized/white -->        
 		<!-- Display controls in the bottom right corner-->
