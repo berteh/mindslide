@@ -2,7 +2,7 @@
     <reveal>
         <!-- path to reveal, must finish with a '/'.  
 			must be either absolute or relative to export save location. -->
-        <base-dir>reveal.js/</base-dir> <!-- typically reveal.js/ or or https://cdn.rawgit.com/hakimel/reveal.js/3.3.0/ or http://cdn.bootcss.com/reveal.js/3.3.0/ (faster, but no speaker notes.html there)-->
+        <base-dir>reveal.js/</base-dir> <!-- typically reveal.js/ or http://cdn.rawgit.com/hakimel/reveal.js/3.3.0/ -->
         <!-- visual style. Moreover at https://github.com/hakimel/reveal.js#theming -->
         <theme>moon</theme> <!-- beige/black/blood/league/moon/night/serif/simple/sky/solarized/white -->        
 		<!-- Display controls in the bottom right corner-->
@@ -87,4 +87,113 @@
 			default is 2 (root's children), set to 0 if you want only linear flow (no 2D) -->
 		<subsectionsLevel>2</subsectionsLevel>  
 	</transform>
+	<icons>
+		<awesome-location>Font-Awesome/css/</awesome-location> <!-- typically Font-Awesome/css/ or https://opensource.keycdn.com/fontawesome/4.6.3/ -->
+		<!-- mapping freeplane builtin icons to FontAwesome icons names -->
+		<ico freeplane='0%'>fa-battery-empty</ico>
+		<ico freeplane='100%'>fa-battery-full</ico>
+		<ico freeplane='25%'>fa-battery-quarter</ico>
+		<ico freeplane='50%'>fa-battery-half</ico>
+		<ico freeplane='75%'>fa-battery-three-quarters</ico>
+		<ico freeplane='addition'>fa-plus</ico>
+		<ico freeplane='attach'>fa-paperclip</ico>
+		<ico freeplane='audio'>fa-play</ico>
+		<ico freeplane='back'>fa-chevron-left</ico>
+		<ico freeplane='bee'>fa-paper-plane</ico>
+		<ico freeplane='bell'>fa-bell</ico>
+		<ico freeplane='bookmark'>fa-bookmark</ico>
+		<ico freeplane='broken-line'>fa-flash</ico>
+		<ico freeplane='button_cancel'>fa-close</ico>
+		<ico freeplane='button_ok'>fa-check</ico>
+		<ico freeplane='calendar'>fa-calendar</ico>
+		<ico freeplane='checked'>fa-check-square-o</ico>
+		<ico freeplane='clanbomber'>fa-bomb</ico>
+		<ico freeplane='clock'>fa-clock-o</ico>
+		<ico freeplane='clock2'>fa-bell</ico>
+		<ico freeplane='closed'>fa-minus-circle</ico>
+		<ico freeplane='decrypted'>fa-unlock</ico>
+		<ico freeplane='desktop_new'>fa-desktop</ico>
+		<ico freeplane='division'>fa-list</ico>
+		<ico freeplane='down'>fa-long-arrow-down</ico>
+		<ico freeplane='edit'>fa-edit</ico>
+		<ico freeplane='encrypted'>fa-lock</ico>
+		<ico freeplane='executable'>fa-gears</ico>
+		<ico freeplane='family'>fa-group</ico>
+		<ico freeplane='fema'>fa-slideshare</ico>
+		<ico freeplane='female1'>fa-female</ico>
+		<ico freeplane='female2'>fa-female</ico>
+		<ico freeplane='females'>fa-group</ico>
+		<ico freeplane='flag'>fa-flag</ico>
+		<ico freeplane='flag-black'>fa-flag</ico>
+		<ico freeplane='flag-blue'>fa-flag</ico>
+		<ico freeplane='flag-green'>fa-flag</ico>
+		<ico freeplane='flag-orange'>fa-flag</ico>
+		<ico freeplane='flag-pink'>fa-flag</ico>
+		<ico freeplane='flag-yellow'>fa-flag</ico>
+		<ico freeplane='folder'>fa-folder</ico>
+		<ico freeplane='forward'>fa-chevron-right</ico>
+		<ico freeplane='freemind_butterfly'>fa-share-alt-square</ico>
+		<ico freeplane='full-0'>fa-list-ol</ico>
+		<ico freeplane='full-1'>fa-list-ol</ico><!--fa-thumbs-o-up</ico>-->
+		<ico freeplane='full-2'>fa-list-ol</ico><!--fa-hand-o-right</ico>-->
+		<ico freeplane='full-3'>fa-list-ol</ico>
+		<ico freeplane='full-4'>fa-list-ol</ico>
+		<ico freeplane='full-5'>fa-list-ol</ico>
+		<ico freeplane='full-6'>fa-list-ol</ico>
+		<ico freeplane='full-7'>fa-list-ol</ico>
+		<ico freeplane='full-8'>fa-list-ol</ico>
+		<ico freeplane='full-9'>fa-list-ol</ico>
+		<ico freeplane='go'>fa-check</ico>
+		<ico freeplane='gohome'>fa-home</ico>
+		<ico freeplane='group'>fa-group</ico>
+		<ico freeplane='help'>fa-question-circle</ico>
+		<ico freeplane='hourglass'>fa-hourglass-half</ico>
+		<ico freeplane='icon_not_found'>fa-terminal</ico>
+		<ico freeplane='idea'>fa-lightbulb-o</ico>
+		<ico freeplane='image'>fa-file-image-o</ico>
+		<ico freeplane='info'>fa-info-circle</ico>
+		<ico freeplane='internet'>fa-globe</ico>
+		<ico freeplane='internet_warning'>fa-fire</ico>
+		<ico freeplane='kaddressbook'>fa-book</ico>
+		<ico freeplane='kmail'>fa-envelope</ico>
+		<ico freeplane='knotify'>fa-music</ico>
+		<ico freeplane='korn'>fa-inbox</ico>
+		<ico freeplane='ksmiletris'>fa-smile-o</ico>
+		<ico freeplane='launch'>fa-rocket</ico>
+		<ico freeplane='licq'>fa-wechat</ico>
+		<ico freeplane='list'>fa-list</ico>
+		<ico freeplane='Mail'>fa-envelope</ico>
+		<ico freeplane='male1'>fa-male</ico>
+		<ico freeplane='male2'>fa-male</ico>
+		<ico freeplane='males'>fa-male</ico>
+		<ico freeplane='menu'>fa-bars</ico>
+		<ico freeplane='messagebox_warning'>fa-warning</ico>
+		<ico freeplane='mindmap'>fa-yelp</ico>
+		<ico freeplane='multiplication'>fa-times</ico>
+		<ico freeplane='narrative'>fa-microphone</ico>
+		<ico freeplane='negative'>fa-thumbs-down</ico>
+		<ico freeplane='neutral'>fa-balance-scale</ico>
+		<ico freeplane='password'>fa-key</ico>
+		<ico freeplane='pencil'>fa-pencil</ico>
+		<ico freeplane='penguin'>fa-linux</ico>
+		<ico freeplane='positive'>fa-thumbs-up</ico>
+		<ico freeplane='prepare'>fa-hourglass-half</ico>
+		<ico freeplane='revision'>fa-gear</ico>
+		<ico freeplane='smiley-angry'>fa-frown-o</ico>		
+		<ico freeplane='smiley-neutral'>fa-meh-o</ico>
+		<ico freeplane='smiley-oh'>fa-eye</ico>
+		<ico freeplane='smily_bad'>fa-frown-o</ico>
+		<ico freeplane='stop'>fa-stop-circle</ico>
+		<ico freeplane='stop-sign'>fa-stop-circle</ico>
+		<ico freeplane='subtraction'>fa-minus</ico>
+		<ico freeplane='unchecked'>fa-check-square-o</ico>
+		<ico freeplane='up'>fa-long-arrow-up</ico>
+		<ico freeplane='user_icon'>fa-user</ico>
+		<ico freeplane='very_negative'>fa-thumbs-down</ico>
+		<ico freeplane='very_positive'>fa-thumbs-up</ico>
+		<ico freeplane='video'>fa-video-camera</ico>
+		<ico freeplane='wizard'>fa-magic</ico>
+		<ico freeplane='xmag'>fa-weixin</ico>
+		<ico freeplane='yes'>fa-exclamation-triangle</ico>
+	</icons>
 </deck-config>

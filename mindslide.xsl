@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<xsl:stylesheet version="2.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
+<xsl:stylesheet version="2.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform" xmlns:my="local.uri">
     <!--
     MINDMAPEXPORTFILTER html Animation MindSlide
     
@@ -33,9 +33,9 @@
     <xsl:param name="CoS" select="document('config.xml')/deck-config/text/cos-title"/>
 
     <!-- internal static variables -->
-    <xsl:variable name="mindslideVersion">0.3</xsl:variable>    
-
+    <xsl:variable name="mindslideVersion">0.5</xsl:variable>    	
     <xsl:include href="reveal-configuration.xsl"/> 
+	
 <xsl:template match="/map">
     <xsl:variable name="mapversion" select="@version" />
     <xsl:text disable-output-escaping='yes'>&lt;!DOCTYPE html></xsl:text>
@@ -67,12 +67,16 @@
             .illustrations.w5 a, .illustrations.w9 a, .illustrations.w10 a {max-width:18%} 
 
             /* bullet lists layout */
-			.mindslide li p {margin: 0 0;}
-            .mindslide section.content>ul li {font-size: 90%;}
-            .mindslide section.content>ul>li:first-of-type, .mindslide section.title>ul li {list-style:none; display:block; font-size: 120%; margin-bottom:1ex}   
+			#mindslide li p {margin: 0 0;}
+            #mindslide section.content>ul li {font-size: 90%;}
+            #mindslide section.content>ul>li:first-of-type, #mindslide section.title>ul li {list-style:none; display:block; font-size: 120%; margin-bottom:1ex}   
 
-            /*zenburn hack for inline code highlight*/
-            pre.inline, .inline code {display:inline; width:auto;}  
+            /* zenburn hack for inline code highlight */
+            pre.inline, .inline code {display:inline; width:auto;}
+			
+			/* icons */
+			#mindslide.awesome section.content li.icon {list-style:none; margin-left: -1em}
+			#mindslide.awesome .fa {font-family: FontAwesome; margin-right: 1ex;}			
         </style>
 
         <xsl:comment>If the query includes 'print-pdf', use the PDF print sheet. works in Chrome, maybe not other browsers</xsl:comment>
@@ -91,7 +95,7 @@
 
         <div class="reveal">
             <xsl:comment>Any section element inside of this container is displayed as a slide</xsl:comment>
-            <div class="slides mindslide">
+            <div id="mindslide" class="slides">
                 <xsl:apply-templates select="node" mode="structure">
                     <xsl:with-param name="level" select="1"/>
                 </xsl:apply-templates>
@@ -153,8 +157,34 @@
 		theme: Reveal.getQueryHash().theme || '<xsl:value-of select="document('config.xml')/deck-config/reveal/theme"/>',
 		transition: Reveal.getQueryHash().transition || '<xsl:value-of select="document('config.xml')/deck-config/reveal/transition"/>',
 
-		<xsl:call-template name="reveal-dependencies"/>
+		<xsl:call-template name="reveal-dependencies"/>	
+    });
         </script>
+		
+		<xsl:if test=".//icon"><!--load FontAwesome only if there is some icon-->
+		<link rel="stylesheet" crossorigin="anonymous">
+			<xsl:attribute name="href"><xsl:value-of select="document('config.xml')/deck-config/icons/awesome-location" />font-awesome.min.css</xsl:attribute>
+		</link>
+		<script>
+		// add "awesome" class to #mindslide (only) if FontAwesome is loaded (for icons layout)
+	
+		function css(element, property) {
+			return window.getComputedStyle(element, null).getPropertyValue(property);
+		}
+		
+		window.onload = function () {
+			var span = document.createElement('span');
+			span.className = 'fa';
+			span.style.display = 'none';
+			document.body.insertBefore(span, document.body.firstChild);
+			if ((css(span, 'font-family')) == 'FontAwesome') {
+				var ms = document.getElementById("mindslide");
+				ms.className += " awesome";
+			}
+			document.body.removeChild(span);
+		};		
+		</script>
+		</xsl:if>
     </body>
     </html>
 </xsl:template>
@@ -210,7 +240,8 @@
             <section class="content"><xsl:attribute name="id"><xsl:value-of select="@ID" /></xsl:attribute>
                 <xsl:element name="{$h}"><xsl:apply-templates select="." mode="simpleText" /></xsl:element>
                 <ul>
-                    <xsl:apply-templates select="node[not(attribute[@NAME='slide-hide'])]" mode="indexEntry" />  <!--all non-hidden children in title slides-->
+                    <xsl:apply-templates select="node[not(attribute[@NAME='slide-hide'])][not(@TEXT='')]" mode="indexEntry" />  <!--all children in title slides unless hidden or without text, TODO this empty text test also removes summary nodes, needs fixing.-->
+					<xsl:apply-templates select=".//node[preceding-sibling::hook[@NAME='SummaryNode']][not(attribute[@NAME='slide-hide'])]" mode="indexEntry" /> <!--quick fix for missing summary nodes. TODO needs to be handled by a better selection in line above instead, to preserve sequence-->
                 </ul>
                 <xsl:call-template name="imagesAndNotes" />     
             </section>            
@@ -219,13 +250,13 @@
         
     <xsl:apply-templates select="node[node[not(attribute[@NAME='slide-hide'])]]" mode="structure"><!-- output complex children slides -->
         <xsl:with-param name="level" select="$level + 1" />
-    </xsl:apply-templates> 
-   
+    </xsl:apply-templates>    
 </xsl:template>
 
 
 <xsl:template match="node[node[not(attribute[@NAME='slide-hide'])]]" mode="indexEntry"><!--complex node as plain text link 'li -->
     <li>
+		<xsl:apply-templates select="icon" />
         <xsl:apply-templates select="." mode="simpleText" />
         <a>
            <xsl:attribute name="href"><xsl:value-of select="concat('#/',@ID)" /></xsl:attribute>
@@ -234,8 +265,12 @@
         </a>           
     </li>
 </xsl:template>
+
 <xsl:template match="node[not(node[not(attribute[@NAME='slide-hide'])])]" mode="indexEntry"><!--simple node as richtext 'li-->
-    <li><xsl:apply-templates select="." mode="richText"/></li>
+    <li>
+		<xsl:apply-templates select="icon" />
+		<xsl:apply-templates select="." mode="richText"/>
+	</li>
 </xsl:template>
 
 <!--richest possible node content, opt. with link on node-->
@@ -244,15 +279,15 @@
        <xsl:attribute name="href"><xsl:value-of select="@LINK" /></xsl:attribute>
        <xsl:attribute name="class"><xsl:value-of select="'link external'" /></xsl:attribute>
        <xsl:apply-templates select="." mode="richContent"/>
-    </a>            
-       
+    </a>                   
 </xsl:template>
+
 <xsl:template match="node[not(@LINK)]" mode="richText">
     <xsl:apply-templates select="." mode="richContent"/>
 </xsl:template>
 
 <xsl:template match="node" mode="richContent"><!--richest possible node content, handle all but for links (->mode link) and images, gathered at the slide lvl (~for layout ease ~gallery)-->
-    <xsl:value-of select="@TEXT"/>
+	<xsl:value-of select="@TEXT"/>
     <xsl:copy-of select="richcontent[@TYPE='NODE']/html/body/node()"/>  <!--todo filter some of the default richcontent layout that messes with reveal, eg font sizes too small, maybe turn to relative?-->
     <xsl:apply-templates select="arrowlink" /><!-- outwards node connectors --> 
 </xsl:template>
@@ -297,6 +332,15 @@
            <xsl:attribute name="alt"><xsl:apply-templates select=".." mode="simpleText"/></xsl:attribute>       
         </img>
     </a>    
+</xsl:template>
+
+<xsl:template match="icon">
+	<xsl:variable name="ico" select="./@BUILTIN" />
+	<xsl:variable name="facls" select="document('config.xml')/deck-config/icons/ico[@freeplane=$ico]" />
+	<xsl:attribute name="class">icon</xsl:attribute>
+	<span aria-hidden="true">
+		<xsl:attribute name="class"><xsl:value-of select="concat('fa ',$facls)" /></xsl:attribute>
+	</span>
 </xsl:template>
 
 <xsl:template match="*" /><!--drop whitespace and garbage-->
