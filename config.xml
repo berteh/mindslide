@@ -2,7 +2,7 @@
     <reveal>
         <!-- path to reveal, must finish with a '/'.  
 			must be either absolute or relative to export save location. -->
-        <base-dir>http://cdn.rawgit.com/hakimel/reveal.js/3.3.0/</base-dir> <!-- typically reveal.js/ or http://cdn.rawgit.com/hakimel/reveal.js/3.3.0/ -->
+        <base-dir>reveal.js/</base-dir> <!-- typically reveal.js/ or http://cdn.rawgit.com/hakimel/reveal.js/3.3.0/ -->
         <!-- visual style. Moreover at https://github.com/hakimel/reveal.js#theming -->
         <theme>moon</theme> <!-- beige/black/blood/league/moon/night/serif/simple/sky/solarized/white -->        
 		<!-- Display controls in the bottom right corner-->
@@ -88,7 +88,7 @@
 		<subsectionsLevel>2</subsectionsLevel>  
 	</transform>
 	<icons>
-		<awesome-location>https://opensource.keycdn.com/fontawesome/4.6.3/font-awesome.min.css</awesome-location> <!-- typically Font-Awesome/css/ or https://opensource.keycdn.com/fontawesome/4.6.3/ -->
+		<awesome-location>Font-Awesome/css/</awesome-location> <!-- typically Font-Awesome/css/ or https://opensource.keycdn.com/fontawesome/4.6.3/ -->
 		<!-- mapping freeplane builtin icons to FontAwesome icons names -->
 		<ico freeplane='0%'>fa-battery-empty</ico>
 		<ico freeplane='100%'>fa-battery-full</ico>

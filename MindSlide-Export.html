@@ -9,10 +9,10 @@
 <meta name="apple-mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-<link rel="stylesheet" href="http://cdn.rawgit.com/hakimel/reveal.js/3.3.0/css/reveal.css">
-<link rel="stylesheet" id="theme" href="http://cdn.rawgit.com/hakimel/reveal.js/3.3.0/css/theme/moon.css">
+<link rel="stylesheet" href="reveal.js/css/reveal.css">
+<link rel="stylesheet" id="theme" href="reveal.js/css/theme/moon.css">
 <!--For syntax highlighting-->
-<link rel="stylesheet" href="http://cdn.rawgit.com/hakimel/reveal.js/3.3.0/lib/css/zenburn.css">
+<link rel="stylesheet" href="reveal.js/lib/css/zenburn.css">
 <style type="text/css">
             a.connector, a.subsection {margin-left: 1ex; font-size: smaller}
             .illustrations a {float:left; margin: 1ex 5px; max-width:100%}
@@ -37,11 +37,11 @@
         </style>
 <!--If the query includes 'print-pdf', use the PDF print sheet. works in Chrome, maybe not other browsers-->
 <script type="text/javascript">
-        document.write( '<link rel="stylesheet" href="http://cdn.rawgit.com/hakimel/reveal.js/3.3.0/css/print/' + ( window.location.search.match( /print-pdf/gi ) ? 'pdf' : 'paper' ) + '.css" type="text/css" media="print" />' );
+        document.write( '<link rel="stylesheet" href="reveal.js/css/print/' + ( window.location.search.match( /print-pdf/gi ) ? 'pdf' : 'paper' ) + '.css" type="text/css" media="print" />' );
         </script>
 <!--
             [if lt IE 9]>
-            <script src="http://cdn.rawgit.com/hakimel/reveal.js/3.3.0/lib/js/html5shiv.js"></script>
+            <script src="reveal.js/lib/js/html5shiv.js"></script>
             <![endif]
         -->
 <!--placeholder for custom header items (typically scripts or stylesheets)-->
@@ -122,13 +122,14 @@
 </li>
 <li>
 <p>
-      simple <font face="Courier New, Courier, Nimbus Mono L, serif, monospace"><b style="font-family: Courier New, Courier, Nimbus Mono L, serif, monospace">&amp; rich-text </b></font><font color="#e1a71c"><u>nodes</u></font>, including code highlight
+      simple <font face="Courier New, Courier, Nimbus Mono L, serif, monospace"><b style="font-family: Courier New, Courier, Nimbus Mono L, serif, monospace">&amp; rich-text</b></font><font color="#e1a71c">&nbsp;<u>nodes</u></font>, including code highlight:
     </p>
 <pre>
 <code class="css">@page:right { margin: 1cm 2cm 1.3cm 4cm; }</code>
 </pre>
 </li>
-<li>links, images and nodes connectors<a href="#/ID_1494003336" class="link connector"> &#8605;</a>
+<li class="icon">
+<span aria-hidden="true" class="fa fa-check"></span>links, images, icons and nodes connectors<a href="#/ID_1494003336" class="link connector"> &#8605;</a>
 </li>
 <li>
 <p>
@@ -166,22 +167,27 @@
 <section class="content" id="ID_1665333044">
 <h3>Recent improvements</h3>
 <ul>
-<li>Reveal.js now allows for</li>
-<li>
+<li class="icon">
+<span aria-hidden="true" class="fa fa-smile-o"></span>Mindslide now shows nodes icons</li>
+<li class="icon">
+<span aria-hidden="true" class="fa fa-bookmark"></span>
 <p>
-      more stunning transitions, including <i>fade, slide, convex, concave, zoom</i>.
+      The last update of Reveal.js now allows for
     </p>
-</li>
+<ul>
 <li>
-<p>
-      parallax background (see <a href="http://berteh.github.io/mindslide/?parallaxBackgroundImage=https%3A%2F%2Fs3.amazonaws.com%2Fhakim-static%2Freveal-js%2Freveal-parallax-1.jpg&amp;parallaxBackgroundSize=2100px%20900px#/ID_1723255651">demo</a>)
-    </p>
-</li>
-<li>slides shuffling</li>
+        more stunning transitions, including <i>fade, slide, convex, concave, zoom</i>.
+      </li>
 <li>
-<p>
-      auto advancing slides (see <a href="https://github.com/hakimel/reveal.js#auto-sliding">documentation</a>)
-    </p>
+        parallax background (see <a href="http://berteh.github.io/mindslide/?parallaxBackgroundImage=https%3A%2F%2Fs3.amazonaws.com%2Fhakim-static%2Freveal-js%2Freveal-parallax-1.jpg&amp;parallaxBackgroundSize=2100px%20900px#/ID_1723255651">demo</a>)
+      </li>
+<li>
+        slides shuffling
+      </li>
+<li>
+        auto advancing slides (see <a href="https://github.com/hakimel/reveal.js#auto-sliding">documentation</a>)
+      </li>
+</ul>
 </li>
 </ul>
 </section>
@@ -223,10 +229,13 @@
     </p>
 <ol>
 <li>
-        dowload and unpack <a href="https://github.com/berteh/mindslide/archive/master.zip">https://github.com/berteh/mindslide/archive/master.zip</a>&nbsp;into "mindslide" directory (or pick any name you like)
+        dowload and unpack <a href="https://github.com/berteh/mindslide/archive/master.zip">mindslide's master.zip</a>&nbsp;into "mindslide" directory (or pick any name you like)
       </li>
 <li>
-        download and upack <a href="https://github.com/hakimel/reveal.js/archive/master.zip">https://github.com/hakimel/reveal.js/archive/master.zip</a>&nbsp;into mindslide/reveal.js directory
+        download and unpack <a href="https://github.com/hakimel/reveal.js/archive/master.zip">reveal.js's master.zip</a>&nbsp;into mindslide/reveal.js directory
+      </li>
+<li>
+        download and unpack <a href="https://github.com/FortAwesome/Font-Awesome/archive/master.zip">FontAwesome's master.zip</a>&nbsp;into mindslide/Font-Awesome directory
       </li>
 </ol>
 </li>
@@ -235,12 +244,10 @@
       (alternatively) you can also clone the source code:
     </p>
 <pre>
-<code class="bash">git clone https://github.com/berteh/mindslide.git
-cd mindslide  # (dir mindslide on windows)
-git submodule update --init</code>
+<code class="bash">git clone --recursive https://github.com/berteh/mindslide.git</code>
 </pre>
 </li>
-<li>copy mindslide/mindslide.xsl, mindslide/config.xml and mindslide/reveal-configuration.xsl into your freeplane/resources/xslt directory</li>
+<li>then copy mindslide/mindslide.xsl, mindslide/config.xml and mindslide/reveal-configuration.xsl into your freeplane/resources/xslt directory</li>
 </ul>
 </section>
 <section class="content" id="ID_1592220697">
@@ -255,7 +262,7 @@ git submodule update --init</code>
 </li>
 <li>
 <p>
-<b>save the HTML presentation in mindslide directory</b>! <small>(or edit settings in config.xml to use the online CDN as base directory)</small>
+<b>save the HTML presentation in your mindslide directory</b>! <small>(or edit settings in config.xml to use the online CDN hosts for both reveal and font awesome)</small>
 </p>
 <a href="#/ID_1593867677" class="link connector"> &#8605;</a>
 </li>
@@ -397,15 +404,12 @@ git submodule update --init</code>
 <h2>
       Not supported yet</h2>
 <ul>
-<li>Many elements are still not supported. We welcome any pointers how to best do it, as well as help to do so! Just post your ideas in our issues tracker.</li>
-<li class="icon">
-<span aria-hidden="true" class="fa fa-lightbulb-o"></span>node and edge style, icons and clouds</li>
+<li>Many elements are still not supported. We welcome any pointers how to best do it, as well as help to do so!</li>
+<li>node and edge style, clouds</li>
 <li>free "post-it" nodes are not marked differently from other nodes</li>
 <li></li>
 <li class="icon">
 <span aria-hidden="true" class="fa fa-list"></span>node attributes, zoom on images, author informations</li>
-<li class="icon">
-<span aria-hidden="true" class="fa fa-exclamation-triangle"></span><span aria-hidden="true" class="fa fa-bookmark"></span><span aria-hidden="true" class="fa fa-list-ol"></span><span aria-hidden="true" class="fa fa-eye"></span>icons</li>
 <li class="icon">
 <span aria-hidden="true" class="fa fa-paperclip"></span>packaging presentation with all its dependencies in a single portable file.</li>
 <li>
@@ -455,7 +459,7 @@ git submodule update --init</code>
 <ul>
 <li>
 <p>
-      This export tool relies on the fantastic <a href="http://lab.hakim.se/reveal-js/">reveal.js</a>&nbsp;HTML presentation framework, and <a href="http://freeplane.sourceforge.net">Freeplane</a>... to map your thoughts.
+      This export tool relies on the fantastic <a href="http://lab.hakim.se/reveal-js/">Reveal.js</a>&nbsp;HTML presentation framework, and <a href="http://freeplane.sourceforge.net">Freeplane</a>&nbsp;mind mapping tool. It uses beautiful icons from <a href="http://fontawesome.io">Font Awesome</a>.
     </p>
 <p></p>
 <p>
@@ -475,7 +479,7 @@ git submodule update --init</code>
 </div>
 </div>
 <footer class="info">MindSlide | <a href="http://berteh.github.io/mindslide/">Mindslide</a> v 0.5 |  <a href="http://freeplane.sourceforge.net/">Freeplane</a> map vfreeplane 1.5.9</footer>
-<script src="http://cdn.rawgit.com/hakimel/reveal.js/3.3.0/lib/js/head.min.js"></script><script src="http://cdn.rawgit.com/hakimel/reveal.js/3.3.0/js/reveal.js"></script><script>
+<script src="reveal.js/lib/js/head.min.js"></script><script src="reveal.js/js/reveal.js"></script><script>
 
 	//run reveal.js
 	// Full list of configuration options available here:
@@ -501,7 +505,7 @@ git submodule update --init</code>
 		autoSlideMethod: Reveal.navigateNext,
 		mouseWheel: true,
 		hideAddressBar: true,
-		previewLinks: true,
+		previewLinks: false,
 		transition: 'slide',
 		transitionSpeed: 'default',
 		backgroundTransition: 'slide',
@@ -517,18 +521,18 @@ git submodule update --init</code>
 		
         // Optional libraries used to extend on reveal.js - see https://github.com/hakimel/reveal.js#dependencies
         dependencies: [
-          { src:'http://cdn.rawgit.com/hakimel/reveal.js/3.3.0/lib/js/classList.js', condition: function() { return !document.body.classList; } },
-          { src:'http://cdn.rawgit.com/hakimel/reveal.js/3.3.0/plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
-          { src:'http://cdn.rawgit.com/hakimel/reveal.js/3.3.0/plugin/zoom-js/zoom.js', async: true, condition: function() { return !!document.body.classList; } },
-          { src:'http://cdn.rawgit.com/hakimel/reveal.js/3.3.0/plugin/notes/notes.js', async: true, condition: function() { return !!document.body.classList; } }
-          //{ src:'http://cdn.rawgit.com/hakimel/reveal.js/3.3.0/plugin/markdown/marked.js', condition: function() { return !!document.querySelector('[data-markdown]' ); } },
-          //{ src:'http://cdn.rawgit.com/hakimel/reveal.js/3.3.0/plugin/markdown/markdown.js', condition: function() { return !!document.querySelector('[data-markdown]' ); } },
-		  //{ src:'http://cdn.rawgit.com/hakimel/reveal.js/3.3.0/plugin/math/math.js', async: true }
+          { src:'reveal.js/lib/js/classList.js', condition: function() { return !document.body.classList; } },
+          { src:'reveal.js/plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+          { src:'reveal.js/plugin/zoom-js/zoom.js', async: true, condition: function() { return !!document.body.classList; } },
+          { src:'reveal.js/plugin/notes/notes.js', async: true, condition: function() { return !!document.body.classList; } }
+          //{ src:'reveal.js/plugin/markdown/marked.js', condition: function() { return !!document.querySelector('[data-markdown]' ); } },
+          //{ src:'reveal.js/plugin/markdown/markdown.js', condition: function() { return !!document.querySelector('[data-markdown]' ); } },
+		  //{ src:'reveal.js/plugin/math/math.js', async: true }
 		]
     	
     });
         </script>
-<link rel="stylesheet" crossorigin="anonymous" href="https://opensource.keycdn.com/fontawesome/4.6.3/font-awesome.min.css">
+<link rel="stylesheet" crossorigin="anonymous" href="Font-Awesome/css/font-awesome.min.css">
 <script>
 		// add "awesome" class to #mindslide (only) if FontAwesome is loaded (for icons layout)
 	
