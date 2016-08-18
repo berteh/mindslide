@@ -41,11 +41,13 @@ More features in the demo of [Reveal.js](http://lab.hakim.se/reveal-js/).
 
 
 ## Thanks
-A big "Thank You!"" to the original developpers of open-source software, and the community of contributors that supported/inspired them and more specifically [Hakim El Hattab](http://hakim.se) for Reveal.js, and Dimitry Polivaev and [contributors](http://freeplane.sourceforge.net/wiki/index.php/Contributors) for Freeplane.
+A big "Thank You!"" to the original developpers of open-source software, and the community of contributors that supported/inspired them and more specifically [Hakim El Hattab](http://hakim.se) for Reveal.js, Dimitry Polivaev and [contributors](http://freeplane.sourceforge.net/wiki/index.php/Contributors) for Freeplane, and Dave Gandy for [Font Awesome](http://fontawesome.io). 
 
 ## Changelog 
 
   * [v0.1](https://github.com/berteh/mindslide/releases/tag/v0.1) - 2013.09  - working JS implementation
   * [v0.2](https://github.com/berteh/mindslide/releases/tag/v0.2) - 2013.09  - change to XSLT implementation, not integrated in Freeplane
   * [v0.3](https://github.com/berteh/mindslide/releases/tag/v0.3) - 2016.06  - compatibility with latest Reveal.js for more options, themes, and stunning visual animation effects, including parallax background.
+  * [v0.4](https://github.com/berteh/mindslide/releases/tag/v0.4) - 2016.08  - improved documentation
+  * [v0.5](https://github.com/berteh/mindslide/releases/tag/v0.5) - 2016.08  - added support for Freeplane icons, with [Font Awesome](http://fontawesome.io)
 
