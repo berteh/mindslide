@@ -49,7 +49,7 @@
 		<!-- Hides the address bar on mobile devices-->
 		<hideAddressBar>true</hideAddressBar>
 		<!-- Opens links in an iframe preview overlay-->
-		<previewLinks>true</previewLinks>
+		<previewLinks>false</previewLinks>
 		<!-- Transition style-->
 		<transition>slide</transition> <!-- none/fade/slide/convex/concave/zoom-->
 		<!-- Transition speed-->

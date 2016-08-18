@@ -163,7 +163,7 @@
 		
 		<xsl:if test=".//icon"><!--load FontAwesome only if there is some icon-->
 		<link rel="stylesheet" crossorigin="anonymous">
-			<xsl:attribute name="href"><xsl:value-of select="document('config.xml')/deck-config/icons/awesome-location" /></xsl:attribute>
+			<xsl:attribute name="href"><xsl:value-of select="document('config.xml')/deck-config/icons/awesome-location" />font-awesome.min.css</xsl:attribute>
 		</link>
 		<script>
 		// add "awesome" class to #mindslide (only) if FontAwesome is loaded (for icons layout)
@@ -240,7 +240,8 @@
             <section class="content"><xsl:attribute name="id"><xsl:value-of select="@ID" /></xsl:attribute>
                 <xsl:element name="{$h}"><xsl:apply-templates select="." mode="simpleText" /></xsl:element>
                 <ul>
-                    <xsl:apply-templates select="node[not(attribute[@NAME='slide-hide'])]" mode="indexEntry" />  <!--all non-hidden children in title slides-->
+                    <xsl:apply-templates select="node[not(attribute[@NAME='slide-hide'])][not(@TEXT='')]" mode="indexEntry" />  <!--all children in title slides unless hidden or without text, TODO this empty text test also removes summary nodes, needs fixing.-->
+					<xsl:apply-templates select=".//node[preceding-sibling::hook[@NAME='SummaryNode']][not(attribute[@NAME='slide-hide'])]" mode="indexEntry" /> <!--quick fix for missing summary nodes. TODO needs to be handled by a better selection in line above instead, to preserve sequence-->
                 </ul>
                 <xsl:call-template name="imagesAndNotes" />     
             </section>            
