@@ -250,13 +250,13 @@
         
     <xsl:apply-templates select="node[node[not(attribute[@NAME='slide-hide'])]]" mode="structure"><!-- output complex children slides -->
         <xsl:with-param name="level" select="$level + 1" />
-    </xsl:apply-templates> 
-   
+    </xsl:apply-templates>    
 </xsl:template>
 
 
 <xsl:template match="node[node[not(attribute[@NAME='slide-hide'])]]" mode="indexEntry"><!--complex node as plain text link 'li -->
     <li>
+		<xsl:apply-templates select="icon" />
         <xsl:apply-templates select="." mode="simpleText" />
         <a>
            <xsl:attribute name="href"><xsl:value-of select="concat('#/',@ID)" /></xsl:attribute>
@@ -265,8 +265,12 @@
         </a>           
     </li>
 </xsl:template>
+
 <xsl:template match="node[not(node[not(attribute[@NAME='slide-hide'])])]" mode="indexEntry"><!--simple node as richtext 'li-->
-    <li><xsl:apply-templates select="." mode="richText"/></li>
+    <li>
+		<xsl:apply-templates select="icon" />
+		<xsl:apply-templates select="." mode="richText"/>
+	</li>
 </xsl:template>
 
 <!--richest possible node content, opt. with link on node-->
@@ -275,22 +279,20 @@
        <xsl:attribute name="href"><xsl:value-of select="@LINK" /></xsl:attribute>
        <xsl:attribute name="class"><xsl:value-of select="'link external'" /></xsl:attribute>
        <xsl:apply-templates select="." mode="richContent"/>
-    </a>            
-       
+    </a>                   
 </xsl:template>
+
 <xsl:template match="node[not(@LINK)]" mode="richText">
     <xsl:apply-templates select="." mode="richContent"/>
 </xsl:template>
 
 <xsl:template match="node" mode="richContent"><!--richest possible node content, handle all but for links (->mode link) and images, gathered at the slide lvl (~for layout ease ~gallery)-->
-    <xsl:apply-templates select="icon" />
 	<xsl:value-of select="@TEXT"/>
     <xsl:copy-of select="richcontent[@TYPE='NODE']/html/body/node()"/>  <!--todo filter some of the default richcontent layout that messes with reveal, eg font sizes too small, maybe turn to relative?-->
     <xsl:apply-templates select="arrowlink" /><!-- outwards node connectors --> 
 </xsl:template>
 
 <xsl:template match="node" mode="simpleText"><!--plain text -->
-	<xsl:apply-templates select="icon" />
     <xsl:value-of select="@TEXT"/>
     <xsl:copy-of select="richcontent[@TYPE='NODE']/html/body//node()/text()"/> <!--todo error: this XPath should get the text of all children in richcontent and seems to only get first lvl, to fix. -->
 </xsl:template>

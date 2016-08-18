@@ -2,7 +2,7 @@
 <!--To view this file, download free mind mapping software Freeplane from http://freeplane.sourceforge.net -->
 <attribute_registry SHOW_ATTRIBUTES="selected"/>
 <node TEXT="MindSlide" FOLDED="false" ID="ID_1723255651" CREATED="1283093380553" MODIFIED="1471481597926"><hook NAME="MapStyle">
-    <properties show_icon_for_attributes="true" fit_to_viewport="false;" show_note_icons="true"/>
+    <properties fit_to_viewport="false;" show_icon_for_attributes="true" show_note_icons="true"/>
 
 <map_styles>
 <stylenode LOCALIZED_TEXT="styles.root_node" STYLE="oval" UNIFORM_SHAPE="true" VGAP_QUANTITY="24.0 pt">
@@ -61,40 +61,11 @@
 <node TEXT="View your Mindmap as an HTML presentation / slideshow" POSITION="right" ID="ID_212678608" CREATED="1377866384042" MODIFIED="1378374500407">
 <edge COLOR="#ff0000"/>
 </node>
-<node POSITION="right" ID="ID_1655550133" CREATED="1377869126231" MODIFIED="1471474899145"><richcontent TYPE="NODE">
-
-<html>
-  <head>
-    
-  </head>
-  <body>
-    <p>
-      
-    </p>
-    <p style="text-align: center">
-      hit <code>&lt;space&gt;</code>&#160;to navigate
-    </p>
-  </body>
-</html>
-
-</richcontent>
+<node TEXT="&lt;html&gt;&#xa;  &lt;head&gt;&#xa;    &#xa;  &lt;/head&gt;&#xa;  &lt;body&gt;&#xa;    &lt;p&gt;&#xa;      &#xa;    &lt;/p&gt;&#xa;    &lt;p style=&quot;text-align: center&quot;&gt;&#xa;      hit &lt;code&gt;&amp;lt;space&amp;gt;&lt;/code&gt;&amp;#160;to navigate&#xa;    &lt;/p&gt;&#xa;  &lt;/body&gt;&#xa;&lt;/html&gt;" POSITION="right" ID="ID_1655550133" CREATED="1377869126231" MODIFIED="1471474899145">
 <edge COLOR="#ffff00"/>
 <font BOLD="false"/>
 </node>
-<node POSITION="right" ID="ID_1180737403" CREATED="1377988602258" MODIFIED="1471474984096"><richcontent TYPE="NODE">
-
-<html>
-  <head>
-    
-  </head>
-  <body>
-    <p style="text-align: center">
-      <small><a href="https://github.com/berteh/mindslide/">source code</a>&#160;(on github) - <a href="https://donorbox.org/donate-98">donate</a>&#160;&#160;(on donorbox)</small>
-    </p>
-  </body>
-</html>
-
-</richcontent>
+<node TEXT="&lt;html&gt;&#xa;  &lt;head&gt;&#xa;    &#xa;  &lt;/head&gt;&#xa;  &lt;body&gt;&#xa;    &lt;p style=&quot;text-align: center&quot;&gt;&#xa;      &lt;small&gt;&lt;a href=&quot;https://github.com/berteh/mindslide/&quot;&gt;source code&lt;/a&gt;&amp;#160;(on github) - &lt;a href=&quot;https://donorbox.org/donate-98&quot;&gt;donate&lt;/a&gt;&amp;#160;&amp;#160;(on donorbox)&lt;/small&gt;&#xa;    &lt;/p&gt;&#xa;  &lt;/body&gt;&#xa;&lt;/html&gt;" POSITION="right" ID="ID_1180737403" CREATED="1377988602258" MODIFIED="1471474984096">
 <edge COLOR="#7c7c00"/>
 </node>
 <node TEXT="What is MindSlide?" FOLDED="true" POSITION="right" ID="ID_1494003336" CREATED="1377988920149" MODIFIED="1377988928576">
@@ -127,7 +98,21 @@
 </html>
 </richcontent>
 <node TEXT="MindSlide currently supports" ID="ID_825683797" CREATED="1377866419355" MODIFIED="1377989164919"/>
-<node TEXT="&lt;html&gt;&#xa;  &lt;head&gt;&#xa;    &#xa;  &lt;/head&gt;&#xa;  &lt;body&gt;&#xa;    &lt;p&gt;&#xa;      &lt;a href=&quot;https://github.com/hakimel/reveal.js#speaker-notes&quot;&gt;speaker notes&lt;/a&gt;&amp;#160;(from the node notes) &lt;small&gt;hit &amp;quot;s&amp;quot;&lt;/small&gt;&#xa;    &lt;/p&gt;&#xa;  &lt;/body&gt;&#xa;&lt;/html&gt;" ID="ID_1792241167" CREATED="1377866789605" MODIFIED="1378390549703"><richcontent TYPE="NOTE">
+<node ID="ID_1792241167" CREATED="1377866789605" MODIFIED="1378390549703"><richcontent TYPE="NODE">
+
+<html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      <a href="https://github.com/hakimel/reveal.js#speaker-notes">speaker notes</a>&#160;(from the node notes) <small>hit &quot;s&quot;</small>
+    </p>
+  </body>
+</html>
+
+</richcontent>
+<richcontent TYPE="NOTE">
 
 <html>
   <head>
@@ -146,37 +131,8 @@
 </html>
 </richcontent>
 </node>
-<node ID="ID_1149617363" CREATED="1377869822244" MODIFIED="1471475060730"><richcontent TYPE="NODE">
-
-<html>
-  <head>
-    
-  </head>
-  <body>
-    <p>
-      2D overview <small>(hit &quot;esc&quot; or &quot;o&quot;)</small>&#160;and easy navigation <small>(space, arrows, click, touch)</small>&#160;help <small>(?)</small>
-    </p>
-  </body>
-</html>
-
-</richcontent>
-</node>
-<node ID="ID_765812044" CREATED="1377866554077" MODIFIED="1471483569748"><richcontent TYPE="NODE">
-
-<html>
-  <head>
-    
-  </head>
-  <body>
-    <p>
-      simple <font face="Courier New, Courier, Nimbus Mono L, serif, monospace"><b style="font-family: Courier New, Courier, Nimbus Mono L, serif, monospace">&amp; rich-text</b></font><font color="#e1a71c">&#160;<u>nodes</u></font>, including code highlight:
-    </p>
-    <pre><code class="css">@page:right { margin: 1cm 2cm 1.3cm 4cm; }</code></pre>
-  </body>
-</html>
-
-</richcontent>
-</node>
+<node TEXT="&lt;html&gt;&#xa;  &lt;head&gt;&#xa;    &#xa;  &lt;/head&gt;&#xa;  &lt;body&gt;&#xa;    &lt;p&gt;&#xa;      2D overview &lt;small&gt;(hit &amp;quot;esc&amp;quot; or &amp;quot;o&amp;quot;)&lt;/small&gt;&amp;#160;and easy navigation &lt;small&gt;(space, arrows, click, touch)&lt;/small&gt;&amp;#160;help &lt;small&gt;(?)&lt;/small&gt;&#xa;    &lt;/p&gt;&#xa;  &lt;/body&gt;&#xa;&lt;/html&gt;" ID="ID_1149617363" CREATED="1377869822244" MODIFIED="1471475060730"/>
+<node TEXT="&lt;html&gt;&#xa;  &lt;head&gt;&#xa;    &#xa;  &lt;/head&gt;&#xa;  &lt;body&gt;&#xa;    &lt;p&gt;&#xa;      simple &lt;font face=&quot;Courier New, Courier, Nimbus Mono L, serif, monospace&quot;&gt;&lt;b style=&quot;font-family: Courier New, Courier, Nimbus Mono L, serif, monospace&quot;&gt;&amp;amp; rich-text&lt;/b&gt;&lt;/font&gt;&lt;font color=&quot;#e1a71c&quot;&gt;&amp;#160;&lt;u&gt;nodes&lt;/u&gt;&lt;/font&gt;, including code highlight:&#xa;    &lt;/p&gt;&#xa;    &lt;pre&gt;&lt;code class=&quot;css&quot;&gt;@page:right { margin: 1cm 2cm 1.3cm 4cm; }&lt;/code&gt;&lt;/pre&gt;&#xa;  &lt;/body&gt;&#xa;&lt;/html&gt;" ID="ID_765812044" CREATED="1377866554077" MODIFIED="1471483569748"/>
 <node TEXT="links, images, icons and nodes connectors" ID="ID_906971272" CREATED="1377866777469" MODIFIED="1471481513806">
 <icon BUILTIN="button_ok"/>
 <arrowlink SHAPE="CUBIC_CURVE" COLOR="#000000" WIDTH="2" TRANSPARENCY="80" FONT_SIZE="9" FONT_FAMILY="SansSerif" DESTINATION="ID_1494003336" STARTINCLINATION="299;-5;" ENDINCLINATION="590;0;" STARTARROW="NONE" ENDARROW="DEFAULT"/>
@@ -200,17 +156,7 @@
 </html>
 </richcontent>
 </node>
-<node TEXT="&lt;html&gt;&#xa;  &lt;head&gt;&#xa;    &#xa;  &lt;/head&gt;&#xa;  &lt;body&gt;&#xa;    &lt;p&gt;&#xa;      &lt;a href=&quot;https://github.com/hakimel/reveal.js#leap-motion&quot;&gt;gestures&lt;/a&gt;, &lt;a href=&quot;https://github.com/hakimel/reveal.js#markdown&quot;&gt;markdown contents&lt;/a&gt;, &lt;a href=&quot;https://github.com/hakimel/reveal.js#pdf-export&quot;&gt;PDF export&lt;/a&gt;, &lt;a href=&quot;https://github.com/hakimel/reveal.js#api&quot;&gt;JavaScript API&lt;/a&gt;&amp;#160;and &lt;a href=&quot;https://github.com/hakimel/reveal.js#instructions&quot;&gt;more&lt;/a&gt;.&#xa;    &lt;/p&gt;&#xa;  &lt;/body&gt;&#xa;&lt;/html&gt;" ID="ID_236559184" CREATED="1377867137693" MODIFIED="1378377202958"/>
-<node TEXT="hidding mindmap nodes from slides" ID="ID_1778852033" CREATED="1401981390393" MODIFIED="1471473834759">
-<arrowlink SHAPE="CUBIC_CURVE" COLOR="#000000" WIDTH="2" TRANSPARENCY="80" FONT_SIZE="9" FONT_FAMILY="SansSerif" DESTINATION="ID_378704017" STARTINCLINATION="195;0;" ENDINCLINATION="195;0;" STARTARROW="NONE" ENDARROW="DEFAULT"/>
-</node>
-<node TEXT="Recent improvements" FOLDED="true" ID="ID_1665333044" CREATED="1465150488181" MODIFIED="1465154916675">
-<node TEXT="Mindslide now shows nodes icons" ID="ID_1730369322" CREATED="1471483059485" MODIFIED="1471483166689">
-<icon BUILTIN="ksmiletris"/>
-</node>
-<node ID="ID_1332528980" CREATED="1465150512936" MODIFIED="1471483146314">
-<icon BUILTIN="bookmark"/>
-<richcontent TYPE="NODE">
+<node ID="ID_236559184" CREATED="1377867137693" MODIFIED="1378377202958"><richcontent TYPE="NODE">
 
 <html>
   <head>
@@ -218,26 +164,22 @@
   </head>
   <body>
     <p>
-      The last update of Reveal.js now allows for
+      <a href="https://github.com/hakimel/reveal.js#leap-motion">gestures</a>, <a href="https://github.com/hakimel/reveal.js#markdown">markdown contents</a>, <a href="https://github.com/hakimel/reveal.js#pdf-export">PDF export</a>, <a href="https://github.com/hakimel/reveal.js#api">JavaScript API</a>&#160;and <a href="https://github.com/hakimel/reveal.js#instructions">more</a>.
     </p>
-    <ul>
-      <li>
-        more stunning transitions, including <i>fade, slide, convex, concave, zoom</i>.
-      </li>
-      <li>
-        parallax background (see <a href="http://berteh.github.io/mindslide/?parallaxBackgroundImage=https%3A%2F%2Fs3.amazonaws.com%2Fhakim-static%2Freveal-js%2Freveal-parallax-1.jpg&amp;parallaxBackgroundSize=2100px%20900px#/ID_1723255651">demo</a>)
-      </li>
-      <li>
-        slides shuffling
-      </li>
-      <li>
-        auto advancing slides (see <a href="https://github.com/hakimel/reveal.js#auto-sliding">documentation</a>)
-      </li>
-    </ul>
   </body>
 </html>
 
 </richcontent>
+</node>
+<node TEXT="hidding mindmap nodes from slides" ID="ID_1778852033" CREATED="1401981390393" MODIFIED="1471473834759">
+<arrowlink SHAPE="CUBIC_CURVE" COLOR="#000000" WIDTH="2" TRANSPARENCY="80" FONT_SIZE="9" FONT_FAMILY="SansSerif" DESTINATION="ID_378704017" STARTINCLINATION="195;0;" ENDINCLINATION="195;0;" STARTARROW="NONE" ENDARROW="DEFAULT"/>
+</node>
+<node TEXT="Recent improvements" FOLDED="true" ID="ID_1665333044" CREATED="1465150488181" MODIFIED="1465154916675">
+<node TEXT="Mindslide now shows nodes icons" ID="ID_1730369322" CREATED="1471483059485" MODIFIED="1471483166689">
+<icon BUILTIN="ksmiletris"/>
+</node>
+<node TEXT="&lt;html&gt;&#xa;  &lt;head&gt;&#xa;    &#xa;  &lt;/head&gt;&#xa;  &lt;body&gt;&#xa;    &lt;p&gt;&#xa;      The last update of Reveal.js now allows for&#xa;    &lt;/p&gt;&#xa;    &lt;ul&gt;&#xa;      &lt;li&gt;&#xa;        more stunning transitions, including &lt;i&gt;fade, slide, convex, concave, zoom&lt;/i&gt;.&#xa;      &lt;/li&gt;&#xa;      &lt;li&gt;&#xa;        parallax background (see &lt;a href=&quot;http://berteh.github.io/mindslide/?parallaxBackgroundImage=https%3A%2F%2Fs3.amazonaws.com%2Fhakim-static%2Freveal-js%2Freveal-parallax-1.jpg&amp;amp;parallaxBackgroundSize=2100px%20900px#/ID_1723255651&quot;&gt;demo&lt;/a&gt;)&#xa;      &lt;/li&gt;&#xa;      &lt;li&gt;&#xa;        slides shuffling&#xa;      &lt;/li&gt;&#xa;      &lt;li&gt;&#xa;        auto advancing slides (see &lt;a href=&quot;https://github.com/hakimel/reveal.js#auto-sliding&quot;&gt;documentation&lt;/a&gt;)&#xa;      &lt;/li&gt;&#xa;    &lt;/ul&gt;&#xa;  &lt;/body&gt;&#xa;&lt;/html&gt;" ID="ID_1332528980" CREATED="1465150512936" MODIFIED="1471483146314">
+<icon BUILTIN="bookmark"/>
 </node>
 </node>
 </node>
@@ -250,55 +192,14 @@
 </node>
 <node TEXT="Install MindSlide" FOLDED="true" ID="ID_1405033759" CREATED="1378221364979" MODIFIED="1378371390127">
 <node TEXT="To install MindSlide takes about 2 minutes:" ID="ID_1842474903" CREATED="1377989535791" MODIFIED="1378221401070"/>
-<node ID="ID_421999596" CREATED="1377867332134" MODIFIED="1471483358674"><richcontent TYPE="NODE">
-
-<html>
-  <head>
-    
-  </head>
-  <body>
-    <p>
-      Install from the archives:
-    </p>
-    <ol>
-      <li>
-        dowload and unpack <a href="https://github.com/berteh/mindslide/archive/master.zip">mindslide's master.zip</a>&#160;into &quot;mindslide&quot; directory (or pick any name you like)
-      </li>
-      <li>
-        download and unpack <a href="https://github.com/hakimel/reveal.js/archive/master.zip">reveal.js's master.zip</a>&#160;into mindslide/reveal.js directory
-      </li>
-      <li>
-        download and unpack <a href="https://github.com/FortAwesome/Font-Awesome/archive/master.zip">FontAwesome's master.zip</a>&#160;into mindslide/Font-Awesome directory
-      </li>
-    </ol>
-  </body>
-</html>
-
-</richcontent>
-</node>
-<node ID="ID_817492504" CREATED="1378387620242" MODIFIED="1471483199735"><richcontent TYPE="NODE">
-
-<html>
-  <head>
-    
-  </head>
-  <body>
-    <p>
-      (alternatively) you can also clone the source code:
-    </p>
-    <pre><code class="bash">git clone --recursive https://github.com/berteh/mindslide.git</code></pre>
-  </body>
-</html>
-
-</richcontent>
-</node>
+<node TEXT="&lt;html&gt;&#xa;  &lt;head&gt;&#xa;    &#xa;  &lt;/head&gt;&#xa;  &lt;body&gt;&#xa;    &lt;p&gt;&#xa;      Install from the archives:&#xa;    &lt;/p&gt;&#xa;    &lt;ol&gt;&#xa;      &lt;li&gt;&#xa;        dowload and unpack &lt;a href=&quot;https://github.com/berteh/mindslide/archive/master.zip&quot;&gt;mindslide&apos;s master.zip&lt;/a&gt;&amp;#160;into &amp;quot;mindslide&amp;quot; directory (or pick any name you like)&#xa;      &lt;/li&gt;&#xa;      &lt;li&gt;&#xa;        download and unpack &lt;a href=&quot;https://github.com/hakimel/reveal.js/archive/master.zip&quot;&gt;reveal.js&apos;s master.zip&lt;/a&gt;&amp;#160;into mindslide/reveal.js directory&#xa;      &lt;/li&gt;&#xa;      &lt;li&gt;&#xa;        download and unpack &lt;a href=&quot;https://github.com/FortAwesome/Font-Awesome/archive/master.zip&quot;&gt;FontAwesome&apos;s master.zip&lt;/a&gt;&amp;#160;into mindslide/Font-Awesome directory&#xa;      &lt;/li&gt;&#xa;    &lt;/ol&gt;&#xa;  &lt;/body&gt;&#xa;&lt;/html&gt;" ID="ID_421999596" CREATED="1377867332134" MODIFIED="1471483358674"/>
+<node TEXT="&lt;html&gt;&#xa;  &lt;head&gt;&#xa;    &#xa;  &lt;/head&gt;&#xa;  &lt;body&gt;&#xa;    &lt;p&gt;&#xa;      (alternatively) you can also clone the source code:&#xa;    &lt;/p&gt;&#xa;    &lt;pre&gt;&lt;code class=&quot;bash&quot;&gt;git clone --recursive https://github.com/berteh/mindslide.git&lt;/code&gt;&lt;/pre&gt;&#xa;  &lt;/body&gt;&#xa;&lt;/html&gt;" ID="ID_817492504" CREATED="1378387620242" MODIFIED="1471483199735"/>
 <node TEXT="then copy mindslide/mindslide.xsl, mindslide/config.xml and mindslide/reveal-configuration.xsl into your freeplane/resources/xslt directory" ID="ID_1487207699" CREATED="1378221411490" MODIFIED="1471483405888"/>
 </node>
 <node TEXT="Use MindSlide" ID="ID_1592220697" CREATED="1465162473408" MODIFIED="1465162589552">
 <node TEXT="Easy as pie:" ID="ID_445118759" CREATED="1465162491212" MODIFIED="1465162894153"/>
 <node TEXT="launch freemind, edit your mindmap to your liking." ID="ID_916240691" CREATED="1378221446025" MODIFIED="1465162526342"/>
-<node TEXT="&lt;html&gt;&#xa;  &lt;head&gt;&#xa;    &#xa;  &lt;/head&gt;&#xa;  &lt;body&gt;&#xa;    &lt;p&gt;&#xa;      select &lt;i&gt;file &amp;gt; export &amp;gt; Animation MindSlide (.html)&lt;/i&gt;&amp;#160;to export your mindmap&#xa;    &lt;/p&gt;&#xa;  &lt;/body&gt;&#xa;&lt;/html&gt;" ID="ID_1269583054" CREATED="1465162527207" MODIFIED="1465162733776"/>
-<node ID="ID_765546127" CREATED="1378221476933" MODIFIED="1471483469701"><richcontent TYPE="NODE">
+<node ID="ID_1269583054" CREATED="1465162527207" MODIFIED="1465162733776"><richcontent TYPE="NODE">
 
 <html>
   <head>
@@ -306,12 +207,14 @@
   </head>
   <body>
     <p>
-      <b>save the HTML presentation in your mindslide directory</b>! <small>(or edit settings in config.xml to use the online CDN hosts for both reveal and font awesome)</small>
+      select <i>file &gt; export &gt; Animation MindSlide (.html)</i>&#160;to export your mindmap
     </p>
   </body>
 </html>
 
 </richcontent>
+</node>
+<node TEXT="&lt;html&gt;&#xa;  &lt;head&gt;&#xa;    &#xa;  &lt;/head&gt;&#xa;  &lt;body&gt;&#xa;    &lt;p&gt;&#xa;      &lt;b&gt;save the HTML presentation in your mindslide directory&lt;/b&gt;! &lt;small&gt;(or edit settings in config.xml to use the online CDN hosts for both reveal and font awesome)&lt;/small&gt;&#xa;    &lt;/p&gt;&#xa;  &lt;/body&gt;&#xa;&lt;/html&gt;" ID="ID_765546127" CREATED="1378221476933" MODIFIED="1471483469701">
 <arrowlink SHAPE="CUBIC_CURVE" COLOR="#000000" WIDTH="2" TRANSPARENCY="80" FONT_SIZE="9" FONT_FAMILY="SansSerif" DESTINATION="ID_1593867677" STARTINCLINATION="598;0;" ENDINCLINATION="598;0;" STARTARROW="NONE" ENDARROW="DEFAULT"/>
 <font BOLD="false"/>
 </node>
@@ -339,7 +242,21 @@
 <attribute NAME="slide-hide" VALUE=""/>
 </node>
 </node>
-<node TEXT="&lt;html&gt;&#xa;  &lt;head&gt;&#xa;    &#xa;  &lt;/head&gt;&#xa;  &lt;body&gt;&#xa;    &lt;p&gt;&#xa;      To hide a node from your mindslides simply add the attribute &amp;quot;slide-hide&amp;quot; to it:&#xa;    &lt;/p&gt;&#xa;    &lt;pre&gt;      right-click &amp;gt; edit attribute in-line &amp;gt; add or select &amp;quot;slide-hide&amp;quot;&lt;/pre&gt;&#xa;  &lt;/body&gt;&#xa;&lt;/html&gt;" ID="ID_1904486340" CREATED="1401981843061" MODIFIED="1401983782171">
+<node ID="ID_1904486340" CREATED="1401981843061" MODIFIED="1401983782171"><richcontent TYPE="NODE">
+
+<html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      To hide a node from your mindslides simply add the attribute &quot;slide-hide&quot; to it:
+    </p>
+    <pre>      right-click &gt; edit attribute in-line &gt; add or select &quot;slide-hide&quot;</pre>
+  </body>
+</html>
+
+</richcontent>
 <hook URI="assets/hidden-node.png" SIZE="0.2695155" NAME="ExternalObject"/>
 </node>
 <node TEXT="Some nodes (and their children) can be excluded from the slides" FOLDED="true" ID="ID_63864419" CREATED="1401981397824" MODIFIED="1401983620699">
@@ -362,7 +279,31 @@
 </node>
 <node TEXT="View Speakers Notes" FOLDED="true" ID="ID_1605694183" CREATED="1378390526444" MODIFIED="1378391591570">
 <node TEXT="Including preview of the next slide, notes for current slide, and timer." ID="ID_996228764" CREATED="1465162982945" MODIFIED="1465163037591"/>
-<node TEXT="&lt;html&gt;&#xa;  &lt;head&gt;&#xa;    &#xa;  &lt;/head&gt;&#xa;  &lt;body&gt;&#xa;    &lt;p&gt;&#xa;      Speaker notes require the presentation be served by a &lt;b&gt;webserver&lt;/b&gt;, they don&apos;t work from a local file.&#xa;    &lt;/p&gt;&#xa;    &lt;p&gt;&#xa;      &#xa;    &lt;/p&gt;&#xa;    &lt;p&gt;&#xa;      You can use a very simple webserver such as &lt;a href=&quot;http://code.google.com/p/mongoose/&quot;&gt;mongoose&lt;/a&gt;&amp;#160;that simply needs to be &lt;a href=&quot;http://code.google.com/p/mongoose/downloads/list&quot;&gt;downloaded&lt;/a&gt;&amp;#160;in mindslide directory and executed (clicked)... or execute the following line in mindslide directory if you have python installed:&#xa;    &lt;/p&gt;&#xa;    &lt;pre&gt;&lt;code class=&quot;bash&quot;&gt;python -m SimpleHTTPServer 8080&lt;/code&gt;&lt;/pre&gt;&#xa;    &lt;p&gt;&#xa;      then browse to &lt;a href=&quot;http://localhost:8080&quot;&gt;http://localhost:8080&lt;/a&gt;&#xa;    &lt;/p&gt;&#xa;  &lt;/body&gt;&#xa;&lt;/html&gt;" ID="ID_254618814" CREATED="1378390551836" MODIFIED="1378392970150"/>
+<node ID="ID_254618814" CREATED="1378390551836" MODIFIED="1378392970150"><richcontent TYPE="NODE">
+
+<html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      Speaker notes require the presentation be served by a <b>webserver</b>, they don't work from a local file.
+    </p>
+    <p>
+      
+    </p>
+    <p>
+      You can use a very simple webserver such as <a href="http://code.google.com/p/mongoose/">mongoose</a>&#160;that simply needs to be <a href="http://code.google.com/p/mongoose/downloads/list">downloaded</a>&#160;in mindslide directory and executed (clicked)... or execute the following line in mindslide directory if you have python installed:
+    </p>
+    <pre><code class="bash">python -m SimpleHTTPServer 8080</code></pre>
+    <p>
+      then browse to <a href="http://localhost:8080">http://localhost:8080</a>
+    </p>
+  </body>
+</html>
+
+</richcontent>
+</node>
 </node>
 </node>
 <node TEXT="Configure MindSlide" FOLDED="true" ID="ID_1593867677" CREATED="1377867328934" MODIFIED="1465162622225">
@@ -390,23 +331,99 @@
 <node TEXT="Contributions are welcome in all kinds:" ID="ID_756109089" CREATED="1377867407739" MODIFIED="1378374264424"/>
 <node TEXT="Share your ideas" ID="ID_1278307251" CREATED="1377867391933" MODIFIED="1377991159466" LINK="https://github.com/berteh/mindslide/issues"/>
 <node TEXT="Improve the code" FOLDED="true" ID="ID_1869571896" CREATED="1378387202453" MODIFIED="1378387207051">
-<node TEXT="&lt;html&gt;&#xa;  &lt;head&gt;&#xa;    &#xa;  &lt;/head&gt;&#xa;  &lt;body&gt;&#xa;    &lt;ol&gt;&#xa;      &lt;li&gt;&#xa;        &lt;a href=&quot;https://github.com/berteh/mindslide&quot;&gt;Fork the code&lt;/a&gt;&amp;#160;on github&#xa;      &lt;/li&gt;&#xa;      &lt;li&gt;&#xa;        Create your feature branch:&#xa;&#xa;        &lt;pre class=&quot;inline&quot;&gt;&lt;code class=&quot;bash&quot;&gt;git checkout -b name-of-your-feature&lt;/code&gt;&lt;/pre&gt;&#xa;      &lt;/li&gt;&#xa;      &lt;li&gt;&#xa;        Commit your changes:&#xa;&#xa;        &lt;pre class=&quot;inline&quot;&gt;&lt;code class=&quot;bash&quot;&gt;git commit -am &apos;name and explain your feature&apos;&lt;/code&gt;&lt;/pre&gt;&#xa;      &lt;/li&gt;&#xa;      &lt;li&gt;&#xa;        Push to the branch:&#xa;&#xa;        &lt;pre class=&quot;inline&quot;&gt;&lt;code class=&quot;bash&quot;&gt;git push origin name-of-your-feature&lt;/code&gt;&lt;/pre&gt;&#xa;      &lt;/li&gt;&#xa;      &lt;li&gt;&#xa;        Create a &lt;a href=&quot;https://github.com/berteh/mindslide/pulls&quot;&gt;new Pull Request&lt;/a&gt;&#xa;      &lt;/li&gt;&#xa;    &lt;/ol&gt;&#xa;  &lt;/body&gt;&#xa;&lt;/html&gt;" ID="ID_697225143" CREATED="1377988602258" MODIFIED="1378389000309"/>
+<node ID="ID_697225143" CREATED="1377988602258" MODIFIED="1378389000309"><richcontent TYPE="NODE">
+
+<html>
+  <head>
+    
+  </head>
+  <body>
+    <ol>
+      <li>
+        <a href="https://github.com/berteh/mindslide">Fork the code</a>&#160;on github
+      </li>
+      <li>
+        Create your feature branch:
+
+        <pre class="inline"><code class="bash">git checkout -b name-of-your-feature</code></pre>
+      </li>
+      <li>
+        Commit your changes:
+
+        <pre class="inline"><code class="bash">git commit -am 'name and explain your feature'</code></pre>
+      </li>
+      <li>
+        Push to the branch:
+
+        <pre class="inline"><code class="bash">git push origin name-of-your-feature</code></pre>
+      </li>
+      <li>
+        Create a <a href="https://github.com/berteh/mindslide/pulls">new Pull Request</a>
+      </li>
+    </ol>
+  </body>
+</html>
+
+</richcontent>
 </node>
-<node TEXT="&lt;html&gt;&#xa;  &lt;head&gt;&#xa;    &#xa;  &lt;/head&gt;&#xa;  &lt;body&gt;&#xa;    &lt;p&gt;&#xa;      Spread the word about &lt;a href=&quot;http://berteh.github.io/mindslide/&quot;&gt;Mindslide&lt;/a&gt;, &lt;a href=&quot;http://freeplane.sourceforge.net/&quot;&gt;Freeplane&lt;/a&gt;&amp;#160;and &lt;a href=&quot;http://lab.hakim.se/reveal-js/&quot;&gt;Reveal.js&lt;/a&gt;&#xa;    &lt;/p&gt;&#xa;  &lt;/body&gt;&#xa;&lt;/html&gt;" ID="ID_191461379" CREATED="1377867415556" MODIFIED="1378387583711"/>
-<node TEXT="&lt;html&gt;&#xa;  &lt;head&gt;&#xa;    &#xa;  &lt;/head&gt;&#xa;  &lt;body&gt;&#xa;    &lt;p&gt;&#xa;      Another way to help keeping this project alive is to &lt;a href=&quot;https://donorbox.org/donate-98&quot;&gt;donate&lt;/a&gt;.&#xa;    &lt;/p&gt;&#xa;  &lt;/body&gt;&#xa;&lt;/html&gt;" ID="ID_1126081913" CREATED="1471434215980" MODIFIED="1471434466830">
+</node>
+<node ID="ID_191461379" CREATED="1377867415556" MODIFIED="1378387583711"><richcontent TYPE="NODE">
+
+<html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      Spread the word about <a href="http://berteh.github.io/mindslide/">Mindslide</a>, <a href="http://freeplane.sourceforge.net/">Freeplane</a>&#160;and <a href="http://lab.hakim.se/reveal-js/">Reveal.js</a>
+    </p>
+  </body>
+</html>
+
+</richcontent>
+</node>
+<node ID="ID_1126081913" CREATED="1471434215980" MODIFIED="1471434466830"><richcontent TYPE="NODE">
+
+<html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      Another way to help keeping this project alive is to <a href="https://donorbox.org/donate-98">donate</a>.
+    </p>
+  </body>
+</html>
+
+</richcontent>
 <font BOLD="false"/>
 </node>
 </node>
 </node>
-<node TEXT="&lt;html&gt;&#xa;  &lt;head&gt;&#xa;    &#xa;  &lt;/head&gt;&#xa;  &lt;body&gt;&#xa;    &lt;p&gt;&#xa;      Not supported &lt;i&gt;yet&lt;/i&gt;&#xa;    &lt;/p&gt;&#xa;  &lt;/body&gt;&#xa;&lt;/html&gt;" POSITION="right" ID="ID_523970975" CREATED="1377866449059" MODIFIED="1465157553908" VSHIFT_QUANTITY="9.0 px">
+<node POSITION="right" ID="ID_523970975" CREATED="1377866449059" MODIFIED="1465157553908" VSHIFT_QUANTITY="9.0 px"><richcontent TYPE="NODE">
+
+<html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      Not supported <i>yet</i>
+    </p>
+  </body>
+</html>
+
+</richcontent>
 <edge COLOR="#ff00ff"/>
 <node TEXT="Many elements are still not supported. We welcome any pointers how to best do it, as well as help to do so!" ID="ID_1524934682" CREATED="1377866451993" MODIFIED="1471481562189"/>
-<node TEXT="node and edge style, clouds" LOCALIZED_STYLE_REF="styles.subtopic" ID="ID_619242118" CREATED="1377866664573" MODIFIED="1471481551236">
+<node TEXT="node and edge style, clouds" LOCALIZED_STYLE_REF="styles.subtopic" ID="ID_619242118" CREATED="1377866664573" MODIFIED="1471490213270">
+<icon BUILTIN="button_cancel"/>
 <edge STYLE="sharp_bezier" COLOR="#3300cc" WIDTH="4"/>
 <font BOLD="true"/>
 <cloud COLOR="#f0f0f0" SHAPE="ARC"/>
 </node>
-<node TEXT="free &quot;post-it&quot; nodes are not marked differently from other nodes" ID="ID_1946776085" CREATED="1377991599034" MODIFIED="1465157553903" HGAP_QUANTITY="440.0 px" VSHIFT_QUANTITY="-10.0 px">
+<node TEXT="free &quot;post-it&quot; nodes are not marked differently from other nodes" ID="ID_1946776085" CREATED="1377991599034" MODIFIED="1471490194120" HGAP_QUANTITY="440.0 px" VSHIFT_QUANTITY="-10.0 px">
+<icon BUILTIN="clock2"/>
 <hook NAME="FreeNode"/>
 </node>
 <node TEXT="" ID="ID_1756859786" CREATED="1471485758991" MODIFIED="1471485758991">
@@ -430,7 +447,21 @@
 <node TEXT="Known Bugs" FOLDED="true" ID="ID_191827926" CREATED="1377874134734" MODIFIED="1471389247293">
 <icon BUILTIN="messagebox_warning"/>
 <node TEXT="Various things we should fix, any pointer how to do so is welcome." ID="ID_957082212" CREATED="1377874299104" MODIFIED="1377874323476"/>
-<node TEXT="&lt;html&gt;&#xa;  &lt;head&gt;&#xa;    &#xa;  &lt;/head&gt;&#xa;  &lt;body&gt;&#xa;    &lt;p&gt;&#xa;      improve styles, fonts and general support of richtext content, as for now some elements don&apos;t show or &lt;font size=&quot;3&quot;&gt;not nicely&lt;/font&gt;&#xa;    &lt;/p&gt;&#xa;  &lt;/body&gt;&#xa;&lt;/html&gt;" ID="ID_636303064" CREATED="1377982838721" MODIFIED="1378389990790"><richcontent TYPE="NOTE">
+<node ID="ID_636303064" CREATED="1377982838721" MODIFIED="1378389990790"><richcontent TYPE="NODE">
+
+<html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      improve styles, fonts and general support of richtext content, as for now some elements don't show or <font size="3">not nicely</font>
+    </p>
+  </body>
+</html>
+
+</richcontent>
+<richcontent TYPE="NOTE">
 
 <html>
   <head>
@@ -463,27 +494,7 @@
 </node>
 <node TEXT="Acknowledgments" FOLDED="true" POSITION="right" ID="ID_510184946" CREATED="1377867969615" MODIFIED="1465149865500">
 <edge COLOR="#00ffff"/>
-<node ID="ID_1924314542" CREATED="1471434294531" MODIFIED="1471481902806"><richcontent TYPE="NODE">
-
-<html>
-  <head>
-    
-  </head>
-  <body>
-    <p>
-      This export tool relies on the fantastic <a href="http://lab.hakim.se/reveal-js/">Reveal.js</a>&#160;HTML presentation framework, and <a href="http://freeplane.sourceforge.net">Freeplane</a>&#160;mind mapping tool. It uses beautiful icons from <a href="http://fontawesome.io">Font Awesome</a>.
-    </p>
-    <p>
-      
-    </p>
-    <p>
-      If this feature helps you saving valuable time kindly consider a <a href="https://donorbox.org/donate-98">donation</a>&#160; to help keeping it alive
-    </p>
-  </body>
-</html>
-
-</richcontent>
-</node>
+<node TEXT="&lt;html&gt;&#xa;  &lt;head&gt;&#xa;    &#xa;  &lt;/head&gt;&#xa;  &lt;body&gt;&#xa;    &lt;p&gt;&#xa;      This export tool relies on the fantastic &lt;a href=&quot;http://lab.hakim.se/reveal-js/&quot;&gt;Reveal.js&lt;/a&gt;&amp;#160;HTML presentation framework, and &lt;a href=&quot;http://freeplane.sourceforge.net&quot;&gt;Freeplane&lt;/a&gt;&amp;#160;mind mapping tool. It uses beautiful icons from &lt;a href=&quot;http://fontawesome.io&quot;&gt;Font Awesome&lt;/a&gt;.&#xa;    &lt;/p&gt;&#xa;    &lt;p&gt;&#xa;      &#xa;    &lt;/p&gt;&#xa;    &lt;p&gt;&#xa;      If this feature helps you saving valuable time kindly consider a &lt;a href=&quot;https://donorbox.org/donate-98&quot;&gt;donation&lt;/a&gt;&amp;#160; to help keeping it alive&#xa;    &lt;/p&gt;&#xa;  &lt;/body&gt;&#xa;&lt;/html&gt;" ID="ID_1924314542" CREATED="1471434294531" MODIFIED="1471481902806"/>
 </node>
 </node>
 </map>
