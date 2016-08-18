@@ -1,10 +1,8 @@
 #Mindslide
-#Mindslide
 
 View mindmap as an HTML animation / presentation (aka Freeplane/Freemind to powerpoint slideshow).
 
 Checkout our **[online demonstration & documentation](http://berteh.github.io/mindslide/)**!
-
 
 Mindslide is an export extension for [Freeplane](http://sourceforge.net/projects/freeplane). It uses the [Reveal.js](http://lab.hakim.se/reveal-js/) HTML presentation framework to make stunning slideshow presentations and animations from your Freeplane (and possibly Freemind) mindmaps.
 
@@ -17,15 +15,15 @@ Using Mindslide is then easy as pie:
 - select file > export > Animation MindSlide (.html) to export your mindmap
 - save the HTML presentation in mindslide directory! (or edit settings in config.xml to use the CDN as base directory)
 
-More information for additional features [online]((http://berteh.github.io/mindslide/#/ID_1592220697), such as hiding nodes (or drafts) from your mindmap, or using speaker notes.
+More information for additional features [online](http://berteh.github.io/mindslide/#/ID_1592220697), such as hiding nodes (or drafts) from your mindmap, or viewing nodes notes as speaker notes.
 
 
 ## Help and support
 
 Use the [Mindslide issue tracker](https://github.com/berteh/mindslide/issues) for your questions / suggestions.
 
-Integration within Freeplane is [being discussed on the Freeplane forum](https://sourceforge.net/apps/phpbb/freeplane/viewtopic.php?f=1&t=750&p=3712#p3708).
-
+Integration within Freeplane is [being discussed on the Freeplane forum](https://sourceforge.net/apps/phpbb/freeplane/viewtopic.php?f=1&t=750&p=3712#p3708)
+ and [here](https://sourceforge.net/p/freeplane/discussion/758437/thread/6a6fed27/#b5c3/3bcf)
 
 ## Screenshots
 
@@ -43,11 +41,17 @@ More features in the demo of [Reveal.js](http://lab.hakim.se/reveal-js/).
 ## Thanks
 A big "Thank You!"" to the original developpers of open-source software, and the community of contributors that supported/inspired them and more specifically [Hakim El Hattab](http://hakim.se) for Reveal.js, Dimitry Polivaev and [contributors](http://freeplane.sourceforge.net/wiki/index.php/Contributors) for Freeplane, and Dave Gandy for [Font Awesome](http://fontawesome.io). 
 
+## FAQ
+
+For presenting while having access to the internet you can use a CDN-hosted reveal.js.
+Most free CDN already host reveal.js resources, but to get the speakers notes to work you need one that hosts html files as well, and so far only 
+```http://cdn.rawgit.com/hakimel/reveal.js/3.3.0/``` does. If you found others kindly let us know.
+
 ## Changelog 
 
   * [v0.1](https://github.com/berteh/mindslide/releases/tag/v0.1) - 2013.09  - working JS implementation
   * [v0.2](https://github.com/berteh/mindslide/releases/tag/v0.2) - 2013.09  - change to XSLT implementation, not integrated in Freeplane
   * [v0.3](https://github.com/berteh/mindslide/releases/tag/v0.3) - 2016.06  - compatibility with latest Reveal.js for more options, themes, and stunning visual animation effects, including parallax background.
-  * [v0.4](https://github.com/berteh/mindslide/releases/tag/v0.4) - 2016.08  - improved documentation
+  * [v0.4](https://github.com/berteh/mindslide/releases/tag/v0.4) - 2016.08  - better documentation for CDN-hosted use
   * [v0.5](https://github.com/berteh/mindslide/releases/tag/v0.5) - 2016.08  - added support for Freeplane icons, with [Font Awesome](http://fontawesome.io)
 
