@@ -1,11 +1,11 @@
-<!DOCTYPE html><html lang="en">
+<!DOCTYPE html><html lang="en" xmlns:my="local.uri">
 <head>
 <META http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
 <title>MindSlide</title>
 <meta name="description" content="Freeplane mindmap HTML presentation">
 <meta name="author" content="Yours Respectfully">
 <meta name="generator" content="Mindslide at http://berteh.github.io/mindslide/">
-<!--Mindslide version 0.3-->
+<!--Mindslide version 0.5-->
 <meta name="apple-mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
@@ -24,12 +24,16 @@
             .illustrations.w5 a, .illustrations.w9 a, .illustrations.w10 a {max-width:18%} 
 
             /* bullet lists layout */
-			.mindslide li p {margin: 0 0;}
-            .mindslide section.content>ul li {font-size: 90%;}
-            .mindslide section.content>ul>li:first-of-type, .mindslide section.title>ul li {list-style:none; display:block; font-size: 120%; margin-bottom:1ex}   
+			#mindslide li p {margin: 0 0;}
+            #mindslide section.content>ul li {font-size: 90%;}
+            #mindslide section.content>ul>li:first-of-type, #mindslide section.title>ul li {list-style:none; display:block; font-size: 120%; margin-bottom:1ex}   
 
-            /*zenburn hack for inline code highlight*/
-            pre.inline, .inline code {display:inline; width:auto;}  
+            /* zenburn hack for inline code highlight */
+            pre.inline, .inline code {display:inline; width:auto;}
+			
+			/* icons */
+			#mindslide.awesome section.content li.icon {list-style:none; margin-left: -1em}
+			#mindslide.awesome .fa {font-family: FontAwesome; margin-right: 1ex;}			
         </style>
 <!--If the query includes 'print-pdf', use the PDF print sheet. works in Chrome, maybe not other browsers-->
 <script type="text/javascript">
@@ -40,23 +44,26 @@
             <script src="http://cdn.rawgit.com/hakimel/reveal.js/3.3.0/lib/js/html5shiv.js"></script>
             <![endif]
         -->
-<!--placeholder for custom header items-->
+<!--placeholder for custom header items (typically scripts or stylesheets)-->
 </head>
 <body>
 <div class="reveal">
 <!--Any section element inside of this container is displayed as a slide-->
-<div class="slides mindslide">
+<div id="mindslide" class="slides">
 <section class="title" id="ID_1723255651">
 <h1>MindSlide</h1>
 <ul>
 <li>View your Mindmap as an HTML presentation / slideshow</li>
-<li>hit &lt;space&gt; to navigate</li>
 <li>
-<a href="https://github.com/berteh/mindslide" class="link external">
-<p>
-<small>MindSlide source code</small>
+<p></p>
+<p style="text-align: center">
+      hit <code>&lt;space&gt;</code>&nbsp;to navigate
+    </p>
+</li>
+<li>
+<p style="text-align: center">
+<small><a href="https://github.com/berteh/mindslide/">source code</a>&nbsp;(on github) - <a href="https://donorbox.org/donate-98">donate</a>&nbsp;&nbsp;(on donorbox)</small>
 </p>
-</a>
 </li>
 </ul>
 </section>
@@ -110,18 +117,19 @@
 </li>
 <li>
 <p>
-      2D overview <small>(hit "esc" or "o")</small>&nbsp;easy navigation <small>(space, arrows, click, touch)</small>&nbsp;help <small>(?)</small>
+      2D overview <small>(hit "esc" or "o")</small>&nbsp;and easy navigation <small>(space, arrows, click, touch)</small>&nbsp;help <small>(?)</small>
 </p>
 </li>
 <li>
 <p>
-      simple <font face="Courier New, Courier, Nimbus Mono L, serif, monospace"><b style="font-family: Courier New, Courier, Nimbus Mono L, serif, monospace">&amp; rich-text </b></font><font color="#e1a71c"><u>nodes</u></font>, including code highlight
+      simple <font face="Courier New, Courier, Nimbus Mono L, serif, monospace"><b style="font-family: Courier New, Courier, Nimbus Mono L, serif, monospace">&amp; rich-text</b></font><font color="#e1a71c">&nbsp;<u>nodes</u></font>, including code highlight:
     </p>
 <pre>
 <code class="css">@page:right { margin: 1cm 2cm 1.3cm 4cm; }</code>
 </pre>
 </li>
-<li>links, images and nodes connectors<a href="#/ID_1494003336" class="link connector"> &#8605;</a>
+<li class="icon">
+<span aria-hidden="true" class="fa fa-check"></span>links, images, icons and nodes connectors<a href="#/ID_1494003336" class="link connector"> &#8605;</a>
 </li>
 <li>
 <p>
@@ -159,22 +167,27 @@
 <section class="content" id="ID_1665333044">
 <h3>Recent improvements</h3>
 <ul>
-<li>Reveal.js now allows for</li>
-<li>
+<li class="icon">
+<span aria-hidden="true" class="fa fa-smile-o"></span>Mindslide now shows nodes icons</li>
+<li class="icon">
+<span aria-hidden="true" class="fa fa-bookmark"></span>
 <p>
-      more stunning transitions, including <i>fade, slide, convex, concave, zoom</i>.
+      The last update of Reveal.js now allows for
     </p>
-</li>
+<ul>
 <li>
-<p>
-      parallax background (see <a href="http://berteh.github.io/mindslide/?parallaxBackgroundImage=https%3A%2F%2Fs3.amazonaws.com%2Fhakim-static%2Freveal-js%2Freveal-parallax-1.jpg&amp;parallaxBackgroundSize=2100px%20900px#/ID_1723255651">demo</a>)
-    </p>
-</li>
-<li>slides shuffling</li>
+        more stunning transitions, including <i>fade, slide, convex, concave, zoom</i>.
+      </li>
 <li>
-<p>
-      auto advancing slides (see <a href="https://github.com/hakimel/reveal.js#auto-sliding">documentation</a>)
-    </p>
+        parallax background (see <a href="http://berteh.github.io/mindslide/?parallaxBackgroundImage=https%3A%2F%2Fs3.amazonaws.com%2Fhakim-static%2Freveal-js%2Freveal-parallax-1.jpg&amp;parallaxBackgroundSize=2100px%20900px#/ID_1723255651">demo</a>)
+      </li>
+<li>
+        slides shuffling
+      </li>
+<li>
+        auto advancing slides (see <a href="https://github.com/hakimel/reveal.js#auto-sliding">documentation</a>)
+      </li>
+</ul>
 </li>
 </ul>
 </section>
@@ -216,10 +229,13 @@
     </p>
 <ol>
 <li>
-        dowload and unpack <a href="https://github.com/berteh/mindslide/archive/master.zip">https://github.com/berteh/mindslide/archive/master.zip</a>&nbsp;into "mindslide" directory (or pick any name you like)
+        dowload and unpack <a href="https://github.com/berteh/mindslide/archive/master.zip">mindslide's master.zip</a>&nbsp;into "mindslide" directory (or pick any name you like)
       </li>
 <li>
-        download and upack <a href="https://github.com/hakimel/reveal.js/archive/master.zip">https://github.com/hakimel/reveal.js/archive/master.zip</a>&nbsp;into mindslide/reveal.js directory
+        download and unpack <a href="https://github.com/hakimel/reveal.js/archive/master.zip">reveal.js's master.zip</a>&nbsp;into mindslide/reveal.js directory
+      </li>
+<li>
+        download and unpack <a href="https://github.com/FortAwesome/Font-Awesome/archive/master.zip">FontAwesome's master.zip</a>&nbsp;into mindslide/Font-Awesome directory
       </li>
 </ol>
 </li>
@@ -228,12 +244,10 @@
       (alternatively) you can also clone the source code:
     </p>
 <pre>
-<code class="bash">git clone https://github.com/berteh/mindslide.git
-cd mindslide  # (dir mindslide on windows)
-git submodule update --init</code>
+<code class="bash">git clone --recursive https://github.com/berteh/mindslide.git</code>
 </pre>
 </li>
-<li>copy mindslide/mindslide.xsl, mindslide/config.xml and mindslide/reveal-configuration.xsl into your freeplane/resources/xslt directory</li>
+<li>then copy mindslide/mindslide.xsl, mindslide/config.xml and mindslide/reveal-configuration.xsl into your freeplane/resources/xslt directory</li>
 </ul>
 </section>
 <section class="content" id="ID_1592220697">
@@ -248,7 +262,7 @@ git submodule update --init</code>
 </li>
 <li>
 <p>
-<b>save the HTML presentation in mindslide directory</b>! <small>(or edit settings in config.xml to use the online CDN as base directory)</small>
+<b>save the HTML presentation in your mindslide directory</b>! <small>(or edit settings in config.xml to use the online CDN hosts for both reveal and font awesome)</small>
 </p>
 <a href="#/ID_1593867677" class="link connector"> &#8605;</a>
 </li>
@@ -278,10 +292,11 @@ git submodule update --init</code>
 </div>
 <aside class="notes">
 <p>
-      The original mindmap has more content in this node... but it does not show in your slides.
+      The original mindmap has more content in this node... but it does not show in your slides (nor do their respective speakers notes).
     </p>
+<p></p>
 <p>
-      Great for creating content in Freeplane, and presenting only when it's ready.
+      Great for preparing content in Freeplane, and presenting every part only when it's ready.
     </p>
 </aside>
 </section>
@@ -339,6 +354,11 @@ git submodule update --init</code>
       Spread the word about <a href="http://berteh.github.io/mindslide/">Mindslide</a>, <a href="http://freeplane.sourceforge.net/">Freeplane</a>&nbsp;and <a href="http://lab.hakim.se/reveal-js/">Reveal.js</a>
 </p>
 </li>
+<li>
+<p>
+      Another way to help keeping this project alive is to <a href="https://donorbox.org/donate-98">donate</a>.
+    </p>
+</li>
 </ul>
 </section>
 <section class="content" id="ID_1869571896">
@@ -385,16 +405,28 @@ git submodule update --init</code>
       Not supported yet</h2>
 <ul>
 <li>Many elements are still not supported. We welcome any pointers how to best do it, as well as help to do so!</li>
-<li>node and edge style, icons and clouds</li>
-<li>free "post-it" nodes are not marked differently from other nodes</li>
-<li>node attributes, zoom on images, author informations</li>
-<li>packaging presentation with all its dependencies in a single portable file.</li>
-<li>summary nodes</li>
-<li>
-<a href="https://github.com/berteh/mindslide/issues" class="link external">Put your suggestions on our "issues" list!</a>
+<li class="icon">
+<span aria-hidden="true" class="fa fa-close"></span>node and edge style, clouds</li>
+<li class="icon">
+<span aria-hidden="true" class="fa fa-bell"></span>free "post-it" nodes are not marked differently from other nodes</li>
+<li class="icon">
+<span aria-hidden="true" class="fa fa-list"></span>node attributes, zoom on images, author informations</li>
+<li class="icon">
+<span aria-hidden="true" class="fa fa-paperclip"></span>packaging presentation with all its dependencies in a single portable file.</li>
+<li class="icon">
+<span aria-hidden="true" class="fa fa-lightbulb-o"></span><a href="https://github.com/berteh/mindslide/issues" class="link external">Put your suggestions on our "issues" list!</a>
 </li>
-<li>Known Bugs<a href="#/ID_191827926" class="link subsection"> &#8628;</a>
+<li class="icon">
+<span aria-hidden="true" class="fa fa-warning"></span>Known Bugs<a href="#/ID_191827926" class="link subsection"> &#8628;</a>
 </li>
+<li>summary node</li>
+</ul>
+</section>
+<section class="content" id="ID_1116046035">
+<h3></h3>
+<ul>
+<li>summary node</li>
+<li>summary node</li>
 </ul>
 </section>
 <section class="content" id="ID_191827926">
@@ -426,7 +458,11 @@ git submodule update --init</code>
 <ul>
 <li>
 <p>
-      This export tool relies on the fantastic <a href="http://lab.hakim.se/reveal-js/">reveal.js</a>&nbsp;HTML presentation framework, and <a href="http://freeplane.sourceforge.net">Freeplane</a>... to map your thoughts.
+      This export tool relies on the fantastic <a href="http://lab.hakim.se/reveal-js/">Reveal.js</a>&nbsp;HTML presentation framework, and <a href="http://freeplane.sourceforge.net">Freeplane</a>&nbsp;mind mapping tool. It uses beautiful icons from <a href="http://fontawesome.io">Font Awesome</a>.
+    </p>
+<p></p>
+<p>
+      If this feature helps you saving valuable time kindly consider a <a href="https://donorbox.org/donate-98">donation</a>&nbsp; to help keeping it alive
     </p>
 </li>
 </ul>
@@ -441,7 +477,7 @@ git submodule update --init</code>
 </section>
 </div>
 </div>
-<footer class="info">MindSlide | <a href="http://berteh.github.io/mindslide/">Mindslide</a> v 0.3 |  <a href="http://freeplane.sourceforge.net/">Freeplane</a> map vfreeplane 1.3.0</footer>
+<footer class="info">MindSlide | <a href="http://berteh.github.io/mindslide/">Mindslide</a> v 0.5 |  <a href="http://freeplane.sourceforge.net/">Freeplane</a> map vfreeplane 1.5.9</footer>
 <script src="http://cdn.rawgit.com/hakimel/reveal.js/3.3.0/lib/js/head.min.js"></script><script src="http://cdn.rawgit.com/hakimel/reveal.js/3.3.0/js/reveal.js"></script><script>
 
 	//run reveal.js
@@ -484,15 +520,36 @@ git submodule update --init</code>
 		
         // Optional libraries used to extend on reveal.js - see https://github.com/hakimel/reveal.js#dependencies
         dependencies: [
-        { src: 'http://cdn.rawgit.com/hakimel/reveal.js/3.3.0/lib/js/classList.js', condition: function() { return !document.body.classList; } },
-        { src: 'http://cdn.rawgit.com/hakimel/reveal.js/3.3.0/plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
-        { src: 'http://cdn.rawgit.com/hakimel/reveal.js/3.3.0/plugin/zoom-js/zoom.js', async: true, condition: function() { return !!document.body.classList; } },
-        { src: 'http://cdn.rawgit.com/hakimel/reveal.js/3.3.0/plugin/notes/notes.js', async: true, condition: function() { return !!document.body.classList; } }
-        //{ src: 'http://cdn.rawgit.com/hakimel/reveal.js/3.3.0/plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
-        //{ src: 'http://cdn.rawgit.com/hakimel/reveal.js/3.3.0/plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
-		//{ src: 'http://cdn.rawgit.com/hakimel/reveal.js/3.3.0/plugin/math/math.js', async: true }
+          { src:'http://cdn.rawgit.com/hakimel/reveal.js/3.3.0/lib/js/classList.js', condition: function() { return !document.body.classList; } },
+          { src:'http://cdn.rawgit.com/hakimel/reveal.js/3.3.0/plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+          { src:'http://cdn.rawgit.com/hakimel/reveal.js/3.3.0/plugin/zoom-js/zoom.js', async: true, condition: function() { return !!document.body.classList; } },
+          { src:'http://cdn.rawgit.com/hakimel/reveal.js/3.3.0/plugin/notes/notes.js', async: true, condition: function() { return !!document.body.classList; } }
+          //{ src:'http://cdn.rawgit.com/hakimel/reveal.js/3.3.0/plugin/markdown/marked.js', condition: function() { return !!document.querySelector('[data-markdown]' ); } },
+          //{ src:'http://cdn.rawgit.com/hakimel/reveal.js/3.3.0/plugin/markdown/markdown.js', condition: function() { return !!document.querySelector('[data-markdown]' ); } },
+		  //{ src:'http://cdn.rawgit.com/hakimel/reveal.js/3.3.0/plugin/math/math.js', async: true }
 		]
-        });
-    </script>
+    	
+    });
+        </script>
+<link rel="stylesheet" crossorigin="anonymous" href="https://opensource.keycdn.com/fontawesome/4.6.3/font-awesome.min.css">
+<script>
+		// add "awesome" class to #mindslide (only) if FontAwesome is loaded (for icons layout)
+	
+		function css(element, property) {
+			return window.getComputedStyle(element, null).getPropertyValue(property);
+		}
+		
+		window.onload = function () {
+			var span = document.createElement('span');
+			span.className = 'fa';
+			span.style.display = 'none';
+			document.body.insertBefore(span, document.body.firstChild);
+			if ((css(span, 'font-family')) == 'FontAwesome') {
+				var ms = document.getElementById("mindslide");
+				ms.className += " awesome";
+			}
+			document.body.removeChild(span);
+		};		
+		</script>
 </body>
 </html>
